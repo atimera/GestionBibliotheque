@@ -16,6 +16,12 @@
           <element id="archive" name="gestion-biblio-model-1.0-SNAPSHOT.jar">
             <element id="module-output" name="gestion-biblio-model" />
           </element>
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-collections4:4.2" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-text:1.6" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.apache.bval:bval-jsr:1.1.2" />
+          <element id="library" level="project" name="Maven: org.apache.bval:bval-core:1.1.2" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.5" />
         </element>
       </element>
       <element id="directory" name="META-INF">
