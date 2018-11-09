@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.18">
+<file name="C:\work\projects\opc\p3\gestion-biblio\gestion-biblio-consumer\src\main\java\com\opc\projet\consumer\App.java">
+<error line="7" severity="error" message="Dans le commentaire javadoc de la classe, il manque une balise @author." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="7" severity="warning" message="Il manque un constructeur à la classe." source="com.puppycrawl.tools.checkstyle.checks.coding.MissingCtorCheck"/>
+<error line="7" column="1" severity="info" message="Les classes utilitaires ne doivent pas avoir de constructeur par défaut ou public." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
+<error line="8" column="1" severity="error" message="&apos;{&apos; à la colonne 1 devrait être sur la ligne précédente." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="9" column="5" severity="error" message="Commentaire javadoc manquant." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="9" column="29" severity="error" message="Il y a une espace de trop après  &apos;(&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="9" column="39" severity="info" message="Le nom &apos;args&apos; n&apos;est pas conforme à l&apos;expression &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="9" column="43" severity="error" message="Il y a une espace de trop avant &apos;)&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="10" column="5" severity="error" message="&apos;{&apos; à la colonne 5 devrait être sur la ligne précédente." source="com.puppycrawl.tools.checkstyle.checks.blocks.LeftCurlyCheck"/>
+<error line="11" severity="error" message="Lutilisation des System.out.print... est interdite." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineJavaCheck"/>
+<error line="11" column="28" severity="error" message="Il y a une espace de trop après  &apos;(&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+<error line="11" column="43" severity="error" message="Il y a une espace de trop avant &apos;)&apos;." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+</file>
+</checkstyle>

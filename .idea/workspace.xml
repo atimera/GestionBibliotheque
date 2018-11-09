@@ -7,29 +7,452 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a537e0e-dc22-4780-8967-853bcd5b875e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/javadoc-bundle-options/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/com/opc/projet/batch/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/com/opc/projet/batch/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/com/opc/projet/batch/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/com/opc/projet/batch/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/com/opc/projet/batch/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/com/opc/projet/batch/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/javadoc-bundle-options/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/com/opc/projet/business/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/com/opc/projet/business/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/com/opc/projet/business/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/com/opc/projet/business/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/com/opc/projet/business/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/com/opc/projet/business/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/javadoc-bundle-options/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/com/opc/projet/consumer/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/com/opc/projet/consumer/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/com/opc/projet/consumer/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/com/opc/projet/consumer/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/com/opc/projet/consumer/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/com/opc/projet/consumer/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/javadoc-bundle-options/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/com/opc/projet/model/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/com/opc/projet/model/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/com/opc/projet/model/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/com/opc/projet/model/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/com/opc/projet/model/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/com/opc/projet/model/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/build/checkstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fml/faq.fml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/markdown/architecture.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/img/dependances_modules.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/checkstyle-cachefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/checkstyle-checker.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/checkstyle-result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/batch/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/batch/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/batch/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/batch/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/batch/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/batch/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/business/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/business/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/business/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/business/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/business/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/business/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/consumer/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/consumer/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/consumer/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/consumer/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/consumer/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/consumer/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/model/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/model/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/model/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/model/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/model/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/com/opc/projet/model/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/overview-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/overview-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/checkstyle-aggregate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/site/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/batch/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/batch/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/batch/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/batch/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/batch/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/batch/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/business/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/business/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/business/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/business/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/business/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/business/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/consumer/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/consumer/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/consumer/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/consumer/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/consumer/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/consumer/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/model/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/model/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/model/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/model/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/model/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/com/opc/projet/model/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/overview-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/overview-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/checkstyle-aggregate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/com/opc/projet/batch/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/com/opc/projet/batch/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/com/opc/projet/batch/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/com/opc/projet/batch/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/com/opc/projet/batch/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/com/opc/projet/batch/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/com/opc/projet/business/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/com/opc/projet/business/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/com/opc/projet/business/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/com/opc/projet/business/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/com/opc/projet/business/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/com/opc/projet/business/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/com/opc/projet/consumer/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/com/opc/projet/consumer/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/com/opc/projet/consumer/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/com/opc/projet/consumer/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/com/opc/projet/consumer/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/com/opc/projet/consumer/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/allclasses-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/allclasses-noframe.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/com/opc/projet/model/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/com/opc/projet/model/class-use/App.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/com/opc/projet/model/package-frame.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/com/opc/projet/model/package-summary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/com/opc/projet/model/package-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/com/opc/projet/model/package-use.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/constant-values.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/deprecated-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/help-doc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/index-all.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/overview-tree.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/package-list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/apidocs/stylesheet.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/checkstyle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/checkstyle.rss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/project-reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/surefire-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/images/rss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/staging/surefire-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/gestion-biblio-batch-1.0-SNAPSHOT-archive-deploy.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/gestion-biblio-batch-1.0-SNAPSHOT-archive-deploy.tar.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/gestion-biblio-batch-1.0-SNAPSHOT-archive-deploy.zip" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/gestion-biblio-batch-1.0-SNAPSHOT-archive-deploy.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/gestion-biblio-batch-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/gestion-biblio-batch-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/site/team.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/surefire-reports/TEST-com.opc.projet.batch.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/surefire-reports/TEST-com.opc.projet.batch.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-batch/target/surefire-reports/com.opc.projet.batch.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/surefire-reports/com.opc.projet.batch.AppTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/gestion-biblio-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/gestion-biblio-business-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/site/team.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/surefire-reports/TEST-com.opc.projet.business.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/surefire-reports/TEST-com.opc.projet.business.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-business/target/surefire-reports/com.opc.projet.business.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/surefire-reports/com.opc.projet.business.AppTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/gestion-biblio-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/gestion-biblio-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/team.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/surefire-reports/TEST-com.opc.projet.consumer.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/surefire-reports/TEST-com.opc.projet.consumer.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-consumer/target/surefire-reports/com.opc.projet.consumer.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/surefire-reports/com.opc.projet.consumer.AppTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/gestion-biblio-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/gestion-biblio-model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/site/team.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/surefire-reports/TEST-com.opc.projet.model.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/surefire-reports/TEST-com.opc.projet.model.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-model/target/surefire-reports/com.opc.projet.model.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/surefire-reports/com.opc.projet.model.AppTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/WEB-INF/lib/gestion-biblio-business-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/WEB-INF/lib/gestion-biblio-business-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/WEB-INF/lib/gestion-biblio-consumer-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/WEB-INF/lib/gestion-biblio-consumer-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/WEB-INF/lib/gestion-biblio-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/WEB-INF/lib/gestion-biblio-model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/jsp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/gestion-biblio-webapp/jsp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/team.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/site.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependency-convergence.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/modules.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/dependency-convergence.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-batch/target/site/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-batch/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-business/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-business/target/site/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-business/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-consumer/target/site/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-consumer/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/project-reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-model/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-model/target/site/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-model/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/dependencies.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/dependency-info.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/dependency-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/distribution-management.html" beforeDir="false" afterPath="$PROJECT_DIR$/gestion-biblio-webapp/target/site/surefire-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/images/close.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/gestion-biblio-webapp/team.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/licenses.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/modules.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/plugin-management.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/plugins.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/plugins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/project-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/project-info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/staging/project-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/staging/team.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/gestion-biblio-business/target/" />
@@ -56,11 +479,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
+          <entry key="fml" value="1" />
           <entry key="iml" value="2" />
           <entry key="jsp" value="10" />
+          <entry key="md" value="1" />
           <entry key="properties" value="2" />
           <entry key="sh" value="1" />
-          <entry key="xml" value="11" />
+          <entry key="xml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -68,50 +493,73 @@
           <entry key="CSS" value="1" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="JSP" value="10" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="2" />
-          <entry key="XML" value="11" />
+          <entry key="XML" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="fml" value="1" />
           <entry key="jsp" value="68" />
-          <entry key="xml" value="771" />
+          <entry key="xml" value="779" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSP" value="68" />
-          <entry key="XML" value="771" />
+          <entry key="XML" value="780" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1508">
-              <caret line="208" column="36" selection-start-line="208" selection-start-column="36" selection-end-line="208" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sit.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="267">
+              <caret line="277" column="31" selection-start-line="277" selection-start-column="31" selection-end-line="277" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gestion-biblio-batch/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/markdown/architecture.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="144">
+                <caret line="9" selection-start-line="9" selection-end-line="9" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fml/faq.fml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="60" column="57" selection-start-line="60" selection-start-column="57" selection-end-line="60" selection-end-column="57" />
+            <state relative-caret-position="219">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/build/checkstyle.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1840">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/site.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -182,8 +630,12 @@
         <option value="$PROJECT_DIR$/gestion-biblio-batch/src/data/conf/db-X.properties" />
         <option value="$PROJECT_DIR$/gestion-biblio-batch/src/data/scripts/batch-X.sh" />
         <option value="$PROJECT_DIR$/gestion-biblio-webapp/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/sit.xml" />
+        <option value="$PROJECT_DIR$/src/markdown/architecture.md" />
+        <option value="$PROJECT_DIR$/src/fml/faq.fml" />
+        <option value="$PROJECT_DIR$/src/build/checkstyle.xml" />
+        <option value="$PROJECT_DIR$/src/site.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -249,6 +701,18 @@
               <item name="gestion-biblio" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gestion-biblio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gestion-biblio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fml" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gestion-biblio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gestion-biblio" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -260,17 +724,18 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541794459570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541797959130" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\projects\opc\p3\gestion-biblio\src\resources\img" />
       <recent name="C:\work\projects\opc\p3\gestion-biblio\gestion-biblio-webapp\src\main\webapp\jsp" />
       <recent name="C:\work\projects\opc\p3\gestion-biblio\gestion-biblio-webapp\src\main\webapp\jsp\_include" />
     </key>
@@ -444,15 +909,15 @@
       <option name="presentableId" value="Default" />
       <updated>1541778228226</updated>
       <workItem from="1541778229683" duration="10287000" />
-      <workItem from="1541792629389" duration="1759000" />
+      <workItem from="1541792629389" duration="4335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12046000" />
+    <option name="totallyTimeSpent" value="14622000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -461,7 +926,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.17377399" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.17377399" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
@@ -469,7 +934,7 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
@@ -593,17 +1058,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="208" column="36" selection-start-line="208" selection-start-column="36" selection-end-line="208" selection-end-column="36" />
+    <entry file="file://$PROJECT_DIR$/src/markdown/architecture.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="144">
+            <caret line="9" selection-start-line="9" selection-end-line="9" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sit.xml">
+    <entry file="file://$PROJECT_DIR$/src/fml/faq.fml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="219">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/build/checkstyle.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1840">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/site.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="277" column="31" selection-start-line="277" selection-start-column="31" selection-end-line="277" selection-end-column="31" />
         </state>
       </provider>
     </entry>
