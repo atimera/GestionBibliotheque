@@ -144,6 +144,17 @@
     </dependencyManagement>
 
     <!-- =============================================================== -->
+    <!-- DistributionManagement -->
+    <!-- =============================================================== -->
+    <distributionManagement>
+        <site>
+            <id>site-projet</id>
+            <name>Site du projet de Gestion de tickets</name>
+            <url>scp://localhost/tmp/</url>
+        </site>
+    </distributionManagement>
+
+    <!-- =============================================================== -->
     <!-- Build -->
     <!-- =============================================================== -->
     <build>

@@ -30,7 +30,7 @@
     <ul>
         <li>Application : GestionBiblio - Appli Web</li>
         <li>Version : 1.0-SNAPSHOT</li>
-        <li>Date du build : 09/11/2018</li>
+        <li>Date du build : ${maven.build.timestamp}</li>
     </ul>
 </div>
 
