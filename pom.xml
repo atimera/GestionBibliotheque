@@ -1,25 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- =================================================================== -->
+    <!-- Informations du projet -->
+    <!-- =================================================================== -->
+
+    <groupId>com.opc.projet</groupId>
+    <artifactId>gestion-biblio</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>gestion-biblio</name>
+    <url>http://maven.apache.org</url>
+    <description>Un projet de gestion de suivi d'emprunts pour les bibiothèque d'une grande ville. Ce projet est réalisé dans le cardre du parcours Expert Java EE de Openclassrooms.</description>
+
+    <!-- ===== Organisation ===== -->
+    <organization>
+        <name>Mon organisation</name>
+        <url>https://openclassrooms.com</url>
+    </organization>
+
+    <!-- ===== Licences ===== -->
+    <licenses>
+        <license>
+            <name>Apache Licence, version x</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <!-- ===== Participants, développeurs ===== -->
+    <developers>
+        <developer>
+            <email>amdiatoutimera@hotmail.fr</email>
+            <name>Amdiatou TIMERA</name>
+            <roles>
+                <role>ALL</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <!-- ===== Proriétés ===== -->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
 
+    <!-- Modules -->
+    <modules>
+        <module>gestion-biblio-batch</module>
+        <module>gestion-biblio-webapp</module>
+        <module>gestion-biblio-business</module>
+        <module>gestion-biblio-consumer</module>
+        <module>gestion-biblio-model</module>
+    </modules>
 
-  <groupId>com.opc.projet</groupId>
-  <artifactId>gestion-biblio</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <name>gestion-biblio</name>
-  <url>http://maven.apache.org</url>
-  
+    <!-- =============================================================== -->
+    <!-- Gestion des dépendances -->
+    <!-- =============================================================== -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- ===== Déprendances des Modules ===== -->
+            <dependency>
+                <groupId>com.opc.projet</groupId>
+                <artifactId>gestion-biblio-batch</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.opc.projet</groupId>
+                <artifactId>gestion-biblio-webapp</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.opc.projet</groupId>
+                <artifactId>gestion-biblio-business</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.opc.projet</groupId>
+                <artifactId>gestion-biblio-consumer</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.opc.projet</groupId>
+                <artifactId>gestion-biblio-model</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
 
-  <dependencies>
+            <!-- ===== Bibliothèques tierces ===== -->
+            <!-- JUnit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+                <scope>test</scope>
+            </dependency>
 
-  </dependencies>
-  <modules>
-    <module>gestion-biblio-batch</module>
-    <module>gestion-biblio-webapp</module>
-    <module>gestion-biblio-business</module>
-    <module>gestion-biblio-consumer</module>
-    <module>gestion-biblio-model</module>
-  </modules>
+        </dependencies>
+    </dependencyManagement>
+
 </project>

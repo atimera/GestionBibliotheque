@@ -1,23 +1,52 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.opc.projet</groupId>
-    <artifactId>gestion-biblio</artifactId>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- =============================================================== -->
+    <!-- Informations Projet Parent -->
+    <!-- =============================================================== -->
+    <parent>
+        <groupId>com.opc.projet</groupId>
+        <artifactId>gestion-biblio</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+
+    <!-- =============================================================== -->
+    <!-- Informations du projet -->
+    <!-- =============================================================== -->
+    <artifactId>gestion-biblio-business</artifactId>
     <version>1.0-SNAPSHOT</version>
-  </parent>
-  <groupId>com.opc.projet</groupId>
-  <artifactId>gestion-biblio-business</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>gestion-biblio-business</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+    <name>gestion-biblio-business</name>
+    <url>http://maven.apache.org</url>
+
+    <!-- =============================================================== -->
+    <!-- Proprétés -->
+    <!-- =============================================================== -->
+    <properties>
+    </properties>
+
+    <!-- =============================================================== -->
+    <!-- Dépendances -->
+    <!-- =============================================================== -->
+    <dependencies>
+        <!-- ===== Modules ===== -->
+        <dependency>
+            <groupId>com.opc.projet</groupId>
+            <artifactId>gestion-biblio-consumer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.opc.projet</groupId>
+            <artifactId>gestion-biblio-model</artifactId>
+        </dependency>
+
+        <!-- ===== Bibliothèques tierces ===== -->
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
 </project>

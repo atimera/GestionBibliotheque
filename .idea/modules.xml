@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/gestion-biblio.iml" filepath="$PROJECT_DIR$/gestion-biblio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestion-biblio-batch/gestion-biblio-batch.iml" filepath="$PROJECT_DIR$/gestion-biblio-batch/gestion-biblio-batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestion-biblio-business/gestion-biblio-business.iml" filepath="$PROJECT_DIR$/gestion-biblio-business/gestion-biblio-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestion-biblio-consumer/gestion-biblio-consumer.iml" filepath="$PROJECT_DIR$/gestion-biblio-consumer/gestion-biblio-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestion-biblio-model/gestion-biblio-model.iml" filepath="$PROJECT_DIR$/gestion-biblio-model/gestion-biblio-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestion-biblio-webapp/gestion-biblio-webapp.iml" filepath="$PROJECT_DIR$/gestion-biblio-webapp/gestion-biblio-webapp.iml" />
+    </modules>
+  </component>
+</project>
