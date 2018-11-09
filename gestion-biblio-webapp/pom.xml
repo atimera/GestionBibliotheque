@@ -88,6 +88,49 @@
     </dependencies>
 
     <!-- ======================================================================== -->
+    <!-- Profiles -->
+    <!-- ======================================================================== -->
+    <profiles>
+        <!-- Pendant le développement -->
+        <profile>
+            <id>target-dev</id>
+        </profile>
+        <!-- Pour les tests-->
+        <profile>
+            <id>target-test</id>
+        </profile>
+        <!-- En Production -->
+        <profile>
+            <id>target-prod</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>enforce-no-snapshot-prod</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>enforce</goal>
+                                </goals>
+                                <configuration>
+                                    <rules>
+                                        <!-- Le projet et son parent ne doivent pas être en SNAPSHOT -->
+                                        <requireReleaseVersion></requireReleaseVersion>
+                                        <!-- Aucune dépendance ne doit être en SNAPSHOT -->
+                                        <requireReleaseDeps></requireReleaseDeps>
+                                    </rules>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <!-- ======================================================================== -->
     <!-- Build -->
     <!-- ======================================================================== -->
     <build>
@@ -111,6 +154,29 @@
                         </resource>
                     </webResources>
                 </configuration>
+            </plugin>
+
+            <!-- Vérification de règle sur le contexte de construction de Maven -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-profile-target</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireActiveProfile>
+                                    <profiles>target-dev, target-test, target-prod</profiles>
+                                    <all>false</all>
+                                </requireActiveProfile>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
 
         </plugins>
