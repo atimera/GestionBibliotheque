@@ -13,8 +13,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="../..">Accueil</a></li>
-                <li><a href="../jsp/about.jsp">A propos</a></li>
+                <li class="active"><a href="../webapp/jsp/about.jsp">Accueil</a></li>
+                <li><a href="">A propos</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

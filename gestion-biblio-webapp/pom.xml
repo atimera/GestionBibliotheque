@@ -57,16 +57,16 @@
         </dependency>
 
         <!-- Commons-Collections -->
-        <dependency>
+<!--        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- Commons-Text -->
-        <dependency>
+<!--        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-text</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- API Servlet pour implémenter un servlet -->
         <dependency>
@@ -75,15 +75,17 @@
         </dependency>
 
         <!-- Pour utiliser l'API de validation de beans (JSR 303) -->
+<!--
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
-        <!-- Implémentation de l'API de validation de beans (JSR 303) -->
+        &lt;!&ndash; Implémentation de l'API de validation de beans (JSR 303) &ndash;&gt;
         <dependency>
             <groupId>org.apache.bval</groupId>
             <artifactId>bval-jsr</artifactId>
         </dependency>
+-->
 
     </dependencies>
 
@@ -161,6 +163,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <executions>
+<!--
                     <execution>
                         <id>enforce-profile-target</id>
                         <phase>validate</phase>
@@ -176,6 +179,7 @@
                             </rules>
                         </configuration>
                     </execution>
+                    -->
                 </executions>
             </plugin>
 
