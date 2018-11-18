@@ -57,7 +57,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.opc.projet.consumer.App</mainClass>
+                            <mainClass>com.opc.projet.gestionbiblio.consumer.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
