@@ -52,7 +52,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.opc.projet.model.App</mainClass>
+                            <mainClass>com.opc.projet.business.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

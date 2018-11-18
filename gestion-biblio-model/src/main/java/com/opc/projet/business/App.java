@@ -1,4 +1,4 @@
-package com.opc.projet.model;
+package com.opc.projet.business;
 
 /**
  * Hello world!

@@ -1,13 +1,13 @@
-package com.opc.projet.model.exception;
+package com.opc.projet.business.exception;
 
-public class FunctionalException extends Exception {
+public class TechnicalException extends Exception {
 
     /**
      * Constructeur.
      *
      * @param pMessage -
      */
-    public FunctionalException(String pMessage) {
+    public TechnicalException(String pMessage) {
         super(pMessage);
     }
 
@@ -18,7 +18,7 @@ public class FunctionalException extends Exception {
      * @param pMessage -
      * @param pCause -
      */
-    public FunctionalException(String pMessage, Throwable pCause) {
+    public TechnicalException(String pMessage, Throwable pCause) {
         super(pMessage, pCause);
     }
 }

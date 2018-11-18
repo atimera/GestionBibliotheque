@@ -1,16 +1,16 @@
-package com.opc.projet.model.bean;
+package com.opc.projet.business.bean;
 
-public class Employe extends Personne {
+public class Adherent extends Personne {
 
     // ===================== Attributs =================//
     private String email;
     private String mdp;
 
     // ==================== Constructeurs =====================//
-    public Employe(){
+    public Adherent(){
     }
 
-    public Employe(Integer pId){
+    public Adherent(Integer pId){
         super(pId);
     }
 
@@ -33,6 +33,5 @@ public class Employe extends Personne {
     }
 
     // ==================== Methods ====================//
-
 
 }

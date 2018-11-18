@@ -1,4 +1,4 @@
-package com.opc.projet.model.exception;
+package com.opc.projet.business.exception;
 
 public class NotFoundException extends Exception {
 

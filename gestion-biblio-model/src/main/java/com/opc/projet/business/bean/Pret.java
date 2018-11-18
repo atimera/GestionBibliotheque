@@ -1,6 +1,4 @@
-package com.opc.projet.model.bean;
-
-import java.util.Date;
+package com.opc.projet.business.bean;
 
 public class Pret {
 

@@ -1,4 +1,4 @@
-package com.opc.projet.model.bean;
+package com.opc.projet.business.bean;
 
 public class Ouvrage {
     // ==================== Attributs ====================
