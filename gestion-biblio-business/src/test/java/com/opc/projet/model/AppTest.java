@@ -1,4 +1,4 @@
-package com.opc.projet.business;
+package com.opc.projet.model;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
