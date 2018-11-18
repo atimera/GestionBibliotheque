@@ -1,6 +1,6 @@
 package com.opc.projet.gestionbiblio.webapp.rest.resource;
 
-import com.opc.projet.gestionbiblio.model.manager.ManagerFactory;
+import com.opc.projet.gestionbiblio.impl.ManagerFactory;
 
 public abstract class AbstractResource {
 

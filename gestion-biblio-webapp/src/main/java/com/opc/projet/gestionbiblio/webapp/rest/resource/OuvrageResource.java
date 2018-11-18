@@ -1,7 +1,7 @@
 package com.opc.projet.gestionbiblio.webapp.rest.resource;
 
-import com.opc.projet.gestionbiblio.model.bean.Ouvrage;
-import com.opc.projet.gestionbiblio.model.manager.OuvrageManager;
+import com.opc.projet.gestionbiblio.bean.Ouvrage;
+import com.opc.projet.gestionbiblio.contract.manager.OuvrageManager;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -22,8 +22,13 @@ public class OuvrageResource extends AbstractResource {
     @Path("{id}")
     public Ouvrage get(@PathParam("id") Integer pId) throws NotFoundException {
         OuvrageManager vOuvrageManager = getManagerFactory().getOuvrageManager();
-        Ouvrage vProjet = vOuvrageManager.getOuvrage(pId);
-        return vProjet;
+        Ouvrage vOuvrage = null;
+        try {
+            vOuvrage = vOuvrageManager.getOuvrage(pId);
+        } catch (com.opc.projet.gestionbiblio.exception.NotFoundException e) {
+            e.printStackTrace();
+        }
+        return vOuvrage;
     }
 
 
@@ -35,7 +40,7 @@ public class OuvrageResource extends AbstractResource {
     @GET
     public List<Ouvrage> get() {
         OuvrageManager vProjetManager = getManagerFactory().getOuvrageManager();
-        List<Ouvrage> vListOuvrage = vProjetManager.getListProjet();
+        List<Ouvrage> vListOuvrage = vProjetManager.getListOuvrage(null);
         return vListOuvrage;
     }
 }

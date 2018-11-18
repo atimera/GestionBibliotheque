@@ -1,8 +1,8 @@
 package com.opc.projet.gestionbiblio.webapp.rest.resource;
 
-import com.opc.projet.gestionbiblio.model.bean.Exemplaire;
-import com.opc.projet.gestionbiblio.model.exception.NotFoundException;
-import com.opc.projet.gestionbiblio.model.manager.ExemplaireManager;
+import com.opc.projet.gestionbiblio.bean.Exemplaire;
+import com.opc.projet.gestionbiblio.contract.manager.ExemplaireManager;
+import com.opc.projet.gestionbiblio.exception.NotFoundException;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
