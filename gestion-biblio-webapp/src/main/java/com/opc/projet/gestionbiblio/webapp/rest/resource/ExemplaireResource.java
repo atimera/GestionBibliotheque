@@ -1,8 +1,8 @@
 package com.opc.projet.gestionbiblio.webapp.rest.resource;
 
-import com.opc.projet.gestionbiblio.bean.Exemplaire;
-import com.opc.projet.gestionbiblio.contract.manager.ExemplaireManager;
-import com.opc.projet.gestionbiblio.exception.NotFoundException;
+import com.opc.projet.gestionbiblio.business.bean.Exemplaire;
+import com.opc.projet.gestionbiblio.business.exception.NotFoundException;
+import com.opc.projet.gestionbiblio.business.contract.manager.ExemplaireManager;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -22,7 +22,7 @@ public class ExemplaireResource extends AbstractResource{
      *
      * @param pId id de l' {@link Exemplaire}
      * @return L' {@link Exemplaire}
-     * @throws NotFoundException Si l' {@link Exemplaire} n'a pas été trouvé
+     * @throws com.opc.projet.gestionbiblio.business.exception.NotFoundException Si l' {@link Exemplaire} n'a pas été trouvé
      */
     @GET
     @Path("{id}")

@@ -17,8 +17,7 @@
     <!-- Informations du projet -->
     <!-- =============================================================== -->
     <artifactId>gestion-biblio-consumer</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>gestion-biblio-consumer</name>
+    <name>${projectName} - Consumer</name>
     <url>http://maven.apache.org</url>
 
     <!-- =============================================================== -->
@@ -33,8 +32,12 @@
     <dependencies>
         <!-- ===== Modules ===== -->
         <dependency>
-            <groupId>com.opc.projet</groupId>
-            <artifactId>gestion-biblio-model</artifactId>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>${project.parent.artifactId}-technical</artifactId>
         </dependency>
 
         <!-- ===== Bibliothèques tierces ===== -->
@@ -57,7 +60,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.opc.projet.gestionbiblio.consumer.App</mainClass>
+                            <mainClass>com.opc.projet.gestionbiblio.business.consumer.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

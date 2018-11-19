@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- ===== Déclaration des Managers ===== -->
+    <bean id="exemplaireManager" class="com.opc.projet.gestionbiblio.business.impl.manager.ExemplaireManagerImpl"/>
+    <bean id="ouvrageManager" class="com.opc.projet.gestionbiblio.business.impl.manager.OuvrageManagerImpl"/>
+
+    <!-- ===== ManagerFactory ===== -->
+    <bean id="managerFactory" class="com.opc.projet.gestionbiblio.business.ManagerFactory">
+        <property name="exemplaireManager" ref="exemplaireManager"/>
+        <property name="ouvrageManager" ref="ouvrageManager"/>
+    </bean>
+
+    <!-- ==== AbstractResource ===== -->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="com.opc.projet.gestionbiblio.webapp.rest.resource.AbstractResource"/>
+        <property name="targetMethod" value="setManagerFactory"/>
+        <property name="arguments" ref="managerFactory"/>
+    </bean>
+
+</beans>

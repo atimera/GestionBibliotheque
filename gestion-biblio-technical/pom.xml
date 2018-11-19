@@ -13,12 +13,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-
     <!-- =============================================================== -->
     <!-- Informations du projet -->
     <!-- =============================================================== -->
-    <artifactId>gestion-biblio-business</artifactId>
-    <name>${projectName} - Business</name>
+    <artifactId>gestion-biblio-technical</artifactId>
+    <name>${projectName} - Technical</name>
     <url>http://maven.apache.org</url>
 
     <!-- =============================================================== -->
@@ -31,21 +30,39 @@
     <!-- Dépendances -->
     <!-- =============================================================== -->
     <dependencies>
-        <!-- ===== Modules ===== -->
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>${project.parent.artifactId}-consumer</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>${project.parent.artifactId}-model</artifactId>
-        </dependency>
-
         <!-- ===== Bibliothèques tierces ===== -->
         <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+        </dependency>
+
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
         </dependency>
     </dependencies>
 
@@ -61,7 +78,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.opc.projet.gestionbiblio.business.App</mainClass>
+                            <mainClass>App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

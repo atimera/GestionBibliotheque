@@ -41,10 +41,12 @@
 
     <!-- ===== Proriétés ===== -->
     <properties>
+        <projectName>Gestion bibliotèques</projectName>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <jersey.version>2.26</jersey.version>
+        <spring.version>4.3.11.RELEASE</spring.version>
     </properties>
 
     <!-- Modules -->
@@ -54,6 +56,7 @@
         <module>gestion-biblio-business</module>
         <module>gestion-biblio-consumer</module>
         <module>gestion-biblio-model</module>
+        <module>gestion-biblio-technical</module>
     </modules>
 
     <!-- =============================================================== -->
@@ -63,29 +66,34 @@
         <dependencies>
             <!-- ===== Déprendances des Modules ===== -->
             <dependency>
-                <groupId>com.opc.projet</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>gestion-biblio-batch</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.opc.projet</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>gestion-biblio-webapp</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.opc.projet</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>gestion-biblio-business</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.opc.projet</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>gestion-biblio-consumer</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.opc.projet</groupId>
+                <groupId>${project.groupId}</groupId>
                 <artifactId>gestion-biblio-model</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>gestion-biblio-technical</artifactId>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- ===== Bibliothèques tierces ===== -->
@@ -102,20 +110,28 @@
                 <artifactId>commons-collections4</artifactId>
                 <version>4.2</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.6</version>
+            </dependency>
 
             <!-- Commons-Text -->
+<!--
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-text</artifactId>
                 <version>1.6</version>
+
                 <exclusions>
-                    <!-- Exclusion de Commons-lang3: une dépendance transitive -->
+                    &lt;!&ndash; Exclusion de Commons-lang3: une dépendance transitive &ndash;&gt;
                     <exclusion>
                         <groupId>org.apache.commons</groupId>
                         <artifactId>commons-lang3</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
+-->
 
             <!-- API Servlet en provided -->
             <dependency>
@@ -154,7 +170,7 @@
                 <scope>import</scope>
             </dependency>
 
-
+            <!-- gestion des logs -->
             <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
@@ -171,6 +187,15 @@
                 <artifactId>log4j-jcl</artifactId>
                 <version>2.6.2</version>
                 <scope>runtime</scope>
+            </dependency>
+
+            <!-- BOM Spring -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
         </dependencies>
