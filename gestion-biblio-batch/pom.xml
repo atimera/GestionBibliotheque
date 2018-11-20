@@ -65,7 +65,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.opc.projet.gestionbiblio.business.batch.App</mainClass>
+                            <mainClass>com.opc.projet.gestionbiblio.batch.Main</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix></classpathPrefix>
                         </manifest>

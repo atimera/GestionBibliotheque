@@ -1,8 +1,8 @@
 package com.opc.projet.gestionbiblio.business.contract.manager;
 
-import com.opc.projet.gestionbiblio.business.exception.NotFoundException;
-import com.opc.projet.gestionbiblio.business.recherche.RechercheOuvrage;
-import com.opc.projet.gestionbiblio.business.bean.Ouvrage;
+import com.opc.projet.gestionbiblio.model.exception.NotFoundException;
+import com.opc.projet.gestionbiblio.model.recherche.RechercheOuvrage;
+import com.opc.projet.gestionbiblio.model.bean.Ouvrage;
 
 import java.util.List;
 

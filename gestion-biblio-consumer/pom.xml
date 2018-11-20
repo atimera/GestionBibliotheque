@@ -51,21 +51,23 @@
     <!-- =============================================================== -->
     <!-- Build -->
     <!-- =============================================================== -->
+<!--
     <build>
         <plugins>
             <plugin>
-                <!-- Plugin Jar pour le Packaging JAR -->
+                &lt;!&ndash; Plugin Jar pour le Packaging JAR &ndash;&gt;
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.opc.projet.gestionbiblio.business.consumer.App</mainClass>
+                            <mainClass>com.opc.projet.gestionbiblio.modelnsumer.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
+-->
+
 </project>

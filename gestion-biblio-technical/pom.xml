@@ -46,6 +46,7 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
 
+<!--
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
@@ -58,8 +59,23 @@
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-jcl</artifactId>
         </dependency>
+-->
 
-        <!-- Spring -->
+        <!-- JSR-250 -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.2</version>
+        </dependency>
+        <!-- JSR-330 -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+
+
+        <!-- Spring context -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -69,10 +85,12 @@
     <!-- =============================================================== -->
     <!-- Build -->
     <!-- =============================================================== -->
+
+<!--
     <build>
         <plugins>
             <plugin>
-                <!-- Plugin Jar pour le Packaging JAR -->
+                &lt;!&ndash; Plugin Jar pour le Packaging JAR &ndash;&gt;
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
@@ -86,4 +104,6 @@
 
         </plugins>
     </build>
+-->
+
 </project>

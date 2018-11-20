@@ -61,7 +61,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.opc.projet.gestionbiblio.business.App</mainClass>
+                            <mainClass>com.opc.projet.gestionbiblio.model.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

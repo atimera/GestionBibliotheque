@@ -163,8 +163,8 @@
     <build>
         <finalName>gestion-biblio-webapp</finalName>
 
-        <plugins>
-            <!-- Packaging WAR -->
+<!--        <plugins>
+            &lt;!&ndash; Packaging WAR &ndash;&gt;
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -183,12 +183,12 @@
                 </configuration>
             </plugin>
 
-            <!-- Vérification de règle sur le contexte de construction de Maven -->
+            &lt;!&ndash; Vérification de règle sur le contexte de construction de Maven &ndash;&gt;
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <executions>
-<!--
+&lt;!&ndash;
                     <execution>
                         <id>enforce-profile-target</id>
                         <phase>validate</phase>
@@ -204,10 +204,11 @@
                             </rules>
                         </configuration>
                     </execution>
-                    -->
+                    &ndash;&gt;
                 </executions>
             </plugin>
 
-        </plugins>
+        </plugins>-->
+
     </build>
 </project>

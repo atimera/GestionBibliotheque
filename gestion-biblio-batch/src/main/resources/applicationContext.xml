@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- IoC -->
+    <!-- ===== Déclaration des Managers ===== -->
+    <bean id="exemplaireManager" class="com.opc.projet.gestionbiblio.business.impl.manager.ExemplaireManagerImpl"/>
+    <bean id="ouvrageManager" class="com.opc.projet.gestionbiblio.business.impl.manager.OuvrageManagerImpl"/>
+    <bean id="adresseManager" class="com.opc.projet.gestionbiblio.business.impl.manager.AdresseManagerImpl"/>
+    <bean id="employeManager" class="com.opc.projet.gestionbiblio.business.impl.manager.EmployeManagerImpl"/>
+    <bean id="adherentManager" class="com.opc.projet.gestionbiblio.business.impl.manager.AdherentManagerImpl"/>
+    <bean id="bibliothequeManager" class="com.opc.projet.gestionbiblio.business.impl.manager.BibliothequeManagerImpl"/>
+
+    <!-- ===== ManagerFactoryImpl ===== -->
+    <bean id="managerFactory" class="com.opc.projet.gestionbiblio.business.impl.ManagerFactoryImpl">
+        <property name="exemplaireManager" ref="exemplaireManager"/>
+        <property name="ouvrageManager" ref="ouvrageManager"/>
+        <property name="adresseManager" ref="adresseManager"/>
+        <property name="employeManager" ref="employeManager"/>
+        <property name="adherentManager" ref="adherentManager"/>
+        <property name="bibliothequeManager" ref="bibliothequeManager"/>
+    </bean>
+
+</beans>

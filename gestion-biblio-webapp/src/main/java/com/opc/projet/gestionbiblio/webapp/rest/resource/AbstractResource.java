@@ -1,15 +1,16 @@
 package com.opc.projet.gestionbiblio.webapp.rest.resource;
 
-import com.opc.projet.gestionbiblio.business.ManagerFactory;
+import com.opc.projet.gestionbiblio.business.impl.ManagerFactoryImpl;
 
 public abstract class AbstractResource {
 
-    private static ManagerFactory managerFactory;
+    private static ManagerFactoryImpl managerFactory;
 
-    protected static ManagerFactory getManagerFactory() {
+    protected static ManagerFactoryImpl getManagerFactory() {
         return managerFactory;
     }
-    public static void setManagerFactory(ManagerFactory pManagerFactory) {
+
+    public static void setManagerFactory(ManagerFactoryImpl pManagerFactory) {
         managerFactory = pManagerFactory;
     }
 }
