@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Named("exemplaireManager")
-public class ExemplaireManagerImpl implements ExemplaireManager {
+public class ExemplaireManagerImpl extends AbstractManager implements ExemplaireManager {
     @Override
     public Exemplaire getExemplaire(Integer pId) throws NotFoundException {
         // TODO: 15/11/2018

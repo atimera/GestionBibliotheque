@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Named("adresseManager")
-public class AdresseManagerImpl implements AdresseManager {
+public class AdresseManagerImpl extends AbstractManager implements AdresseManager {
 
     @Override
     public Adresse getAdresse(Integer pId) throws NotFoundException {

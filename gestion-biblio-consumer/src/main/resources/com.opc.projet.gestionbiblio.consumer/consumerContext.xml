@@ -10,8 +10,5 @@
     <bean id="employeDao" class="com.opc.projet.gestionbiblio.consumer.impl.dao.EmployeDaoImpl"/>
 
     <!-- ===== DaoFactory ===== -->
-    <bean id="daoFactory" class="com.opc.projet.gestionbiblio.consumer.impl.DaoFactoryImpl">
-        <property name="adresseDao" ref="adresseDao"/>
-        <property name="employeDao" ref="employeDao"/>
-    </bean>
+    <bean id="daoFactory" class="com.opc.projet.gestionbiblio.consumer.impl.DaoFactoryImpl" />
 </beans>

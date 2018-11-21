@@ -7,12 +7,16 @@
 
     <!-- IoC -->
     <!-- ===== Déclaration des Managers ===== -->
-    <bean id="exemplaireManager" class="com.opc.projet.gestionbiblio.business.impl.manager.ExemplaireManagerImpl"/>
-    <bean id="ouvrageManager" class="com.opc.projet.gestionbiblio.business.impl.manager.OuvrageManagerImpl"/>
-    <bean id="adresseManager" class="com.opc.projet.gestionbiblio.business.impl.manager.AdresseManagerImpl"/>
-    <bean id="employeManager" class="com.opc.projet.gestionbiblio.business.impl.manager.EmployeManagerImpl"/>
-    <bean id="adherentManager" class="com.opc.projet.gestionbiblio.business.impl.manager.AdherentManagerImpl"/>
-    <bean id="bibliothequeManager" class="com.opc.projet.gestionbiblio.business.impl.manager.BibliothequeManagerImpl"/>
+    <bean id="daoFactory" class="com.opc.projet.gestionbiblio.consumer.impl.DaoFactoryImpl" />
+    <bean id="abstractManager" abstract="true">
+        <property name="daoFactory" ref="daoFactory"/>
+    </bean>
+    <bean id="exemplaireManager" class="com.opc.projet.gestionbiblio.business.impl.manager.ExemplaireManagerImpl" parent="abstractManager" />
+    <bean id="ouvrageManager" class="com.opc.projet.gestionbiblio.business.impl.manager.OuvrageManagerImpl" parent="abstractManager" />
+    <bean id="adresseManager" class="com.opc.projet.gestionbiblio.business.impl.manager.AdresseManagerImpl" parent="abstractManager"  />
+    <bean id="employeManager" class="com.opc.projet.gestionbiblio.business.impl.manager.EmployeManagerImpl" parent="abstractManager" />
+    <bean id="adherentManager" class="com.opc.projet.gestionbiblio.business.impl.manager.AdherentManagerImpl" parent="abstractManager" />
+    <bean id="bibliothequeManager" class="com.opc.projet.gestionbiblio.business.impl.manager.BibliothequeManagerImpl" parent="abstractManager" />
 
     <!-- ===== ManagerFactoryImpl ===== -->
     <bean id="managerFactory" class="com.opc.projet.gestionbiblio.business.impl.ManagerFactoryImpl">

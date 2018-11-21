@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Named("employeManager")
-public class EmployeManagerImpl implements EmployeManager {
+public class EmployeManagerImpl extends AbstractManager implements EmployeManager {
 
     @Override
     public Employe getEmploye(Integer pId) throws NotFoundException {

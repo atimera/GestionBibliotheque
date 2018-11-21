@@ -5,5 +5,5 @@ import com.opc.projet.gestionbiblio.business.contract.manager.BibliothequeManage
 import javax.inject.Named;
 
 @Named("bibliothequeManager")
-public class BibliothequeManagerImpl implements BibliothequeManager {
+public class BibliothequeManagerImpl extends AbstractManager implements BibliothequeManager {
 }

@@ -9,7 +9,7 @@ import javax.inject.Named;
 import java.util.List;
 
 @Named("ouvrageManager")
-public class OuvrageManagerImpl implements OuvrageManager {
+public class OuvrageManagerImpl extends AbstractManager implements OuvrageManager {
     @Override
     public Ouvrage getOuvrage(Integer pId) throws NotFoundException {
         // TODO: 19/11/2018
