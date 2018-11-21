@@ -25,7 +25,7 @@ public class Main
      */
     public static void main(String[] pArgs) throws TechnicalException {
         ApplicationContext vApplicationContext
-                //= new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
+                //= new ClassPathXmlApplicationContext("classpath:/batchContext.xml");
                 = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 
         // Il est possible de récupérer un bean dans ce contexte :

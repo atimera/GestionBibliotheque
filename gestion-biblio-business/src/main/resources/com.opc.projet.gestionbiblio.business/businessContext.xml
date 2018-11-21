@@ -5,7 +5,6 @@
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
     <!-- IoC -->
     <!-- ===== Déclaration des Managers ===== -->
     <bean id="exemplaireManager" class="com.opc.projet.gestionbiblio.business.impl.manager.ExemplaireManagerImpl"/>

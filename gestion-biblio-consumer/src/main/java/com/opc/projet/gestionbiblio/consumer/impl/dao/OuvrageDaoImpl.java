@@ -1,4 +1,6 @@
 package com.opc.projet.gestionbiblio.consumer.impl.dao;
 
-public class OuvrageDaoImpl {
+import com.opc.projet.gestionbiblio.consumer.contract.dao.OuvrageDao;
+
+public class OuvrageDaoImpl implements OuvrageDao {
 }

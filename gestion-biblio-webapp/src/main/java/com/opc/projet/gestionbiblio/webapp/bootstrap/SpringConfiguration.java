@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ComponentScan("com.opc.projet.gestionbiblio")
-@ImportResource("classpath:/applicationContext.xml")
+@ImportResource("classpath:/bootstrapContext.xml")
 public class SpringConfiguration {
 
 }
