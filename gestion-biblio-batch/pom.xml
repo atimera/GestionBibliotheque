@@ -46,6 +46,19 @@
         </dependency>
 
         <!-- ===== Bibliothèques tierces ===== -->
+
+        <!-- JDBC postgresSQL -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+
+        <!-- Pool de connexion DBCP -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+        </dependency>
+
         <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
@@ -67,7 +80,7 @@
                         <manifest>
                             <mainClass>com.opc.projet.gestionbiblio.batch.Main</mainClass>
                             <addClasspath>true</addClasspath>
-                            <classpathPrefix></classpathPrefix>
+                            <classpathPrefix />
                         </manifest>
                     </archive>
                 </configuration>

@@ -211,6 +211,21 @@
                 <version>1</version>
             </dependency>
 
+            <!-- Drivers JDBC PostgreSQL -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>9.4.1212</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!-- Pool de connexion DBCP -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

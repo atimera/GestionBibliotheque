@@ -1,7 +1,7 @@
 package com.opc.projet.gestionbiblio.webapp.rest.resource;
 
 import com.opc.projet.gestionbiblio.model.bean.Adherent;
-import com.opc.projet.gestionbiblio.model.bean.Adresse;
+import com.opc.projet.gestionbiblio.model.bean.adresse.Adresse;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

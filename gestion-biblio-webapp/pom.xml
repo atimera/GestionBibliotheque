@@ -112,6 +112,12 @@
             <artifactId>spring-web</artifactId>
         </dependency>
 
+        <!-- JDBC postgresSQL -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+
     </dependencies>
 
     <!-- ======================================================================== -->

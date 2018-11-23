@@ -1,5 +1,7 @@
 package com.opc.projet.gestionbiblio.model.bean;
 
+import com.opc.projet.gestionbiblio.model.bean.adresse.Adresse;
+
 public abstract class Personne {
 
     // ==================== Attributs ==================== //

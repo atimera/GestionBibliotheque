@@ -1,4 +1,4 @@
-package com.opc.projet.gestionbiblio.model.bean;
+package com.opc.projet.gestionbiblio.model.bean.adresse;
 
 public class Adresse {
     // ===================== Attributs =================//

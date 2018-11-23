@@ -13,4 +13,8 @@
         <property name="arguments" ref="managerFactory"/>
     </bean>
 
+    <!-- ajout de la resource dataSourceAdresse -->
+    <bean id="dataSourceAdresse" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="java:comp/env/jdbc/DB_GESTION_BIBLIO"/>
+    </bean>
 </beans>
