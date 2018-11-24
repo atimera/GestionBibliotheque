@@ -226,6 +226,14 @@
                 <version>2.1.1</version>
             </dependency>
 
+            <!-- Hibernate ORM -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-agroal</artifactId>
+                <version>5.3.7.Final</version>
+                <type>pom</type>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

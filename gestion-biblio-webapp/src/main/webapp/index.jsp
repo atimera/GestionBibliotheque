@@ -1,11 +1,17 @@
-<!doctype html>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Gestion de bibliothèques</title>
+    <title>Gestion Biblio</title>
 </head>
-
 <body>
-<h2>Bienvenue sur l'application de Gestion de bibliothèques</h2>
+<h2>Gestion Biblio</h2>
+<hr>
+<ul>
+    <li><a href="address/showForm">Formulaire de saisie d'adresse</a></li>
+    <li><a href="address/list">Liste des adresses</a></li>
+    <li><a href="customer/showForm">Formulaire d'un client</a></li>
+    <li><a href="customer/list">Liste des clients</a></li>
+</ul>
+
 </body>
 </html>

@@ -28,7 +28,7 @@ public class Main
                 //= new ClassPathXmlApplicationContext("classpath:/batchContext.xml");
                 = new AnnotationConfigApplicationContext(SpringConfiguration.class);
 
-        // Il est possible de récupérer un bean dans ce contexte :
+        // Il est possible de récupérer un entity dans ce contexte :
         ManagerFactory vManagerFactory
                 = vApplicationContext.getBean("managerFactory", ManagerFactory.class);
 
