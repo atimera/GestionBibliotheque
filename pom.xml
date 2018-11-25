@@ -219,7 +219,7 @@
                 <scope>runtime</scope>
             </dependency>
 
-            <!-- Pool de connexion DBCP -->
+            <!-- Pool de connexion commons DBCP -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-dbcp2</artifactId>

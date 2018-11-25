@@ -1,4 +1,4 @@
-<!--  OPC app context
+<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns="http://www.springframework.org/schema/beans"
@@ -6,24 +6,22 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-&lt;!&ndash;    <entity id="managerFactory" class="com.opc.projet.gestionbiblio.business.impl.ManagerFactoryImpl" />&ndash;&gt;
+&lt;!&ndash;
+    <entity id="managerFactory" class="com.opc.projet.gestionbiblio.business.impl.ManagerFactoryImpl" />
 
     &lt;!&ndash; ==== AbstractResource ===== &ndash;&gt;
-&lt;!&ndash;
     <entity class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-        <property name="targetClass" value="com.opc.projet.gestionbiblio.webapp.rest.resource.AbstractResource"/>
+        <property name="targetClass" value="com.opc.projet.gestionbiblio.webapp-context.rest.resource.AbstractResource"/>
         <property name="targetMethod" value="setManagerFactory"/>
         <property name="arguments" ref="managerFactory"/>
     </entity>
-&ndash;&gt;
 
     &lt;!&ndash; ajout de la resource dataSourceAdresse &ndash;&gt;
-&lt;!&ndash;
     <entity id="dataSourceAdresse" class="org.springframework.jndi.JndiObjectFactoryBean">
         <property name="jndiName" value="java:comp/env/jdbc/DB_GESTION_BIBLIO"/>
     </entity>
 &ndash;&gt;
 
 </beans>
-
 -->
+

@@ -7,7 +7,7 @@
 
     <!-- Inclusion d'autres fichiers de contexte Spring -->
 <!--
-    <import resource="classpath:/com.opc.projet.gestionblio.webapp/webappContext.xml" />
+    <import resource="classpath:/com.opc.projet.gestionblio.webapp-context/webappContextOLD.xml" />
     <import resource="classpath:/com.opc.projet.gestionbiblio.business/businessContext.xml" />
 -->
 

@@ -14,8 +14,6 @@
     </div>
 </div>
 
-${addresses}
-
 <section id="container">
     <div id="content">
         <table>

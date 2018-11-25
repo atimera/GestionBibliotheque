@@ -1,6 +1,11 @@
-<!--
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
+
+    <!-- Mysql -->
+    <!--<Resource />-->
+
+    <!-- Posgres sql-->
+<!--
     <Resource name="jdbc/DB_GESTION_BIBLIO"
               auth="Container"
               type="javax.sql.DataSource"
@@ -26,5 +31,5 @@
               testWhileIdle="true"
               testOnBorrow="true"
     />
+    -->
 </Context>
--->
