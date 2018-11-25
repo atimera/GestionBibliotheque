@@ -1,7 +1,7 @@
 package com.opc.projet.gestionbiblio.business.impl.manager;
 
 import com.opc.projet.gestionbiblio.business.contract.manager.AdresseManager;
-import com.opc.projet.gestionbiblio.model.bean.Adresse;
+import com.opc.projet.gestionbiblio.model.bean.adresse.Adresse;
 import com.opc.projet.gestionbiblio.model.exception.NotFoundException;
 
 import javax.inject.Named;

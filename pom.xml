@@ -211,6 +211,29 @@
                 <version>1</version>
             </dependency>
 
+            <!-- Drivers JDBC PostgreSQL -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>9.4.1212</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!-- Pool de connexion commons DBCP -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+
+            <!-- Hibernate ORM -->
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-agroal</artifactId>
+                <version>5.3.7.Final</version>
+                <type>pom</type>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

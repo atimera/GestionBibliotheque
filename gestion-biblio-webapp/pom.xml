@@ -39,6 +39,7 @@
     <!-- =============================================================== -->
     <dependencies>
         <!-- ===== Modules ===== -->
+<!--
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>${project.parent.artifactId}-business</artifactId>
@@ -51,6 +52,7 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>${project.parent.artifactId}-technical</artifactId>
         </dependency>
+-->
 
         <!-- ===== Bibliothèques tierces ===== -->
         <!-- JUnit -->
@@ -112,6 +114,73 @@
             <artifactId>spring-web</artifactId>
         </dependency>
 
+        <!-- Spring MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- Spring ORM -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+        </dependency>
+
+
+        <!-- Hibernate ORM -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-agroal</artifactId>
+            <version>5.3.7.Final</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.3.7.Final</version>
+        </dependency>
+
+
+        <!-- Mysql Jdbc -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.13</version>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- c3pO Pool de connexion -->
+        <!-- https://mvnrepository.com/artifact/c3p0/c3p0 -->
+        <dependency>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/jstl/jstl -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+
+        <!-- JDBC postgresSQL -->
+<!--
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
+-->
+
     </dependencies>
 
     <!-- ======================================================================== -->
@@ -163,16 +232,16 @@
     <build>
         <finalName>gestion-biblio-webapp</finalName>
 
-<!--        <plugins>
-            &lt;!&ndash; Packaging WAR &ndash;&gt;
-            <plugin>
+        <plugins>
+            <!-- Packaging WAR -->
+<!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
                     <webResources>
                         <resource>
                             <filtering>true</filtering>
-                            <directory>src/main/webapp</directory>
+                            <directory>src/main/webapp-context</directory>
                             <includes>
                                 <include>jsp/_include/header.jsp</include>
                                 <include>jsp/_include/footer.jsp</include>
@@ -181,14 +250,14 @@
                         </resource>
                     </webResources>
                 </configuration>
-            </plugin>
+            </plugin>-->
 
-            &lt;!&ndash; Vérification de règle sur le contexte de construction de Maven &ndash;&gt;
+            <!-- Vérification de règle sur le contexte de construction de Maven -->
+<!--
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-enforcer-plugin</artifactId>
                 <executions>
-&lt;!&ndash;
                     <execution>
                         <id>enforce-profile-target</id>
                         <phase>validate</phase>
@@ -204,11 +273,11 @@
                             </rules>
                         </configuration>
                     </execution>
-                    &ndash;&gt;
                 </executions>
             </plugin>
+-->
 
-        </plugins>-->
+        </plugins>
 
     </build>
 </project>
