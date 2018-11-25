@@ -32,7 +32,7 @@ public class AddressController {
         return "list-addresses";
     }
 
-    @RequestMapping("showForm")
+    @RequestMapping("/showForm")
     public String showForm(Model theModel){
 
         theModel.addAttribute("address", new Address());
@@ -40,15 +40,35 @@ public class AddressController {
         return "address-form";
     }
 
-    @RequestMapping("processForm")
+    @RequestMapping("/processForm")
     public String processForm(@Valid @ModelAttribute("address") Address theAddress,
                               BindingResult bindingResult){
+
+        // manuel validation
+        if(theAddress.getPostalCode()== null || theAddress.getPostalCode().length() != 5
+            || theAddress.getCity() == null || theAddress.getCity().length() < 5){
+            return "list-addresses";
+        }
+
+        System.out.println("\n\n");
+        System.out.println(theAddress);
+        System.out.println("\n\n");
+
 
         if (bindingResult.hasErrors()){
             return "address-form";
         }else {
+            addressDao.add(theAddress);
             return "address-confirmation";
         }
+    }
+    
+    @RequestMapping("/delete{id}")
+    public String delete(){
+
+        // TODO: 25/11/2018  
+        
+        return "list-addresses";
     }
 
 
