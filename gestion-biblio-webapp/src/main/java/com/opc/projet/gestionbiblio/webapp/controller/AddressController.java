@@ -16,8 +16,8 @@ import java.util.List;
 @RequestMapping("/address")
 public class AddressController {
 
-    // need to inject the Address Dao
-    @Autowired // will look for AddressDaoImpl
+
+    @Autowired
     private AddressDao addressDao;
 
     @RequestMapping("/list")
@@ -44,11 +44,14 @@ public class AddressController {
     public String processForm(@Valid @ModelAttribute("address") Address theAddress,
                               BindingResult bindingResult){
 
+
         // manuel validation
         if(theAddress.getPostalCode()== null || theAddress.getPostalCode().length() != 5
             || theAddress.getCity() == null || theAddress.getCity().length() < 5){
             return "list-addresses";
         }
+
+        // TODO: 25/11/2018 Form Validation
 
         System.out.println("\n\n");
         System.out.println(theAddress);
@@ -58,7 +61,7 @@ public class AddressController {
         if (bindingResult.hasErrors()){
             return "address-form";
         }else {
-            addressDao.add(theAddress);
+            // addressDao.add(theAddress);
             return "address-confirmation";
         }
     }
@@ -66,7 +69,7 @@ public class AddressController {
     @RequestMapping("/delete{id}")
     public String delete(){
 
-        // TODO: 25/11/2018  
+        // TODO: 25/11/2018
         
         return "list-addresses";
     }

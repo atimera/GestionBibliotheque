@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
+@Named
 public class CustomerDaoImpl implements CustomerDao {
 
     // nend to inject session Factory

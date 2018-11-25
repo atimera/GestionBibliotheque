@@ -4,7 +4,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class Address {
+public class AddressModel {
 
     @NotNull
     @Size(min = 5, message = "addresse trop courte")
@@ -22,11 +22,11 @@ public class Address {
     @Pattern(regexp = "", message = "Code postal invalide")
     private String city;
 
-    public Address(){
+    public AddressModel(){
 
     }
 
-    public Address(String address, String postalCode, String city) {
+    public AddressModel(String address, String postalCode, String city) {
         this.address = address;
         this.postalCode = postalCode;
         this.city = city;

@@ -11,8 +11,6 @@
     <li><a href="address/list">Liste des adresses</a></li>
     <li><a href="customer/showForm">Formulaire d'un client</a></li>
     <li><a href="customer/list">Liste des clients</a></li>
-    <li><a href="library/showForm">Formulaire de saisie d'un bibliothèque</a></li>
-    <li><a href="library/list">Liste des des bibliothèque</a></li>
 </ul>
 
 </body>

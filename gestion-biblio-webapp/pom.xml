@@ -234,7 +234,8 @@
 
         <plugins>
             <!-- Packaging WAR -->
-<!--            <plugin>
+<!--
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <configuration>
@@ -250,7 +251,8 @@
                         </resource>
                     </webResources>
                 </configuration>
-            </plugin>-->
+            </plugin>
+-->
 
             <!-- Vérification de règle sur le contexte de construction de Maven -->
 <!--
