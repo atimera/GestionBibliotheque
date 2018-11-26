@@ -9,7 +9,16 @@
 </head>
 <body>
 
-<h2>Saisie d'une adresse</h2>
+<div class="wrapper">
+    <div class="header">
+        <header>
+            <h2>Gestion de bibliothèques</h2>
+        </header>
+    </div>
+</div>
+
+
+<h3>Saisie d'une adresse</h3>
 
 
 <form:form action="processForm" modelAttribute="library">

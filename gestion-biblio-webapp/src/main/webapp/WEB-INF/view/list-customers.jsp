@@ -9,18 +9,21 @@
 </head>
 <body>
 
-<div id="wrapper">
-    <div id="header">
-        <header>CRM - Customer Relationship Manager</header>
+<div class="wrapper">
+    <div class="header">
+        <header>
+            <h2>Gestion de bibliothèques</h2>
+        </header>
     </div>
 </div>
 
-<section id="container">
-    <div id="content">
+<section class="container">
+    <h3>Liste des clients</h3>
+    <div class="content">
         <table>
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>Prénom</th>
+                <th>Nom</th>
                 <th>Email</th>
             </tr>
 

@@ -45,6 +45,8 @@ public class CustomerController {
     public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer,
                               BindingResult bindingResult){
 
+        // TODO: 26/11/2018  
+        
         if (bindingResult.hasErrors()){
             return "customer-form";
         }else {

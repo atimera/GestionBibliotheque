@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<div class="wrapper">
+    <div class="header">
+        <header>
+            <h2>Gestion de bibliothèques</h2>
+        </header>
+    </div>
+</div>
+
+
 <h2>Client</h2>
 
 Prénom : ${customer.firstName}

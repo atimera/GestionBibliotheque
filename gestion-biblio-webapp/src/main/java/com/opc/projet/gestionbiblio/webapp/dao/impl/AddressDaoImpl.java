@@ -13,7 +13,6 @@ import javax.inject.Named;
 import java.util.List;
 
 @Repository
-@Named
 public class AddressDaoImpl implements AddressDao {
 
     // need to inject session Factory
@@ -21,7 +20,6 @@ public class AddressDaoImpl implements AddressDao {
     SessionFactory sessionFactory;
 
     @Override
-    @Transactional
     public List<Address> getAddresses() {
 
         // get the current hibernate session
@@ -33,17 +31,10 @@ public class AddressDaoImpl implements AddressDao {
         // executre query and get results
         return theQuery.getResultList();
 
-        // for example without db
-//        List<Address> addressList = new ArrayList<>();
-//        addressList.add( new Address("15 Avenue auguste renoir", "77680", "Roissy en brie"));
-//        addressList.add( new Address("2 Boulevard des près", "77008", "Paris"));
-//        addressList.add( new Address("10 Allée Eugène Pottier", "77420", "Champs sur marne"));
-//        return addressList;
     }
 
     @Override
-    @Transactional
-    public void add(Address address) {
+    public void save(Address address) {
 
         Session currentSession = sessionFactory.getCurrentSession();
         currentSession.save(address);
@@ -51,7 +42,6 @@ public class AddressDaoImpl implements AddressDao {
     }
 
     @Override
-    @Transactional
     public Address get(Integer addressId) {
 
         return sessionFactory.getCurrentSession().get(Address.class, addressId);
@@ -59,7 +49,6 @@ public class AddressDaoImpl implements AddressDao {
     }
 
     @Override
-    @Transactional
     public void delete(Integer addressId) {
         sessionFactory.getCurrentSession().delete(addressId);
     }

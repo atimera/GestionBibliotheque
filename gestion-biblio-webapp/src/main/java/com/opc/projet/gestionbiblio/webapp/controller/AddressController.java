@@ -1,12 +1,14 @@
 package com.opc.projet.gestionbiblio.webapp.controller;
 
-import com.opc.projet.gestionbiblio.webapp.dao.contract.AddressDao;
 import com.opc.projet.gestionbiblio.webapp.entity.Address;
+import com.opc.projet.gestionbiblio.webapp.service.contract.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
@@ -18,13 +20,13 @@ public class AddressController {
 
 
     @Autowired
-    private AddressDao addressDao;
+    private AddressService addressService;
 
-    @RequestMapping("/list")
+    @GetMapping("/list")
     public String listAddresses(Model theModel){
 
-        // get addresses from the dao
-        List<Address> theAddresses = addressDao.getAddresses();
+
+        List<Address> theAddresses = addressService.getAddresses();
 
         // add addresses the spring mvc model
         theModel.addAttribute("addresses", theAddresses);
@@ -32,7 +34,7 @@ public class AddressController {
         return "list-addresses";
     }
 
-    @RequestMapping("/showForm")
+    @GetMapping("/showForm")
     public String showForm(Model theModel){
 
         theModel.addAttribute("address", new Address());
@@ -40,30 +42,24 @@ public class AddressController {
         return "address-form";
     }
 
-    @RequestMapping("/processForm")
-    public String processForm(@Valid @ModelAttribute("address") Address theAddress,
+    @GetMapping("showFormForAdd")
+    public String showFormForAdd(Model theModel){
+
+        theModel.addAttribute("address", new Address());
+
+
+        return "address-form";
+    }
+
+    @PostMapping("/saveAddress")
+    public String saveAddress(@Valid @ModelAttribute("address") Address theAddress,
                               BindingResult bindingResult){
-
-
-        // manuel validation
-        if(theAddress.getPostalCode()== null || theAddress.getPostalCode().length() != 5
-            || theAddress.getCity() == null || theAddress.getCity().length() < 5){
-            return "list-addresses";
-        }
 
         // TODO: 25/11/2018 Form Validation
 
-        System.out.println("\n\n");
-        System.out.println(theAddress);
-        System.out.println("\n\n");
+        addressService.saveAddress(theAddress);
 
-
-        if (bindingResult.hasErrors()){
-            return "address-form";
-        }else {
-            // addressDao.add(theAddress);
-            return "address-confirmation";
-        }
+        return "redirect:/address/list";
     }
     
     @RequestMapping("/delete{id}")

@@ -9,6 +9,15 @@
 </head>
 <body>
 
+<div class="wrapper">
+    <div class="header">
+        <header>
+            <h2>Gestion de bibliothèques</h2>
+        </header>
+    </div>
+</div>
+
+
 <h2>Saisie d'un client</h2>
 
 <form:form action="processForm" modelAttribute="customer">

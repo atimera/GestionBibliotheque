@@ -9,16 +9,16 @@
 </head>
 <body>
 
-<div id="wrapper">
-    <div id="header">
+<div class="wrapper">
+    <div class="header">
         <header>
             <h2>Liste des Bibliothèques</h2>
         </header>
     </div>
 </div>
 
-<section id="container">
-    <div id="content">
+<section class="container">
+    <div class="content">
 
         <c:forEach var="library" items="${libraries}">
 
