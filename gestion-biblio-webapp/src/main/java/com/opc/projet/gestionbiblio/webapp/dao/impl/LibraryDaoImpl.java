@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-@Named
 public class LibraryDaoImpl implements LibraryDao {
 
     @Autowired

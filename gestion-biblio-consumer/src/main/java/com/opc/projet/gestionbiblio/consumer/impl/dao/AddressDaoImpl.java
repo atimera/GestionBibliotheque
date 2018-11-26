@@ -9,10 +9,10 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.inject.Named;
+
 import java.util.List;
 
-@Named
+//@Named
 public class AddressDaoImpl extends AbstractDaoImpl implements AddressDao {
 
     // need to inject session Factory

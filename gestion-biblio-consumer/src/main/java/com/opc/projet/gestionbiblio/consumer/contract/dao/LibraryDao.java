@@ -3,10 +3,9 @@ package com.opc.projet.gestionbiblio.consumer.contract.dao;
 import com.opc.projet.gestionbiblio.model.bean.Library;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.inject.Named;
 import java.util.List;
 
-@Named
+
 public interface LibraryDao {
 
     @Transactional

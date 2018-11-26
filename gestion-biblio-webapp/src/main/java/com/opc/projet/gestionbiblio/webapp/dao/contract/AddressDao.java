@@ -2,10 +2,9 @@ package com.opc.projet.gestionbiblio.webapp.dao.contract;
 
 import com.opc.projet.gestionbiblio.webapp.entity.Address;
 
-import javax.inject.Named;
 import java.util.List;
 
-@Named
+
 public interface AddressDao {
 
     /**

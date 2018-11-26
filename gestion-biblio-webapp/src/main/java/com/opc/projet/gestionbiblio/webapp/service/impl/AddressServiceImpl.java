@@ -23,16 +23,19 @@ public class AddressServiceImpl implements AddressService {
     }
 
     @Override
+    @Transactional
     public void saveAddress(Address address) {
         addressDao.save(address);
     }
 
     @Override
+    @Transactional
     public Address get(Integer addressId) {
         return addressDao.get(addressId);
     }
 
     @Override
+    @Transactional
     public void delete(Integer addressId) {
         addressDao.delete(addressId);
     }

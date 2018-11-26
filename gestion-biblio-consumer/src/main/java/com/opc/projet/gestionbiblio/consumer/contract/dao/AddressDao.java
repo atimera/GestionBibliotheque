@@ -2,11 +2,10 @@ package com.opc.projet.gestionbiblio.consumer.contract.dao;
 
 import com.opc.projet.gestionbiblio.model.bean.Address;
 
-import javax.inject.Named;
 import javax.transaction.Transactional;
 import java.util.List;
 
-@Named
+
 public interface AddressDao {
 
     /**
