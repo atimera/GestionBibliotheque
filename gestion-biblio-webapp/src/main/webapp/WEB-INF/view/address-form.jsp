@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire Adresse</title>
-
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-address-style.css" />
     <style type="text/css">
         .error{ color: red; }
     </style>

@@ -5,10 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire Client</title>
-
-    <style type="text/css">
-        .error{ color: red; }
-    </style>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
 

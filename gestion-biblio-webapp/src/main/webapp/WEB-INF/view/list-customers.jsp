@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>List of Customers</title>
+    <meta charset="UTF-8">
+    <title>List of Customers</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
 

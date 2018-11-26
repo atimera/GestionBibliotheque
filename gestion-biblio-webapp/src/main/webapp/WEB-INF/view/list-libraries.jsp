@@ -5,12 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Bibibliothèques</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
 
 <div id="wrapper">
     <div id="header">
-        <header>Liste des Bibliothèques</header>
+        <header>
+            <h2>Liste des Bibliothèques</h2>
+        </header>
     </div>
 </div>
 

@@ -2,6 +2,8 @@
 <html>
 <head>
     <title>Gestion Biblio</title>
+    <link type="text/css" rel="stylesheet"
+          href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
 <h2>Gestion Biblio</h2>

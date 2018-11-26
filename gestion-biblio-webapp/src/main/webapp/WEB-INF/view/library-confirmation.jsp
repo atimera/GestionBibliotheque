@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Confirmation - Saisie Bibliothèque</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
 
