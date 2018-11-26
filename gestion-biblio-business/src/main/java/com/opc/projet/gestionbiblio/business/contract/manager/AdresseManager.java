@@ -1,6 +1,6 @@
 package com.opc.projet.gestionbiblio.business.contract.manager;
 
-import com.opc.projet.gestionbiblio.model.bean.adresse.Adresse;
+import com.opc.projet.gestionbiblio.model.bean.Address;
 import com.opc.projet.gestionbiblio.model.exception.NotFoundException;
 
 import java.util.List;
@@ -8,18 +8,18 @@ import java.util.List;
 public interface AdresseManager {
 
     /**
-     * Cherche et renvoie le {@link Adresse} numéro {@code pNumero}
+     * Cherche et renvoie le {@link Address} numéro {@code pNumero}
      *
      * @param pId l'id de l'exemplaire
-     * @return Le {@link Adresse}
+     * @return Le {@link Address}
      * @throws NotFoundException Si l'ouvrage n'est pas trouvé
      */
-    Adresse getAdresse(Integer pId) throws NotFoundException;
+    Address getAdresse(Integer pId) throws NotFoundException;
 
     /**
-     * Renvoie la liste des {@link Adresse} correspondants aux critères de recherche.
+     * Renvoie la liste des {@link Address} correspondants aux critères de recherche.
      *
      * @return List
      */
-    List<Adresse> getListAdresse();
+    List<Address> getListAdresse();
 }

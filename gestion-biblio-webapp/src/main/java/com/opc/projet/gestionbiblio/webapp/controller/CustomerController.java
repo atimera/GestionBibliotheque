@@ -1,6 +1,6 @@
 package com.opc.projet.gestionbiblio.webapp.controller;
 
-import com.opc.projet.gestionbiblio.webapp.dao.contract.CustomerDao;
+import com.opc.projet.gestionbiblio.webapp.dao.contract.MemberDao;
 import com.opc.projet.gestionbiblio.webapp.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +19,7 @@ public class CustomerController {
 
 
     @Autowired
-    private CustomerDao customerDao;
+    private MemberDao customerDao;
 
     @RequestMapping("/list")
     public String listCustomer(Model theModel){

@@ -1,6 +1,6 @@
 package com.opc.projet.gestionbiblio.model.bean;
 
-public class Ouvrage {
+public class Book {
     // ==================== Attributs ====================
     private Integer id;
     private String titre;
@@ -11,7 +11,7 @@ public class Ouvrage {
     /**
      * Constructeur par défaut.
      */
-    public Ouvrage() {
+    public Book() {
     }
 
     /**
@@ -19,7 +19,7 @@ public class Ouvrage {
      *
      * @param pId -
      */
-    public Ouvrage(Integer pId) {
+    public Book(Integer pId) {
         id = pId;
     }
 

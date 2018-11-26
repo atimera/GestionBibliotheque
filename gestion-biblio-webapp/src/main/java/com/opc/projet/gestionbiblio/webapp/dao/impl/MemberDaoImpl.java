@@ -1,6 +1,6 @@
 package com.opc.projet.gestionbiblio.webapp.dao.impl;
 
-import com.opc.projet.gestionbiblio.webapp.dao.contract.CustomerDao;
+import com.opc.projet.gestionbiblio.webapp.dao.contract.MemberDao;
 import com.opc.projet.gestionbiblio.webapp.entity.Customer;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Repository
 @Named
-public class CustomerDaoImpl implements CustomerDao {
+public class MemberDaoImpl implements MemberDao {
 
     // nend to inject session Factory
     @Autowired

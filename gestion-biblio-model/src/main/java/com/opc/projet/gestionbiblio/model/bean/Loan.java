@@ -1,6 +1,6 @@
 package com.opc.projet.gestionbiblio.model.bean;
 
-public class Pret {
+public class Loan {
 
 //    private Adherent personne;
 //    private Exemplaire exemplaire;

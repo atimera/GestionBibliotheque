@@ -19,7 +19,8 @@
     <artifactId>gestion-biblio-webapp</artifactId>
     <packaging>war</packaging>
     <url>http://maven.apache.org</url>
-    <name>${projectName} - Application web</name>
+    <!--<name>${projectName} - Application web</name>-->
+    <!--<name>${projectName} - Application web</name>-->
 
     <!-- =============================================================== -->
     <!-- Propriétés -->
@@ -39,7 +40,6 @@
     <!-- =============================================================== -->
     <dependencies>
         <!-- ===== Modules ===== -->
-<!--
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>${project.parent.artifactId}-business</artifactId>
@@ -52,7 +52,6 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>${project.parent.artifactId}-technical</artifactId>
         </dependency>
--->
 
         <!-- ===== Bibliothèques tierces ===== -->
         <!-- JUnit -->
@@ -158,6 +157,7 @@
             <artifactId>c3p0</artifactId>
             <version>0.9.1.2</version>
         </dependency>
+        
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

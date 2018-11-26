@@ -6,14 +6,6 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- chargement du fichier conf/db-ticket.properties -->
-    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="locations">
-            <list>
-                <value>file:${TICKET_HOME}/conf/db-ticket.properties</value>
-            </list>
-        </property>
-        <property name="ignoreUnresolvablePlaceholders" value="false"/>
-    </bean>
 
 
 </beans>

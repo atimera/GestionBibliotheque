@@ -1,16 +1,16 @@
 package com.opc.projet.gestionbiblio.model.bean;
 
-public class Adherent extends Personne {
+public class Employee extends Person {
 
     // ===================== Attributs =================//
     private String email;
     private String mdp;
 
     // ==================== Constructeurs =====================//
-    public Adherent(){
+    public Employee(){
     }
 
-    public Adherent(Integer pId){
+    public Employee(Integer pId){
         super(pId);
     }
 
@@ -33,5 +33,6 @@ public class Adherent extends Personne {
     }
 
     // ==================== Methods ====================//
+
 
 }

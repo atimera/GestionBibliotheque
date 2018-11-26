@@ -2,7 +2,6 @@ package com.opc.projet.gestionbiblio.business.impl;
 
 import com.opc.projet.gestionbiblio.business.contract.ManagerFactory;
 import com.opc.projet.gestionbiblio.business.contract.manager.*;
-import com.opc.projet.gestionbiblio.model.bean.Employe;
 
 import javax.inject.Inject;
 import javax.inject.Named;

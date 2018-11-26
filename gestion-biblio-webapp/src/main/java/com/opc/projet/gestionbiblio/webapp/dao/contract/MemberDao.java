@@ -5,7 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-public interface CustomerDao {
+public interface MemberDao {
 
     @Transactional
     List<Customer> getCustomers();

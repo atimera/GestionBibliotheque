@@ -2,7 +2,7 @@ package com.opc.projet.gestionbiblio.model.bean;
 
 import java.util.Date;
 
-public class Exemplaire {
+public class Copy {
 
     // ================= Attributs ======================= //
     private Integer id;
@@ -10,10 +10,10 @@ public class Exemplaire {
 
     // ================== Constructors ================= //
 
-    public Exemplaire(){
+    public Copy(){
     }
 
-    public Exemplaire(Integer pId){
+    public Copy(Integer pId){
         id = pId;
     }
 

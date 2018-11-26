@@ -1,6 +1,6 @@
-package com.opc.projet.gestionbiblio.webapp.dao.contract;
+package com.opc.projet.gestionbiblio.consumer.contract.dao;
 
-import com.opc.projet.gestionbiblio.webapp.entity.Library;
+import com.opc.projet.gestionbiblio.model.bean.Library;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Named;
@@ -24,8 +24,5 @@ public interface LibraryDao {
 
 
     public Library get(Integer libraryId);
-
-
-
 
 }

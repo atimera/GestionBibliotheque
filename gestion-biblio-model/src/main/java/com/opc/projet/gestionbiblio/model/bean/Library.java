@@ -1,23 +1,22 @@
 package com.opc.projet.gestionbiblio.model.bean;
 
-import com.opc.projet.gestionbiblio.model.bean.adresse.Adresse;
-
-public class Bibliotheque {
+public class Library {
 
     // ==================== Attributs ================//
     private Integer id;
-    private String nom;
-    private Adresse adresse;
+    private String name;
+    private Address address;
 
     // ==================== Constructeurs =====================//
-    public Bibliotheque(){
+    public Library(){
     }
 
-    public Bibliotheque(Integer pId){
+    public Library(Integer pId){
         id = pId;
     }
 
     // ==================== Getters/Setters ====================//
+
     public Integer getId() {
         return id;
     }
@@ -26,20 +25,20 @@ public class Bibliotheque {
         this.id = id;
     }
 
-    public String getNom() {
-        return nom;
+    public String getName() {
+        return name;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Adresse getAdresse() {
-        return adresse;
+    public Address getAddress() {
+        return address;
     }
 
-    public void setAdresse(Adresse adresse) {
-        this.adresse = adresse;
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
 

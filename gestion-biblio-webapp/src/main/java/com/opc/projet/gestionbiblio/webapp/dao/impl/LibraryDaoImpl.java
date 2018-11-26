@@ -39,4 +39,22 @@ public class LibraryDaoImpl implements LibraryDao {
         sessionFactory.getCurrentSession().save(library);
 
     }
+
+    @Override
+    public void update(Integer libraryId) {
+        // TODO: 25/11/2018
+    }
+
+    @Override
+    public Library get(Integer libraryId) {
+        Library library = null;
+        try {
+            library = sessionFactory.getCurrentSession().get(Library.class, libraryId);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return library;
+
+    }
 }

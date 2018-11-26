@@ -6,9 +6,9 @@
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- ===== Déclaration des DAO ===== -->
-    <bean id="adresseDao" class="com.opc.projet.gestionbiblio.consumer.impl.dao.AdresseDaoImpl"/>
-    <bean id="employeDao" class="com.opc.projet.gestionbiblio.consumer.impl.dao.EmployeDaoImpl"/>
+    <!--<bean id="adresseDao" class="com.opc.projet.gestionbiblio.consumer.impl.dao.AdresseDaoImpl"/>-->
+    <!--<bean id="employeDao" class="com.opc.projet.gestionbiblio.consumer.impl.dao.EmployeDaoImpl"/>-->
 
     <!-- ===== DaoFactory ===== -->
-    <bean id="daoFactory" class="com.opc.projet.gestionbiblio.consumer.impl.DaoFactoryImpl" />
+    <!--<bean id="daoFactory" class="com.opc.projet.gestionbiblio.consumer.impl.DaoFactoryImpl" />-->
 </beans>
