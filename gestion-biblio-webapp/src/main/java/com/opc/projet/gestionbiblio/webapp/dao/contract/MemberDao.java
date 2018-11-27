@@ -1,13 +1,19 @@
 package com.opc.projet.gestionbiblio.webapp.dao.contract;
 
 import com.opc.projet.gestionbiblio.webapp.entity.Member;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 
 public interface MemberDao {
 
-    @Transactional
-    List<Member> getMembers();
+    public List<Member> getAll();
+
+    public void save(Member book);
+
+    public void update(Member book);
+
+    public Member get(Integer id);
+
+    public void delete(Integer id);
 }

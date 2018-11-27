@@ -2,50 +2,56 @@ package com.opc.projet.gestionbiblio.webapp.dao.impl;
 
 import com.opc.projet.gestionbiblio.webapp.dao.contract.MemberDao;
 import com.opc.projet.gestionbiblio.webapp.entity.Member;
+import com.opc.projet.gestionbiblio.webapp.entity.Person;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 public class MemberDaoImpl implements MemberDao {
 
-    // nend to inject session Factory
     @Autowired
-    private SessionFactory sessionFactory;
+    SessionFactory sessionFactory;
 
     @Override
-    @Transactional
-    public List<Member> getMembers() {
+    public List<Member> getAll() {
 
-//        // get the current hibernate session
-//        Session currentSession = sessionFactory.getCurrentSession();
-//
-//        EntityManager entityManager = sessionFactory.createEntityManager();
-//
-//        // create a query
-//        //Query<Member> theQuery = currentSession.createQuery("select a from Member a", Member.class);
-//
-//        // executre query and get results
-//        String sql = "select c from Member c";
-//        List<Member> results = entityManager.createQuery(sql, Member.class).getResultList();
-//
-//        if(results == null){
-//            System.out.println( "\nPAS de Résultalt\n");
-//        }
-//
-//        // return the list
-//        return results;
+        return sessionFactory.getCurrentSession()
+                .createQuery("SELECT m FROM Member m", Member.class)
+                .getResultList();
 
-        // for example without db
-        List<Member> memberList = new ArrayList<>();
-        memberList.add(new Member("John", "Doe", "john.doe@gmail.com"));
-        memberList.add(new Member("Franc", "Leroy", "leroy.franc@gmail.com"));
-        memberList.add(new Member("Moise", "Camara", "moise.camara@hotmail.com"));
-        return memberList;
     }
 
+    @Override
+    public void save(Member member) {
+
+        try {
+            sessionFactory.getCurrentSession().save(member);
+        } catch (Exception ignored) {
+        }
+
+    }
+
+    public void update(Member member) {
+        try {
+            sessionFactory.getCurrentSession().update(member);
+        } catch (Exception ignored) {
+        }
+    }
+
+    @Override
+    public Member get(Integer id) {
+        return sessionFactory.getCurrentSession().get(Member.class, id);
+    }
+
+    @Override
+    public void delete(Integer id) {
+        try {
+            sessionFactory.getCurrentSession().delete(id);
+        } finally {
+            sessionFactory.close();
+        }
+    }
 }

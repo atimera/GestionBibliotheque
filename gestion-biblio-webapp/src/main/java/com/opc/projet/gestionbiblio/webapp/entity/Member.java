@@ -3,19 +3,8 @@ package com.opc.projet.gestionbiblio.webapp.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customer")
-public class Member {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
-
-    @Column(name = "first_name")
-    private String firstName;
-
-    @Column(name = "last_name")
-    private String lastName;
+@Table(name = "member")
+public class Member extends Person{
 
     @Column(name = "email")
     private String email;
@@ -24,37 +13,11 @@ public class Member {
     private String password;
 
     public Member(){
-
     }
 
     public Member(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+        super(firstName, lastName);
         this.email = email;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -73,4 +36,11 @@ public class Member {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "Member{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }

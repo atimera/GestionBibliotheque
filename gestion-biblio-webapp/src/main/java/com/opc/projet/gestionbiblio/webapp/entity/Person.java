@@ -3,22 +3,23 @@ package com.opc.projet.gestionbiblio.webapp.entity;
 import javax.persistence.*;
 
 
-@MappedSuperclass
-public class Person {
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Integer id;
+    @Column(name = "id", updatable = false, nullable = false)
+    protected Integer id;
 
     @Column(name = "first_name")
-    private String firstName;
+    protected String firstName;
 
     @Column(name = "last_name")
-    private String lastName;
+    protected String lastName;
 
     @Column(name = "gender")
-    private char gender; // F or M or O for other;
+    protected char gender; // F or M or O for other;
 
     public Person(){
     }
@@ -60,4 +61,13 @@ public class Person {
         this.gender = gender;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender=" + gender +
+                '}';
+    }
 }

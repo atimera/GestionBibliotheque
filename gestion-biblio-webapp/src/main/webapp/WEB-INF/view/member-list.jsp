@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>List of Members</title>
+    <title>Liste des Membre</title>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
@@ -18,13 +18,14 @@
 </div>
 
 <section class="container">
-    <h3>Liste des clients</h3>
+    <h3>Liste des membres</h3>
     <div class="content">
         <table>
             <tr>
                 <th>Prénom</th>
                 <th>Nom</th>
                 <th>Email</th>
+                <th>Sexe</th>
             </tr>
 
             <c:forEach var="member" items="${members}">
@@ -32,6 +33,7 @@
                     <td>${member.firstName}</td>
                     <td>${member.lastName}</td>
                     <td>${member.email}</td>
+                    <td>${member.gender}</td>
                 </tr>
             </c:forEach>
 
