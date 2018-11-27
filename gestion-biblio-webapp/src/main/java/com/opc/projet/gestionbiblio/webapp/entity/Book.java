@@ -2,7 +2,6 @@ package com.opc.projet.gestionbiblio.webapp.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -18,16 +17,16 @@ public class Book {
     private String title;
 
     @Column(name = "date_of_publication")
-    private Date dateOfPublication;
+    private String dateOfPublication;
 
     // when a book is deleted, all it's copies will be deleted
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "book", cascade = {CascadeType.ALL})
     private List<BookCopy> copies;
 
     public Book() {
     }
 
-    public Book(String title, Date dateOfPublication) {
+    public Book(String title, String dateOfPublication) {
         this.title = title;
         this.dateOfPublication = dateOfPublication;
     }
@@ -48,11 +47,11 @@ public class Book {
         this.title = title;
     }
 
-    public Date getDateOfPublication() {
+    public String getDateOfPublication() {
         return dateOfPublication;
     }
 
-    public void setDateOfPublication(Date dateOfPublication) {
+    public void setDateOfPublication(String dateOfPublication) {
         this.dateOfPublication = dateOfPublication;
     }
 

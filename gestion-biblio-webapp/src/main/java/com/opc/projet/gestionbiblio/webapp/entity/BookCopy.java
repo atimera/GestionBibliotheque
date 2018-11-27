@@ -1,10 +1,9 @@
 package com.opc.projet.gestionbiblio.webapp.entity;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
-@Table
+@Table(name = "bookcopy")
 public class BookCopy {
 
     @Id
@@ -12,8 +11,11 @@ public class BookCopy {
     @Column(name = "id")
     private Integer id;
 
+    @Column(name = "reference")
+    private String reference;
+
     @Column(name = "date_of_purchase")
-    private Date dateOfPurchase;
+    private String dateOfPurchase;
 
     // a Book is not deleted when the copy is deleted
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
@@ -25,7 +27,7 @@ public class BookCopy {
     public BookCopy() {
     }
 
-    public BookCopy(Date dateOfPurchase) {
+    public BookCopy(String dateOfPurchase) {
         this.dateOfPurchase = dateOfPurchase;
     }
 
@@ -39,11 +41,19 @@ public class BookCopy {
         this.id = id;
     }
 
-    public Date getDateOfPurchase() {
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+    public String getDateOfPurchase() {
         return dateOfPurchase;
     }
 
-    public void setDateOfPurchase(Date dateOfPurchase) {
+    public void setDateOfPurchase(String dateOfPurchase) {
         this.dateOfPurchase = dateOfPurchase;
     }
 
@@ -59,7 +69,9 @@ public class BookCopy {
     public String toString() {
         return "BookCopy{" +
                 "id=" + id +
-                ", dateOfPurchase=" + dateOfPurchase +
+                ", reference='" + reference + '\'' +
+                ", dateOfPurchase='" + dateOfPurchase + '\'' +
+                ", book=" + book +
                 '}';
     }
 }

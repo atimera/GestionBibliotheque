@@ -1,7 +1,7 @@
 package com.opc.projet.gestionbiblio.webapp.dao.impl;
 
 import com.opc.projet.gestionbiblio.webapp.dao.contract.MemberDao;
-import com.opc.projet.gestionbiblio.webapp.entity.Customer;
+import com.opc.projet.gestionbiblio.webapp.entity.Member;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -19,7 +19,7 @@ public class MemberDaoImpl implements MemberDao {
 
     @Override
     @Transactional
-    public List<Customer> getCustomers() {
+    public List<Member> getMembers() {
 
 //        // get the current hibernate session
 //        Session currentSession = sessionFactory.getCurrentSession();
@@ -27,11 +27,11 @@ public class MemberDaoImpl implements MemberDao {
 //        EntityManager entityManager = sessionFactory.createEntityManager();
 //
 //        // create a query
-//        //Query<Customer> theQuery = currentSession.createQuery("select a from Customer a", Customer.class);
+//        //Query<Member> theQuery = currentSession.createQuery("select a from Member a", Member.class);
 //
 //        // executre query and get results
-//        String sql = "select c from Customer c";
-//        List<Customer> results = entityManager.createQuery(sql, Customer.class).getResultList();
+//        String sql = "select c from Member c";
+//        List<Member> results = entityManager.createQuery(sql, Member.class).getResultList();
 //
 //        if(results == null){
 //            System.out.println( "\nPAS de Résultalt\n");
@@ -41,11 +41,11 @@ public class MemberDaoImpl implements MemberDao {
 //        return results;
 
         // for example without db
-        List<Customer> customerList = new ArrayList<>();
-        customerList.add(new Customer("John", "Doe", "john.doe@gmail.com"));
-        customerList.add(new Customer("Franc", "Leroy", "leroy.franc@gmail.com"));
-        customerList.add(new Customer("Moise", "Camara", "moise.camara@hotmail.com"));
-        return customerList;
+        List<Member> memberList = new ArrayList<>();
+        memberList.add(new Member("John", "Doe", "john.doe@gmail.com"));
+        memberList.add(new Member("Franc", "Leroy", "leroy.franc@gmail.com"));
+        memberList.add(new Member("Moise", "Camara", "moise.camara@hotmail.com"));
+        return memberList;
     }
 
 }

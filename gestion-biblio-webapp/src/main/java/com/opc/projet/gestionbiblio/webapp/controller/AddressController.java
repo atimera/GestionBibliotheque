@@ -47,7 +47,6 @@ public class AddressController {
 
         theModel.addAttribute("address", new Address());
 
-
         return "address-form";
     }
 

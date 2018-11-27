@@ -20,7 +20,7 @@
 
 <h2>Saisie d'un client</h2>
 
-<form:form action="processForm" modelAttribute="customer">
+<form:form action="processForm" modelAttribute="member">
 
     <label for="firstName">Prénom:</label>
     <form:input path="firstName" id="firstName"/>
@@ -33,8 +33,13 @@
     <br><br>
 
     <label for="email">Email:</label>
-    <form:input path="email" id="email"/>
+    <form:input type="email" path="email" id="email"/>
     <form:errors path="email" cssClass="error"/>
+    <br><br>
+
+    <label for="password">Mot de passe:</label>
+    <form:input type="password" path="password" id="password"/>
+    <form:errors path="password" cssClass="error"/>
     <br><br>
 
     <input type="submit" value="Valider" />

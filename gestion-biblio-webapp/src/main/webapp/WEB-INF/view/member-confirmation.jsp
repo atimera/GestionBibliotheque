@@ -19,11 +19,11 @@
 
 <h2>Client</h2>
 
-Prénom : ${customer.firstName}
+Prénom : ${member.firstName}
 <br>
-Nom : ${customer.lastName}
+Nom : ${member.lastName}
 <br>
-Email : ${customer.email}
+Email : ${member.email}
 
 
 </body>

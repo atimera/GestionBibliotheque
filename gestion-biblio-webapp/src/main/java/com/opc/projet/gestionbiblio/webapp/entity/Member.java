@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "customer")
-public class Customer {
+public class Member {
 
     @Id
     @Column(name = "id")
@@ -20,11 +20,14 @@ public class Customer {
     @Column(name = "email")
     private String email;
 
-    public Customer(){
+    @Column(name = "password")
+    private String password;
+
+    public Member(){
 
     }
 
-    public Customer(String firstName, String lastName, String email) {
+    public Member(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -62,14 +65,12 @@ public class Customer {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 }

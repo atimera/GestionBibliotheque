@@ -1,7 +1,7 @@
 package com.opc.projet.gestionbiblio.webapp.controller;
 
 import com.opc.projet.gestionbiblio.webapp.dao.contract.MemberDao;
-import com.opc.projet.gestionbiblio.webapp.entity.Customer;
+import com.opc.projet.gestionbiblio.webapp.entity.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,44 +13,44 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-@RequestMapping("/customer")
-public class CustomerController {
+@RequestMapping("/member")
+public class MemberController {
 
 
 
     @Autowired
-    private MemberDao customerDao;
+    private MemberDao memberDao;
 
     @RequestMapping("/list")
-    public String listCustomer(Model theModel){
+    public String listMember(Model theModel){
 
-        // get customers from the dao
-        List<Customer> theCustomers = customerDao.getCustomers();
+        // get members from the dao
+        List<Member> theMembers = memberDao.getMembers();
 
-        // add customers the spring mvc model
-        theModel.addAttribute("customers", theCustomers);
+        // add members the spring mvc model
+        theModel.addAttribute("members", theMembers);
 
-        return "list-customers";
+        return "list-members";
     }
 
     @RequestMapping("showForm")
     public String showForm(Model theModel){
 
-        theModel.addAttribute("customer", new Customer());
+        theModel.addAttribute("member", new Member());
 
-        return "customer-form";
+        return "member-form";
     }
 
     @RequestMapping("processForm")
-    public String processForm(@Valid @ModelAttribute("customer") Customer theCustomer,
+    public String processForm(@Valid @ModelAttribute("member") Member theMember,
                               BindingResult bindingResult){
 
         // TODO: 26/11/2018  
         
         if (bindingResult.hasErrors()){
-            return "customer-form";
+            return "member-form";
         }else {
-            return "customer-confirmation";
+            return "member-confirmation";
         }
     }
 

@@ -21,15 +21,15 @@ public interface AddressDao {
 
     /**
      * Get an Address from db
-     * @param addressId The Address id
+     * @param id The Address id
      * @return The Address object
      */
-    public Address get(Integer addressId);
+    public Address get(Integer id);
 
     /**
      * Delete the Address from the db
-     * @param addressId the address id
+     * @param id the address id
      */
-    public void delete(Integer addressId);
+    public void delete(Integer id);
 
 }
