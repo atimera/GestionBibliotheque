@@ -5,10 +5,5 @@
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- Inclusion d'autres fichiers de contexte Spring -->
-<!--
-    <import resource="classpath:/com.opc.projet.gestionblio.webapp-context/webappContextOLD.xml" />
-    <import resource="classpath:/com.opc.projet.gestionbiblio.business/businessContext.xml" />
--->
 
 </beans>

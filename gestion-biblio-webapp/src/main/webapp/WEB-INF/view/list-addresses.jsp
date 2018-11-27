@@ -3,19 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Adresse - Liste</title>
+    <meta charset="UTF-8">
+    <title>Adresse - Liste</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
 
-<div id="wrapper">
-    <div id="header">
-        <header>Liste des Adresses</header>
+<div class="wrapper">
+    <div class="header">
+        <header>
+            <h2>Gestion de bibliothèques</h2>
+        </header>
     </div>
 </div>
 
-<section id="container">
-    <div id="content">
+<section class="container">
+
+    <h2>Liste des adresses</h2>
+
+    <div class="content">
         <table>
             <tr>
                 <th>Adresse</th>
@@ -23,6 +29,10 @@
                 <th>Ville</th>
             </tr>
 
+            <%-- redirect to Adding Address form --%>
+            <input type="button" value="Ajouter"
+                   onclick="window.location.href='showFormForAdd'; return false;"
+                   class="add-button" />
 
             <c:forEach var="address" items="${addresses}" >
                 <tr>

@@ -252,6 +252,9 @@
     <!-- Build -->
     <!-- =============================================================== -->
     <build>
+
+        <finalName>gestion-biblio</finalName>
+
         <pluginManagement>
             <plugins>
                 <!-- Packaging JAR -->

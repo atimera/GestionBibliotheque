@@ -1,43 +1,69 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Formulaire Adresse</title>
-
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-address-style.css" />
     <style type="text/css">
         .error{ color: red; }
     </style>
 </head>
 <body>
 
-<h2>Saisie d'une adresse</h2>
+<div class="wrapper">
+    <div class="header">
+        <header>
+            <h2>Gestion de bibliothèques</h2>
+        </header>
+    </div>
+</div>
 
-<form:form action="processForm" modelAttribute="address">
+<section class="container">
+    <div class="content">
+        <h3>Ajouter une adresse</h3>
 
-    <label for="postalCode">Adresse:</label>
-    <form:input path="address" id="address"/>
-    <form:errors path="address" cssClass="error"/>
-    <br><br>
+        <form:form action="saveAddress" modelAttribute="address" method="post">
 
-    <label for="postalCode">Adresse 2:</label>
-    <form:input path="address2" id="address2"/>
-    <form:errors path="address2" cssClass="error"/>
-    <br><br>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="address">Adresse :</label></td>
+                        <td><form:input path="address" id="address" /></td>
+                        <td><form:errors path="address" cssClass="error"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address2">Adresse 2:</label></td>
+                        <td><form:input path="address2" id="address2" /></td>
+                        <td><form:errors path="address2" cssClass="error"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="postalCode">Code postal :</label></td>
+                        <td><form:input path="postalCode" id="postalCode"/></td>
+                        <td><form:errors path="postalCode" cssClass="error"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">Ville :</label></td>
+                        <td><form:input path="city" id="city"/></td>
+                        <td><form:errors path="city" cssClass="error"/></td>
+                    </tr>
 
-    <label for="postalCode">Code postal:</label>
-    <form:input path="postalCode" id="postalCode"/>
-    <form:errors path="postalCode" cssClass="error"/>
-    <br><br>
+                </tbody>
+            </table>
 
-    <label for="postalCode">Ville:</label>
-    <form:input path="city" id="city"/>
-    <form:errors path="city" cssClass="error"/>
-    <br><br>
+            <input type="submit" value="Ajouter" class="save"/>
 
-    <input type="submit" value="Valider" />
-</form:form>
+        </form:form>
+
+        <div style="clear: both;"></div>
+        
+        <p><a href="${pageContext.request.contextPath}/address/list">Retourà la liste</a></p>
+
+    </div>
+</section>
 
 </body>
 </html>
