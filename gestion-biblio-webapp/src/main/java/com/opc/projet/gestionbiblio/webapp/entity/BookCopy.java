@@ -22,7 +22,19 @@ public class BookCopy {
     @JoinColumn(name = "book_id")
     private Book book;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "lender_id")
+    private Member lender;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "employee_id")
+    private Employee lendBy;
+
+    @Column(name = "date_of_lend")
+    private String dateOfLend;
+
+    @Column(name = "date_of_return")
+    private String dateOfReturn;
 
     public BookCopy() {
     }
@@ -65,13 +77,38 @@ public class BookCopy {
         this.book = book;
     }
 
-    @Override
-    public String toString() {
-        return "BookCopy{" +
-                "id=" + id +
-                ", reference='" + reference + '\'' +
-                ", dateOfPurchase='" + dateOfPurchase + '\'' +
-                ", book=" + book +
-                '}';
+    public Member getLender() {
+        return lender;
     }
+
+    public void setLender(Member lender) {
+        this.lender = lender;
+    }
+
+    public Employee getLendBy() {
+        return lendBy;
+    }
+
+    public void setLendBy(Employee lendBy) {
+        this.lendBy = lendBy;
+    }
+
+    public String getDateOfLend() {
+        return dateOfLend;
+    }
+
+    public void setDateOfLend(String dateOfLend) {
+        this.dateOfLend = dateOfLend;
+    }
+
+    public String getDateOfReturn() {
+        return dateOfReturn;
+    }
+
+    public void setDateOfReturn(String dateOfReturn) {
+        this.dateOfReturn = dateOfReturn;
+    }
+
+
+
 }

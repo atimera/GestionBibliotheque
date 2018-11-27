@@ -20,7 +20,7 @@ public class Book {
     private String dateOfPublication;
 
     // when a book is deleted, all it's copies will be deleted
-    @OneToMany(mappedBy = "book", cascade = {CascadeType.ALL})
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "book", cascade = {CascadeType.ALL})
     private List<BookCopy> copies;
 
     public Book() {
@@ -72,12 +72,14 @@ public class Book {
         this.copies = copies;
     }
 
+
     // convenience methods for bi-directional relationship
 
-    public void add (BookCopy bookCopy){
+    public void addCopy (BookCopy bookCopy){
         if(copies == null){
             copies = new ArrayList<>();
         }
+        // set the link
         copies.add(bookCopy);
         bookCopy.setBook(this);
     }

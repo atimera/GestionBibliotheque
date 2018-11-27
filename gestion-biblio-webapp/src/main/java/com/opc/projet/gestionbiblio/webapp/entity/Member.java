@@ -1,6 +1,8 @@
 package com.opc.projet.gestionbiblio.webapp.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "member")
@@ -11,6 +13,19 @@ public class Member extends Person{
 
     @Column(name = "password")
     private String password;
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinTable(name = "library_member",
+            joinColumns = @JoinColumn(name = "member_id"),
+            inverseJoinColumns = @JoinColumn(name = "library_id"))
+    private List<Library> libraries;
+
+    @OneToMany(mappedBy = "lender",
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<BookCopy> lendedCopies;
 
     public Member(){
     }
@@ -36,6 +51,22 @@ public class Member extends Person{
         this.password = password;
     }
 
+    public List<Library> getLibraries() {
+        return libraries;
+    }
+
+    public void setLibraries(List<Library> libraries) {
+        this.libraries = libraries;
+    }
+
+    public List<BookCopy> getLendedCopies() {
+        return lendedCopies;
+    }
+
+    public void setLendedCopies(List<BookCopy> lendedCopies) {
+        this.lendedCopies = lendedCopies;
+    }
+
     @Override
     public String toString() {
         return "Member{" +
@@ -43,4 +74,27 @@ public class Member extends Person{
                 ", password='" + password + '\'' +
                 '}';
     }
+
+
+    // inconvenience methods for bi-directional relationship
+
+    public void addLibrary(Library library) {
+        if(libraries == null){
+            libraries = new ArrayList<>();
+        }
+        // set the link
+        libraries.add(library);
+        library.addMember(this);
+    }
+
+    public void addBookCopy(BookCopy copy){
+        if(lendedCopies == null){
+            lendedCopies = new ArrayList<>();
+        }
+        // set the link
+        lendedCopies.add(copy);
+        copy.setLender(this);
+    }
+
+
 }
