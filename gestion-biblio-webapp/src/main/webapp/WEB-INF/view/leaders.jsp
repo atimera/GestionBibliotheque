@@ -13,7 +13,7 @@
 <div class="wrapper">
     <div class="header">
         <header>
-            <h2>Gestion de bibliothèques</h2>
+            <h2>Les leaders</h2>
         </header>
     </div>
 </div>
@@ -23,17 +23,9 @@
 <div class="container">
     <div class="content">
         <ul>
-            <security:authorize access="hasAnyRole('ADMIN', 'MANAGER')" >
-                <li><a href="${pageContext.request.contextPath}/showAdmins">Accès administrateurs</a></li>
-            </security:authorize>
-
-            <security:authorize access="hasAnyRole('ADMIN')">
-                <li><a href="${pageContext.request.contextPath}/showLeaders">Accès leaders</a></li>
-            </security:authorize>
-
-            <security:authorize access="hasAnyRole('EMPLOYEE', 'USER')" >
-                <li><a href="${pageContext.request.contextPath}/showEmployees">Accès employés</a></li>
-            </security:authorize>
+            <li><a href="${pageContext.request.contextPath}/showAdmins">Accès administrateurs</a></li>
+            <li><a href="${pageContext.request.contextPath}/showLeaders">Accès leaders</a></li>
+            <li><a href="${pageContext.request.contextPath}/showEmployees">Accès employés</a></li>
         </ul>
     </div>
     <div>

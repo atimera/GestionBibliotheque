@@ -18,9 +18,8 @@
     <!-- =============================================================== -->
     <artifactId>gestion-biblio-webapp</artifactId>
     <packaging>war</packaging>
-    <url>http://maven.apache.org</url>
-    <!--<name>${projectName} - Application web</name>-->
-    <!--<name>${projectName} - Application web</name>-->
+    <url>http://maven.apache.org</url>-->
+    <name>${projectName} - Application web</name>
 
     <!-- =============================================================== -->
     <!-- Propriétés -->
@@ -33,6 +32,7 @@
         <!-- Propriété servant à contourner le bug du non remplacement
              de la propriété maven.build.timestamp lors du filtrage des ressources -->
         <buildTimestamp>${maven.build.timestamp}</buildTimestamp>
+        <spring.security.version>5.1.1.RELEASE</spring.security.version>
     </properties>
 
     <!-- =============================================================== -->
@@ -77,6 +77,28 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
         </dependency>
+
+        <!-- Spring Security Web -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <!-- Spring Security config -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
+        <!-- Spring security taglibs -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-taglibs</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
 
         <!-- Spring ORM -->
         <dependency>
