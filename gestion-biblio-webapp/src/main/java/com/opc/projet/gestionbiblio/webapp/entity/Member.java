@@ -1,11 +1,14 @@
 package com.opc.projet.gestionbiblio.webapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "member")
+@JsonIgnoreProperties(ignoreUnknown = true) // ignore the unknown properties
 public class Member extends Person{
 
     @Column(name = "email")

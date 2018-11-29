@@ -31,29 +31,29 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     // We override this method if we don't want the default login form provided by spring
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-        http.authorizeRequests()
-                // roles management
-                .antMatchers("/").hasRole("USER")
-                .antMatchers("/").hasRole("EMPLOYEE")
-                .antMatchers("/systems/**").hasRole("ADMIN")
-                .antMatchers("/management/**").hasRole("MANAGER")
-                .anyRequest().authenticated()
-
-                // login form
-                .and()
-                .formLogin()
-                .loginPage("/showMyLoginPage")
-                .loginProcessingUrl("/authenticateTheUser")
-                .permitAll()
-
-                // logout
-                .and()
-                .logout().permitAll()
-
-                // access denied page
-                .and()
-                .exceptionHandling().accessDeniedPage("/access-denied");
+//
+//        http.authorizeRequests()
+//                // roles management
+//                .antMatchers("/").hasRole("USER")
+//                .antMatchers("/").hasRole("EMPLOYEE")
+//                .antMatchers("/systems/**").hasRole("ADMIN")
+//                .antMatchers("/management/**").hasRole("MANAGER")
+//                .anyRequest().authenticated()
+//
+//                // login form
+//                .and()
+//                .formLogin()
+//                .loginPage("/showMyLoginPage")
+//                .loginProcessingUrl("/authenticateTheUser")
+//                .permitAll()
+//
+//                // logout
+//                .and()
+//                .logout().permitAll()
+//
+//                // access denied page
+//                .and()
+//                .exceptionHandling().accessDeniedPage("/access-denied");
 
     }
 
