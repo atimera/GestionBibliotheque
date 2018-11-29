@@ -1,4 +1,4 @@
-package com.opc.projet.gestionbiblio.webapp.security;
+package com.opc.projet.gestionbiblio.webapp.config;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

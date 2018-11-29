@@ -1,25 +1,33 @@
-package com.opc.projet.gestionbiblio.webapp.security;
+package com.opc.projet.gestionbiblio.webapp.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
+import java.util.Properties;
 import java.util.logging.Logger;
 
 @Configuration
 @EnableWebMvc // similar to <mvc:resources> in the XML set up
+@EnableTransactionManagement
 @ComponentScan(basePackages = "com.opc.projet.gestionbiblio.webapp")
-@PropertySource("classpath:config/persistence-mysql.properties") // for reading properties files
-public class ApplicationConfig {
+@PropertySource({"classpath:config/persistence-mysql.properties"}) // for reading properties files
+public class ApplicationConfig implements WebMvcConfigurer {
 
     // set up a variable to hold the properties
     @Autowired
@@ -49,15 +57,15 @@ public class ApplicationConfig {
      * @return a javax.sql.DataSource object
      */
     @Bean
-    public DataSource securityDataSource(){
+    public DataSource myDatasource(){
 
         // create a connection pool
-        ComboPooledDataSource securityDataSource =
+        ComboPooledDataSource myDatasource =
                                 new ComboPooledDataSource();
 
         // set up the jdbc driver class
         try {
-            securityDataSource.setDriverClass(env.getProperty("jdbc.driver"));
+            myDatasource.setDriverClass(env.getProperty("jdbc.driver"));
         } catch (PropertyVetoException exc) {
             throw new RuntimeException(exc);
         }
@@ -67,26 +75,63 @@ public class ApplicationConfig {
         logger.info("\n\t>>> JDBC.USER = " + env.getProperty("jdbc.user"));
 
         // set up the database connections properties
-        securityDataSource.setJdbcUrl(env.getProperty("jdbc.url"));
-        securityDataSource.setUser(env.getProperty("jdbc.user"));
-        securityDataSource.setPassword(env.getProperty("jdbc.password"));
+        myDatasource.setJdbcUrl(env.getProperty("jdbc.url"));
+        myDatasource.setUser(env.getProperty("jdbc.user"));
+        myDatasource.setPassword(env.getProperty("jdbc.password"));
 
         // set up connection pool properties
-        securityDataSource.setInitialPoolSize(
+        myDatasource.setInitialPoolSize(
                 getIntProperty("connection.pool.initialPoolSize"));
 
-        securityDataSource.setMinPoolSize(
+        myDatasource.setMinPoolSize(
                 getIntProperty("connection.pool.minPoolSize"));
 
-        securityDataSource.setMaxPoolSize(
+        myDatasource.setMaxPoolSize(
                 getIntProperty("connection.pool.maxPoolSize"));
 
-        securityDataSource.setMaxIdleTime(
+        myDatasource.setMaxIdleTime(
                 getIntProperty("connection.pool.maxIdleTime"));
 
-        return securityDataSource;
+        return myDatasource;
 
     }
+
+    private Properties getHibernateProperties() {
+
+        // set hibernate properties
+        Properties props = new Properties();
+
+        props.setProperty("hibernate.dialect", env.getProperty("hibernate.dialect"));
+        props.setProperty("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
+
+        return props;
+    }
+
+    @Bean
+    public LocalSessionFactoryBean sessionFactory(){
+
+        // create session factorys
+        LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
+
+        // set the properties
+        sessionFactory.setDataSource(myDatasource());
+        sessionFactory.setPackagesToScan(env.getProperty("hibernate.packagesToScan"));
+        sessionFactory.setHibernateProperties(getHibernateProperties());
+
+        return sessionFactory;
+    }
+
+    @Bean
+    @Autowired
+    public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
+
+        // setup transaction manager based on session factory
+        HibernateTransactionManager txManager = new HibernateTransactionManager();
+        txManager.setSessionFactory(sessionFactory);
+
+        return txManager;
+    }
+
 
 
     /**
@@ -99,5 +144,12 @@ public class ApplicationConfig {
         String propVal = env.getProperty(propertyName);
         int intPropVal = Integer.parseInt(propVal);
         return intPropVal;
+    }
+
+
+    // static resources
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
     }
 }

@@ -16,7 +16,6 @@
     <li><a href="${pageContext.request.contextPath}/api/members/0">Premier membre de la list</a></li>
 </ul>
 
-<%--
 <h3>Liens Application</h3>
 <ul>
     <li><a href="address/showFormForAdd">Formulaire de saisie d'adresse</a></li>
@@ -30,8 +29,6 @@
     <li><a href="book/showBookCopyForm">Ajouter un exemplaire</a></li>
     <li><a href="book/copies">Liste des exemplaire</a></li>
 </ul>
---%>
-
 
 </body>
 </html>
