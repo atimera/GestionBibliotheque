@@ -1,426 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <!-- =================================================================== -->
-    <!-- Informations du projet -->
-    <!-- =================================================================== -->
-    <groupId>com.opc.projet</groupId>
-    <artifactId>gestion-biblio</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <name>gestion-biblio</name>
-    <url>http://maven.apache.org</url>
-    <description>Un projet de gestion de suivi d'emprunts pour les bibiothèque d'une grande ville. Ce projet est réalisé dans le cardre du parcours Expert Java EE de Openclassrooms.</description>
+	<groupId>com.opc.projet</groupId>
+	<artifactId>gestionbiblio</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-    <!-- ===== Organisation ===== -->
-    <organization>
-        <name>Mon organisation</name>
-        <url>https://openclassrooms.com</url>
-    </organization>
+	<name>gestionbiblio</name>
+	<description>Application de gestion des bibliothèques d'une grande ville</description>
 
-    <!-- ===== Licences ===== -->
-    <licenses>
-        <license>
-            <name>Apache Licence, version x</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-        </license>
-    </licenses>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.0.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
 
-    <!-- ===== Participants, développeurs ===== -->
-    <developers>
-        <developer>
-            <email>amdiatoutimera@hotmail.fr</email>
-            <name>Amdiatou TIMERA</name>
-            <roles>
-                <role>ALL</role>
-            </roles>
-        </developer>
-    </developers>
+    <!-- ===== PROPERTIES ===== -->
 
-    <!-- ===== Proriétés ===== -->
-    <properties>
-        <projectName>Gestion bibliotèques</projectName>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <jersey.version>2.26</jersey.version>
-        <spring.version>5.1.2.RELEASE</spring.version>
-    </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
 
-    <!-- Modules -->
-    <modules>
-        <module>gestion-biblio-batch</module>
-        <module>gestion-biblio-webapp</module>
-        <module>gestion-biblio-business</module>
-        <module>gestion-biblio-consumer</module>
-        <module>gestion-biblio-model</module>
-        <module>gestion-biblio-technical</module>
-    </modules>
+    <!-- ===== DEPENDENCIES ===== -->
 
-    <!-- =============================================================== -->
-    <!-- Gestion des dépendances -->
-    <!-- =============================================================== -->
-    <dependencyManagement>
-        <dependencies>
-            <!-- ===== Déprendances des Modules ===== -->
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>gestion-biblio-batch</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>gestion-biblio-webapp</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>gestion-biblio-business</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>gestion-biblio-consumer</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>gestion-biblio-model</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>gestion-biblio-technical</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+	<dependencies>
+        <!-- web starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-            <!-- ===== Bibliothèques tierces ===== -->
-            <!-- JUnit -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.11</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- Commons-Collections -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-collections4</artifactId>
-                <version>4.2</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.6</version>
-            </dependency>
 
-            <!-- Commons-Text -->
-<!--
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-text</artifactId>
-                <version>1.6</version>
+        <!-- REST with jersey -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jersey</artifactId>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-undertow</artifactId>-->
+        <!--</dependency>-->
 
-                <exclusions>
-                    &lt;!&ndash; Exclusion de Commons-lang3: une dépendance transitive &ndash;&gt;
-                    <exclusion>
-                        <groupId>org.apache.commons</groupId>
-                        <artifactId>commons-lang3</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
--->
+        <!-- actuator starter -->
+        <!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+		<!--</dependency>-->
 
-            <!-- API Servlet en provided -->
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>3.1.0</version>
-                <scope>provided</scope>
-            </dependency>
+        <!-- security starter -->
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 
-            <!-- Pour utiliser l'API de validation de beans (JSR 303) -->
-            <dependency>
-                <groupId>javax.validation</groupId>
-                <artifactId>validation-api</artifactId>
-                <version>1.1.0.Final</version>
-                <scope>compile</scope>
-            </dependency>
-            <!-- Implémentation de l'API de validation de beans (JSR 303) -->
-            <dependency>
-                <groupId>org.apache.bval</groupId>
-                <artifactId>bval-jsr</artifactId>
-                <version>1.1.2</version>
-                <scope>runtime</scope>
-            </dependency>
+        <!-- lombok -->
+        <!--<dependency>-->
+            <!--<groupId>org.projectlombok</groupId>-->
+            <!--<artifactId>lombok</artifactId>-->
+            <!--<optional>true</optional>-->
+        <!--</dependency>-->
 
-            <!-- rest -->
-            <dependency>
-                <groupId>javax.ws.rs</groupId>
-                <artifactId>javax.ws.rs-api</artifactId>
-                <version>2.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jersey</groupId>
-                <artifactId>jersey-bom</artifactId>
-                <version>${jersey.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+        <!-- thymeleaf starter -->
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 
-            <!-- gestion des logs -->
-            <dependency>
-                <groupId>commons-logging</groupId>
-                <artifactId>commons-logging</artifactId>
-                <version>1.2</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-core</artifactId>
-                <version>2.6.2</version>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-jcl</artifactId>
-                <version>2.6.2</version>
-                <scope>runtime</scope>
-            </dependency>
+        <!-- webjars -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.3.1</version>
+        </dependency>
 
-            <!-- BOM Spring -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-framework-bom</artifactId>
-                <version>${spring.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 
-            <!-- JSR-250 -->
-            <dependency>
-                <groupId>javax.annotation</groupId>
-                <artifactId>javax.annotation-api</artifactId>
-                <version>1.2</version>
-            </dependency>
-            <!-- JSR-330 -->
-            <dependency>
-                <groupId>javax.inject</groupId>
-                <artifactId>javax.inject</artifactId>
-                <version>1</version>
-            </dependency>
+        <!-- validation starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
 
-            <!-- Drivers JDBC PostgreSQL -->
-            <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>9.4.1212</version>
-                <scope>runtime</scope>
-            </dependency>
+        <!-- H2 -->
+        <!--<dependency>-->
+            <!--<groupId>com.h2database</groupId>-->
+            <!--<artifactId>h2</artifactId>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
 
-            <!-- Pool de connexion commons DBCP -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-dbcp2</artifactId>
-                <version>2.1.1</version>
-            </dependency>
+        <!-- Mysql  & C3P0 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.1.2</version>
+        </dependency>
 
-            <!-- Hibernate ORM -->
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-agroal</artifactId>
-                <version>5.3.7.Final</version>
-                <type>pom</type>
-            </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 
-        </dependencies>
-    </dependencyManagement>
 
-    <!-- =============================================================== -->
-    <!-- DistributionManagement -->
-    <!-- =============================================================== -->
-    <distributionManagement>
-        <site>
-            <id>site-projet</id>
-            <name>Site du projet de Gestion de tickets</name>
-            <url>scp://localhost/tmp/</url>
-        </site>
-    </distributionManagement>
+        <!-- ===== TEST ===== -->
 
-    <!-- =============================================================== -->
-    <!-- Build -->
-    <!-- =============================================================== -->
-    <build>
-        <pluginManagement>
-            <plugins>
-                <!-- Packaging JAR -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+        <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
-                <!-- Packaging WAR -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
+    <!-- ===== BUILD ===== -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
-                <!-- Compilation des sources JAVA : plugin compiler : Goal compile avec options -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
-                    <configuration>
-                        <showWarnings>true</showWarnings>
-                        <showDeprecation>true</showDeprecation>
-                    </configuration>
-                </plugin>
 
-                <!-- Vérification de règle sur le contexte de construction de Maven -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0-M2</version>
-                </plugin>
-
-                <!-- Assemblage -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
-
-                <!-- Génération du site -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.7.1</version>
-                    <configuration>
-                        <locales>fr</locales>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
-    <!-- ============================================================= -->
-    <!-- Reporting -->
-    <!-- ============================================================= -->
-    <reporting>
-        <plugins>
-            <!-- ===== Rapport d'information général sur le projet ===== -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.9</version>
-                <!-- Pour ne sélectionner que quelques Gols => rapports -->
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>index</report>
-                            <report>summary</report>
-                            <report>plugins</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-
-            <!-- ===== Rapport sur les tests ===== -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.22.1</version>
-                <configuration>
-                    <linkXRef>false</linkXRef>
-                </configuration>
-                <reportSets>
-                    <reportSet>
-                        <id>aggregate</id>
-                        <reports>
-                            <report>report</report>
-                        </reports>
-                        <!-- ne pas exécuter ce sous-rapport dans les sous-projets -->
-                        <inherited>false</inherited>
-                        <configuration>
-                            <aggregate>true</aggregate>
-                        </configuration>
-                    </reportSet>
-
-                    <!-- reportSet non agrégé, exécuté dans tous les sous-projets (modules) -->
-                    <reportSet>
-                        <id>modules</id>
-                        <!-- exécuter ce sous-rapport dans les sous-projets -->
-                        <inherited>true</inherited>
-                        <reports>
-                            <report>report</report>
-                        </reports>
-                        <configuration>
-                            <aggregate>false</aggregate>
-                        </configuration>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-
-            <!-- ===== Génération de la Javadoc ===== -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.4</version>
-                <configuration>
-                    <quiet>true</quiet>
-                    <locale>fr</locale>
-                </configuration>
-                <reportSets>
-                    <!-- reportSet exécuté dans tous les modules -->
-                    <reportSet>
-                        <reports>
-                            <report>javadoc</report>
-                        </reports>
-                    </reportSet>
-                    <!-- reportSet d'agrégation des rapports des sous-modules -->
-                    <reportSet>
-                        <id>aggregate</id>
-                        <inherited>false</inherited>
-                        <reports>
-                            <report>aggregate</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-
-            <!-- ===== Rapport d'analyse du code par Checkstyle ===== -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.0.0</version>
-                <configuration>
-                    <configLocation>src/build/checkstyle.xml</configLocation>
-                    <linkXRef>false</linkXRef>
-                </configuration>
-                <reportSets>
-                    <!-- reportSet exécuté dans tous les modules -->
-                    <reportSet>
-                        <reports>
-                            <report>checkstyle</report>
-                        </reports>
-                    </reportSet>
-                    <!-- reportSet d'agrégation des rapports des sous-modules -->
-                    <reportSet>
-                        <id>checkstyle-aggregate</id>
-                        <inherited>false</inherited>
-                        <configuration>
-                            <skipExec>true</skipExec>
-                        </configuration>
-                        <reports>
-                            <report>checkstyle-aggregate</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-
-        </plugins>
-    </reporting>
 </project>
