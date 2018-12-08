@@ -1,0 +1,15 @@
+-- INSERT ADDRESS
+INSERT INTO ADDRESS(ID, ADDRESS, ADDRESS2, POSTAL_CODE, CITY)
+VALUES(100001, '15 avenue auguste renoir', 'Résidence la renardiere', '77680', 'Roissy en brie' );
+
+INSERT INTO ADDRESS(ID, ADDRESS, ADDRESS2, POSTAL_CODE, CITY)
+VALUES(100002, '20 Rue du près', '', '75008', 'Paris' );
+
+INSERT INTO ADDRESS(ID, ADDRESS, ADDRESS2, POSTAL_CODE, CITY)
+VALUES(100003, '6 Allée Emile Roux', '', '77420', 'Champs sur marne' );
+
+INSERT INTO ADDRESS(ID, ADDRESS, ADDRESS2, POSTAL_CODE, CITY)
+VALUES(100004, '10 Allée Eugène Pottier', '', '77420', 'Champs sur marne' );
+
+
+

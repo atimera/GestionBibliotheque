@@ -25,7 +25,7 @@
         <div class="row col-sm-8" th:if="${address == null}">
             <p>L'adresse d'id {id} n'existe pas.</p>
         </div>
-        <div class="row">
+        <div class="row" th:if="${address != null }">
             <div class="col-sm-8">
                 <div class="form-horizontal">
                     <div class="form-group">
