@@ -2,7 +2,7 @@ package com.opc.projet.gestionbiblio;
 
 
 import com.opc.projet.gestionbiblio.business.AddressRepository;
-import com.opc.projet.gestionbiblio.model.Address;
+import com.opc.projet.gestionbiblio.business.LibraryRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +18,9 @@ public class GestionbiblioApplication implements CommandLineRunner {
     
     @Autowired
     private AddressRepository addressRepository;
+    @Autowired
+    private LibraryRepository libraryRepository;
+
     
 	public static void main(String[] args) {
 		ApplicationContext ctx =  SpringApplication.run(GestionbiblioApplication.class, args);
@@ -35,40 +38,20 @@ public class GestionbiblioApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        logger.info("\n====> All users -> {}", addressRepository.findAll());
+//        logger.info("\n====> All Addresses -> {}", addressRepository.findAll());
+//
+//        libraryRepository.save(new Library("Ma biblio"));
+//
+//        Library library = new Library("Ma biblotheque");
+//        Address a = new Address();
+//        a.setCity("Ma ville"); a.setPostalCode("99999");
+//        library.setAddress(a);
+//        logger.info("\n====> Seved Library -> {}", libraryRepository.save(library));
 
-        logger.info("\n====> User with id 100004 -> {}", addressRepository.findById(100004L));
-
-        //logger.info("\n====> User with Last Name Timera -> {}", dao.findByLastName("Timera"));
-
-
-        //logger.info("\n====> Deleting Users Last Name TIMERA -> Number of rows deleted - {}", dao.deleteByLastName("timera"));
-
-        logger.info("\n====> Insert User -> Number of rows inserted - {}",
-                addressRepository.insert(new Address("5 Boulevard du palais", "", "75015", "Paris")));
-
-        logger.info("\n====> Updating User with id 100004 -> {}");
-        addressRepository.update(
-                new Address(
-                        1L,
-                        "5 Boulevard du palais",
-                        "",
-                        "75015",
-                        "Paris")
-        );
-
-        /*
-	    Address newAddress = new Address("Robert", "Mogabé", "Yaoudé", new Date());
-        logger.info("\n====> Updating User with id 10001 -> {}",
-                dao.updateById(10001, newAddress));
-        */
-
-        Thread.sleep(1000);
-
-        logger.info("\n====> Deleting User with with id 100001 -> Number of rows deleted ");
-        addressRepository.deletById(1L);
-
-        logger.info("\n====> All users -> {}", addressRepository.findAll());
-
+//
+//        logger.info("\n====> Librery with id 3 -> {}", libraryRepository.findById(200000L));
+//
+//        Library l = libraryRepository.findById(200000L);
+//        System.out.println("\nLibrairie trouvé: \n"+ l);
     }
 }

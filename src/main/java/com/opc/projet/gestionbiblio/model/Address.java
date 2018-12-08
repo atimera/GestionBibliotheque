@@ -8,7 +8,12 @@ import javax.validation.constraints.Pattern;
 
 @SuppressWarnings("JpaQlInspection")
 @Entity
-@NamedQuery(name = "find_all_addresses", query = "select a from Address a")
+@NamedQueries({
+    @NamedQuery(name = "find_all_addresses", query = "select a from Address a"),
+
+    @NamedQuery(name = "find_libraries_group_by_city",
+        query = "select a.city, count(L) from Address a join a.library L group by  a.city")
+})
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -23,14 +28,15 @@ public class Address{
 
     @NotBlank(message = "Obligatoire")
     @Pattern(regexp = "^[0-9]{5}", message = "Code postal invalide")
+    @Column(nullable = false, length = 5)
     private String postalCode;
 
     @NotBlank(message = "Obligatoire")
+    @Column(nullable = false)
     private String city;
 
-    //@Setter(AccessLevel.NONE)
-//    @Version
-//    private Long version = 0L;
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "address")
+    private Library library;
 
     // === contructors with args
 
@@ -67,12 +73,17 @@ public class Address{
 
     @Override
     public String toString() {
-        return "\n-> Address{" +
+        return "-> Address{" +
                 "id=" + id +
                 ", address='" + address + '\'' +
                 ", address2='" + address2 + '\'' +
                 ", postalCode='" + postalCode + '\'' +
                 ", city='" + city + '\'' +
                 '}';
+    }
+
+
+    public void setLibrary(Library library) {
+        this.library = library;
     }
 }

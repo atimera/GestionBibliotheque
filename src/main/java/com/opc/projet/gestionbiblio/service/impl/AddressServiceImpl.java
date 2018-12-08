@@ -26,12 +26,7 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public Address save(Address address) {
-        return repository.insert(address);
-    }
-
-    @Override
-    public Address updtae(Address address) {
-        return repository.update(address);
+        return repository.save(address);
     }
 
     @Override
