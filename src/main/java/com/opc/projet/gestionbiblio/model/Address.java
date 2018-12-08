@@ -29,8 +29,8 @@ public class Address{
     private String city;
 
     //@Setter(AccessLevel.NONE)
-    @Version
-    private Long version = 0L;
+//    @Version
+//    private Long version = 0L;
 
     // === contructors with args
 
@@ -73,7 +73,6 @@ public class Address{
                 ", address2='" + address2 + '\'' +
                 ", postalCode='" + postalCode + '\'' +
                 ", city='" + city + '\'' +
-                ", version=" + version +
                 '}';
     }
 }

@@ -24,7 +24,7 @@
     <div th:if="${not #lists.isEmpty(addresses)}">
         <h2>Liste des adresses</h2>
         <div>
-            <a th:href="@{'/address/new'}" class="btn btn-primary">Ajouter</a>
+            <a th:href="@{'/addresses/new'}" class="btn btn-primary">Ajouter</a>
         </div>
         <table class="table table-striped">
             <thead>
@@ -42,9 +42,9 @@
                     <td th:text="${address.getAddress()}" ></td>
                     <td th:text="${address.getPostalCode()}" ></td>
                     <td th:text="${address.getCity()}" ></td>
-                    <td><a th:href="@{'/address/' + ${address.id}}">Voir</a></td>
-                    <td><a th:href="@{'/address/edit/' + ${address.id}}">Modifier</a></td>
-                    <td><a th:href="@{'/address/delete/' + ${address.id}}">Supprimer</a></td>
+                    <td><a th:href="@{'/addresses/' + ${address.id}}">Voir</a></td>
+                    <td><a th:href="@{'/addresses/edit/' + ${address.id}}">Modifier</a></td>
+                    <td><a th:href="@{'/addresses/delete/' + ${address.id}}">Supprimer</a></td>
                 </tr>
             </tbody>
         </table>
