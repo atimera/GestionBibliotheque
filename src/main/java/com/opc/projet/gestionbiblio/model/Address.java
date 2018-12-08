@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import java.util.List;
 
 @SuppressWarnings("JpaQlInspection")
 @Entity
@@ -35,24 +36,24 @@ public class Address{
     @Column(nullable = false)
     private String city;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "address")
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "location")
     private Library library;
 
-    // === contructors with args
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            mappedBy = "location",
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<Person> people;
 
+
+    // === contructors with postalCode and city
     public Address(
-            long id,
-            String address,
-            String address2,
                 @NotBlank(message = "Obligatoire")
                 @Pattern(regexp = "^[0-9]{5}", message = "Code postal invalide")
             String postalCode,
                 @NotBlank(message = "Obligatoire")
             String city) {
 
-        this.id = id;
-        this.address = address;
-        this.address2 = address2;
         this.postalCode = postalCode;
         this.city = city;
     }

@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 
 @SuppressWarnings("JpaQlInspection")
@@ -29,8 +30,7 @@ public class Library {
     @GeneratedValue
     private Long id;
 
-    @NotBlank
-    @Size(min = 2)
+    @NotBlank @Size(min = 2)
     @Column(nullable = false)
     private String name;
 
@@ -39,7 +39,25 @@ public class Library {
 
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "address_id")
-    private Address address;
+    private Address location;
+
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            mappedBy = "library",
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<Employee> employees;
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinTable(name = "library_member",
+            joinColumns = @JoinColumn(name = "library_id"),
+            inverseJoinColumns = @JoinColumn(name = "member_id"))
+    private List<Member> members;
+
+
+
+
 
     // construction with name
     public Library(@NotBlank @Size(min = 2) String name) {
@@ -60,10 +78,10 @@ public class Library {
     public Library(@NotBlank @Size(min = 2)
                    String name,
                    @Pattern(regexp = "[ 0-9]", message = "numero de téléphone incorrect")
-                   Address address) {
+                   Address location) {
 
         this.name = name;
-        this.address = address;
+        this.location = location;
     }
 
 
@@ -72,28 +90,12 @@ public class Library {
                    String name,
                    @Pattern(regexp = "[ 0-9]", message = "numero de téléphone incorrect")
                    String phoneNumber,
-                   Address address) {
+                   Address location) {
 
         this.name = name;
         this.phoneNumber = phoneNumber;
-        this.address = address;
+        this.location = location;
     }
-
-
-    //    @OneToMany(
-//            fetch = FetchType.LAZY,
-//            mappedBy = "library",
-//            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-//    private List<Employee> employees;
-//
-//    @ManyToMany(
-//            fetch = FetchType.LAZY,
-//            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-//    @JoinTable(name = "library_member",
-//            joinColumns = @JoinColumn(name = "library_id"),
-//            inverseJoinColumns = @JoinColumn(name = "member_id"))
-//    private List<Member> members;
-
 
 
 //    public List<Employee> getEmployees() {
@@ -138,7 +140,7 @@ public class Library {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", address -> " + address +
+                ", address -> " + location +
                 '}';
     }
 

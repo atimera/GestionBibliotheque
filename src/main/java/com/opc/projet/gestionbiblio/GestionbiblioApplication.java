@@ -2,7 +2,7 @@ package com.opc.projet.gestionbiblio;
 
 
 import com.opc.projet.gestionbiblio.business.AddressRepository;
-import com.opc.projet.gestionbiblio.business.LibraryRepository;
+import com.opc.projet.gestionbiblio.business.BookRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class GestionbiblioApplication implements CommandLineRunner {
     @Autowired
     private AddressRepository addressRepository;
     @Autowired
-    private LibraryRepository libraryRepository;
+    private BookRepository bookRepository;
 
     
 	public static void main(String[] args) {
@@ -38,20 +38,16 @@ public class GestionbiblioApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-//        logger.info("\n====> All Addresses -> {}", addressRepository.findAll());
-//
-//        libraryRepository.save(new Library("Ma biblio"));
-//
-//        Library library = new Library("Ma biblotheque");
-//        Address a = new Address();
-//        a.setCity("Ma ville"); a.setPostalCode("99999");
-//        library.setAddress(a);
-//        logger.info("\n====> Seved Library -> {}", libraryRepository.save(library));
+        logger.info("\n====> All Books -> {}", bookRepository.findAll());
 
-//
-//        logger.info("\n====> Librery with id 3 -> {}", libraryRepository.findById(200000L));
-//
-//        Library l = libraryRepository.findById(200000L);
-//        System.out.println("\nLibrairie trouvé: \n"+ l);
+        //logger.info("==-> Saved Author -> {}", bookRepository.save(book));
+
+        bookRepository.deletById(400002L);
+
+        //logger.info("\n====> All Books -> {}", bookRepository.findAll());
+
+        //logger.info("Deleting author .....");
+        //authorRepository.deletById(1);
+
     }
 }
