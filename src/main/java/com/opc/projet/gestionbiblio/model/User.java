@@ -19,7 +19,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 @Setter
-public abstract class User extends Person{
+public class User extends Person{
 
     protected String username;
     protected String password;

@@ -25,7 +25,7 @@ public class AddressController {
         this.addressService = addressService;
     }
 
-    @RequestMapping({"/", "/list"})
+    @RequestMapping({"", "/", "/list"})
     public String getAddresses(Model pModel){
         pModel.addAttribute("addresses", addressService.getAll());
         return "address/list";

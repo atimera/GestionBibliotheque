@@ -1,8 +1,12 @@
 package com.opc.projet.gestionbiblio.model;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("JpaQlInspection")
@@ -24,11 +28,11 @@ public class Book {
     private String cover;
 
     // when a book is deleted, all it's copies will be deleted
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "book", cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "book", cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private List<BookCopy> copies;
 
     @ManyToMany(
-            fetch = FetchType.EAGER,
+            fetch = FetchType.LAZY,
             cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinTable(name = "author_book",
             joinColumns = @JoinColumn(name = "book_id"),
@@ -40,27 +44,31 @@ public class Book {
         return "Book{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
+                ", dateOfPublication='" + dateOfPublication + '\'' +
+                ", cover='" + cover + '\'' +
+                ", copies=" + copies +
                 '}';
     }
 
-    //    public List<BookCopy> getCopies() {
-//        return copies;
-//    }
-//
-//    public void setCopies(List<BookCopy> copies) {
-//        this.copies = copies;
-//    }
-//
-//
-//    // convenience methods for bi-directional relationship
-//
-//    public void addCopy (BookCopy bookCopy){
-//        if(copies == null){
-//            copies = new ArrayList<>();
-//        }
-//        // set the link
-//        copies.add(bookCopy);
-//        bookCopy.setBook(this);
-//    }
+
+    public List<BookCopy> getCopies() {
+        return copies;
+    }
+
+    public void setCopies(List<BookCopy> copies) {
+        this.copies = copies;
+    }
+
+
+    // convenience methods for bi-directional relationship
+
+    public void addCopy (BookCopy bookCopy){
+        if(copies == null){
+            copies = new ArrayList<>();
+        }
+        // set the link
+        copies.add(bookCopy);
+        bookCopy.setBook(this);
+    }
 
 }

@@ -17,13 +17,17 @@
 </head>
 <body>
 
+<!-- MEMU -->
+<div th:replace="fragments/menu :: nav">Menu</div>
+
+
 <div class="container">
     <div class="row">
         <div>
             <h2>Ajout d'une adresse</h2>
         </div>
         <div class="row">
-            <form class="form-horizontal" th:object="${address}" th:action="@{/address/process}" method="post">
+            <form class="form-horizontal" th:object="${address}" th:action="@{/addresses/process}" method="post">
 
                 <input type="hidden" th:field="*{id}" />
 

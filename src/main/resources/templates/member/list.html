@@ -17,6 +17,10 @@
 </head>
 <body>
 
+<!-- MEMU -->
+<div th:replace="fragments/menu :: nav">Menu</div>
+
+
 <div class="container">
     <div th:if="${#lists.isEmpty(members)}">
         <i>La listes est vide</i>

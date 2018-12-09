@@ -21,7 +21,7 @@ public class BookCopyRepository {
     // === find all
     public List<BookCopy> findAll(){
 
-        TypedQuery<BookCopy> namedQuery = em.createNamedQuery("find_all_BookCopies", BookCopy.class);
+        TypedQuery<BookCopy> namedQuery = em.createNamedQuery("find_all_copies", BookCopy.class);
         return namedQuery.getResultList();
     }
 
@@ -45,7 +45,5 @@ public class BookCopyRepository {
         BookCopy copy = findById(id);
         em.remove(copy);
     }
-
-
 
 }

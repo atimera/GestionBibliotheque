@@ -1,7 +1,12 @@
 body{
     background: aliceblue;
 }
-.main{
-    /*background: #eeeeee;*/
-    background-image: url("../image/bg.jpg");
+
+
+
+
+/* CUSTOM BOOSTRAP CSS */
+
+.navbar{
+    margin-bottom: 0;
 }

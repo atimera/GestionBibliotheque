@@ -10,7 +10,7 @@ import javax.persistence.*;
 @SuppressWarnings("JpaQlInspection")
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "find_all_copies", query = "select bc from BookCopy bc"),
+        @NamedQuery(name = "find_all_copies", query = "select c from BookCopy c"),
 })
 @NoArgsConstructor
 @AllArgsConstructor
@@ -50,4 +50,12 @@ public class BookCopy {
     private String dateOfReturn;
 
 
+    @Override
+    public String toString() {
+        return "BookCopy{" +
+                "id=" + id +
+                ", reference='" + reference + '\'' +
+                ", dateOfPurchase='" + dateOfPurchase + '\'' +
+                '}';
+    }
 }
