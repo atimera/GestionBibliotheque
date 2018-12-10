@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -21,7 +22,9 @@ import java.util.List;
 
 public class Employee extends User{
 
-    @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST, CascadeType.REFRESH})
+    @ManyToOne(
+            fetch = FetchType.EAGER,
+            cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinColumn(name = "library_id")
     private Library library;
 
@@ -32,16 +35,18 @@ public class Employee extends User{
     private List<BookCopy> lendedCopies;
 
 
-//    // inconvenience methods for bi-directional relationship
-//
-//    public void addLendedCopy(BookCopy copy){
-//        if(lendedCopies == null){
-//            lendedCopies = new ArrayList<>();
-//        }
-//        // set the link
-//        lendedCopies.add(copy);
-//        copy.setLendBy(this);
-//    }
-//
+
+
+    // inconvenience methods for bi-directional relationship
+
+    public void addLendedCopy(BookCopy copy){
+        if(lendedCopies == null){
+            lendedCopies = new ArrayList<>();
+        }
+        // set the link
+        lendedCopies.add(copy);
+        copy.setLendBy(this);
+    }
+
 
 }

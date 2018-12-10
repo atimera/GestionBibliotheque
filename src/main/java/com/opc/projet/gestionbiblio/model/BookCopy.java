@@ -52,12 +52,5 @@ public class BookCopy {
     private String dateOfReturn;
 
 
-    @Override
-    public String toString() {
-        return "BookCopy{" +
-                "id=" + id +
-                ", reference='" + reference + '\'' +
-                ", dateOfPurchase='" + dateOfPurchase + '\'' +
-                '}';
-    }
+
 }

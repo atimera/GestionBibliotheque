@@ -9,6 +9,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -54,7 +55,7 @@ public class Library {
 
     @ManyToMany(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.ALL})
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinTable(name = "library_member",
             joinColumns = @JoinColumn(name = "library_id"),
             inverseJoinColumns = @JoinColumn(name = "member_id"))
@@ -105,33 +106,25 @@ public class Library {
 
 
 
-    // convenience methods for bi-directional relationship
+    //convenience methods for bi-directional relationship
 
-//    public void addEmployee (Employee employee){
-//        if(employees == null){
-//            employees = new ArrayList<>();
-//        }
-//        employees.add(employee);
-//        employee.setLibrary(this);
-//    }
-//
-//    public void addMember (Member member){
-//        if(members == null){
-//            members = new ArrayList<>();
-//        }
-//        members.add(member);
-//        member.addLibrary(this);
-//    }
-
-
-    @Override
-    public String toString() {
-        return "\n-> Library{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", address -> " + location +
-                '}';
+    public void addEmployee (Employee employee){
+        if(employees == null){
+            employees = new ArrayList<>();
+        }
+        employees.add(employee);
+        employee.setLibrary(this);
     }
+
+    public void addMember (Member member){
+        if(members == null){
+            members = new ArrayList<>();
+        }
+        members.add(member);
+        member.addLibrary(this);
+    }
+
+
+
 
 }

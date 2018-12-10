@@ -39,11 +39,20 @@ public class Address{
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "location")
     private Library library;
 
-    @OneToMany(
+    @ManyToMany(
             fetch = FetchType.LAZY,
-            mappedBy = "location",
-            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})  // TODO: 10/12/2018
+    @JoinTable(name = "person_address",
+            joinColumns = @JoinColumn(name = "address_id"),
+            inverseJoinColumns = @JoinColumn(name = "person_id"))
     private List<Person> people;
+
+
+
+
+
+
+
 
 
     // === contructors with postalCode and city
@@ -72,19 +81,5 @@ public class Address{
         this.city = city;
     }
 
-    @Override
-    public String toString() {
-        return "-> Address{" +
-                "id=" + id +
-                ", address='" + address + '\'' +
-                ", address2='" + address2 + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                ", city='" + city + '\'' +
-                '}';
-    }
 
-
-    public void setLibrary(Library library) {
-        this.library = library;
-    }
 }

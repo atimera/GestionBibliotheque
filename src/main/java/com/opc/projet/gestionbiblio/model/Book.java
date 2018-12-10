@@ -31,7 +31,7 @@ public class Book {
     @OneToMany(
             fetch = FetchType.EAGER,
             mappedBy = "book",
-            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+            cascade = {CascadeType.ALL})
     private List<BookCopy> copies;
 
 
@@ -43,31 +43,13 @@ public class Book {
 
     @ManyToMany(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+            cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinTable(name = "author_book",
             joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     List<Author> authors;
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", dateOfPublication='" + dateOfPublication + '\'' +
-                ", cover='" + cover + '\'' +
-                ", copies=" + copies +
-                '}';
-    }
 
-
-    public List<BookCopy> getCopies() {
-        return copies;
-    }
-
-    public void setCopies(List<BookCopy> copies) {
-        this.copies = copies;
-    }
 
 
     // convenience methods for bi-directional relationship
