@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adresse - Liste</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <script href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+            th:href="@{/webjars/jquery/3.3.1/jquery.min.css}">
+    </script>
+    <!-- CSS -->
+    <link href="../../static/css/style.css"
+          th:href="@{css/style.css}" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<!-- MEMU -->
+<div th:replace="fragments/menu :: nav">Menu</div>
+
+<div class="container">
+    <div th:if="${#lists.isEmpty(addresses)}">
+        <i>La liste des address est vide</i>
+        <div>
+            <a th:href="@{'/addresses/new'}" class="btn btn-primary">Ajouter</a>
+        </div>
+    </div>
+    <div th:if="${not #lists.isEmpty(addresses)}">
+        <h2>Liste des adresses</h2>
+        <div>
+            <a th:href="@{'/addresses/new'}" class="btn btn-primary">Ajouter</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Address</th>
+                    <th>Code postal</th>
+                    <th>Ville</th>
+                    <th colspan="3" class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="address: ${addresses}">
+                    <td th:text="${address.getId()}" ></td>
+                    <td th:text="${address.getAddress()}" ></td>
+                    <td th:text="${address.getPostalCode()}" ></td>
+                    <td th:text="${address.getCity()}" ></td>
+                    <td><a th:href="@{'/addresses/' + ${address.id}}">Voir</a></td>
+                    <td><a th:href="@{'/addresses/edit/' + ${address.id}}">Modifier</a></td>
+                    <td><a th:href="@{'/addresses/delete/' + ${address.id}}">Supprimer</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

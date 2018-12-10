@@ -1,36 +1,60 @@
 package com.opc.projet.gestionbiblio.model;
 
-public class Member extends Person {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-    private String email;
-    private String password;
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
+import javax.persistence.*;
+import java.util.List;
 
 
-    @Override
-    public String toString() {
-        return "Member{" +
-                "email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", gender=" + gender +
-                '}';
-    }
+@SuppressWarnings("JpaQlInspection")
+@Entity
+@NamedQueries({
+        @NamedQuery(name = "find_all_members", query = "select m from Member m"),
+})
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@JsonIgnoreProperties(value = {"libraries", "lendedCopies"})
+public class Member extends User{
+
+    @OneToMany(mappedBy = "lender", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<BookCopy> lendedCopies;
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinTable(name = "library_member",
+            joinColumns = @JoinColumn(name = "member_id"),
+            inverseJoinColumns = @JoinColumn(name = "library_id"))
+    private List<Library> libraries;
+
+
+
+
+    // inconvenience methods for bi-directional relationship
+
+//    public void addLibrary(Library library) {
+//        if(libraries == null){
+//            libraries = new ArrayList<>();
+//        }
+//        // set the link
+//        libraries.add(library);
+//        library.addMember(this);
+//    }
+//
+//    public void addBookCopy(BookCopy copy){
+//        if(lendedCopies == null){
+//            lendedCopies = new ArrayList<>();
+//        }
+//        // set the link
+//        lendedCopies.add(copy);
+//        copy.setLender(this);
+//    }
+
+
 }

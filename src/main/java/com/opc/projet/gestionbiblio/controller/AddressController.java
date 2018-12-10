@@ -5,67 +5,69 @@ import com.opc.projet.gestionbiblio.service.contract.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.validation.Valid;
+
 @Controller
-@RequestMapping("/address")
+@RequestMapping("/addresses")
 public class AddressController {
 
-
+    @Autowired
     private AddressService addressService;
 
-    @Autowired
-    public void setAddressService(AddressService addressService) {
-        this.addressService = addressService;
-    }
 
-    @RequestMapping({"/", "/list"})
+    @RequestMapping({"", "/", "/list"})
     public String getAddresses(Model pModel){
         pModel.addAttribute("addresses", addressService.getAll());
-        return "address/list";
+        return "addresses/list";
     }
 
     @RequestMapping("/{id}")
     public String getAddress(@PathVariable int id, Model pModel){
         Address vAddress = addressService.getById(id);
         if(vAddress == null){
-            return "redirect:/address/list";
+            return "redirect:/addresses/list";
         }
         pModel.addAttribute("address", vAddress);
-        return "address/details";
+        return "addresses/details";
     }
 
     @RequestMapping("/new")
     public String newAddress(Model pModel){
         pModel.addAttribute("address", new Address());
-        return "address/form";
+        return "addresses/form";
     }
 
     @RequestMapping("/edit/{id}")
     public String editAddress(@PathVariable int id, Model pModel){
         Address vAddress = addressService.getById(id);
         if(vAddress == null){
-            return "redirect:/address/list";
+            return "redirect:/addresses/list";
         }
         pModel.addAttribute("address", vAddress);
 
-        return "address/form";
+        return "addresses/form";
     }
 
     @RequestMapping("/delete/{id}")
     public String deleteAddress(@PathVariable int id){
-        addressService.delete(id);
-        return "redirect:/address/list";
+        addressService.deleteById(id);
+        return "redirect:/addresses/list";
     }
 
     @RequestMapping(value = "/process", method = RequestMethod.POST)
-    public String saveOrUpdateAddress(@ModelAttribute("address") Address pAddress){
-        Address address = addressService.saveOrUpdate(pAddress);
-        System.out.println("\n\n\n" + pAddress + "\n\n\n");
-        return "redirect:/address/"+ address.getId();
+    public String saveOrUpdateAddress(@Valid @ModelAttribute("address") Address pAddress,
+                                      BindingResult bindingResult){
+        if(bindingResult.hasErrors()){
+            return "addresses/form";
+        }
+        Address address = addressService.save(pAddress);
+        return "redirect:/addresses/"+ address.getId();
     }
 
 }
