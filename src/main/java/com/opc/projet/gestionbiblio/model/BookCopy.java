@@ -30,6 +30,8 @@ public class BookCopy {
     @Column(name = "date_of_purchase")
     private String dateOfPurchase;
 
+    private Boolean isLended;
+
     // a Book is not deleted when the copy is deleted
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "book_id")

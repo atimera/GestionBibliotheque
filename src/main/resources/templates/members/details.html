@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Membre - Details</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <script href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+            th:href="@{/webjars/jquery/3.3.1/jquery.min.css}">
+    </script>
+    <!-- CSS -->
+    <link href="../../static/css/style.css"
+          th:href="@{../css/member.css}" rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Details de l'adresse</h2>
+        </div>
+        <div class="row col-sm-8" th:if="${member == null}">
+            <p>L'adresse d'id {id} n'existe pas.</p>
+        </div>
+        <div class="row" th:if="${member != null }">
+            <div class="col-sm-8">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Id</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" th:text="${member.id}"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Prénom</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" th:text="${member.firstName}"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Nom</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" th:text="${member.lastName}"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" th:text="${member.email}"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Genre</label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static" th:text="${member.gender}"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

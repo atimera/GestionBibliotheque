@@ -20,37 +20,37 @@
 <!-- MEMU -->
 <div th:replace="fragments/menu :: nav">Menu</div>
 
-
 <div class="container">
-    <div th:if="${#lists.isEmpty(members)}">
-        <i>La listes est vide</i>
-    </div>
-    <div th:if="${not #lists.isEmpty(members)}">
-        <h2>Liste des Membres</h2>
+    <div th:if="${#lists.isEmpty(addresses)}">
+        <i>La liste des address est vide</i>
         <div>
-            <a th:href="@{'/member/new'}" class="btn btn-primary">Ajouter</a>
+            <a th:href="@{'/addresses/new'}" class="btn btn-primary">Ajouter</a>
+        </div>
+    </div>
+    <div th:if="${not #lists.isEmpty(addresses)}">
+        <h2>Liste des adresses</h2>
+        <div>
+            <a th:href="@{'/addresses/new'}" class="btn btn-primary">Ajouter</a>
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Prénom</th>
-                    <th>Nom</th>
-                    <th>Email</th>
-                    <th>Genre</th>
+                    <th>Address</th>
+                    <th>Code postal</th>
+                    <th>Ville</th>
                     <th colspan="3" class="text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="member: ${members}">
-                    <td th:text="${member.getId()}" ></td>
-                    <td th:text="${member.getFirstName()}" ></td>
-                    <td th:text="${member.getLastName()}" ></td>
-                    <td th:text="${member.getEmail()}" ></td>
-                    <td th:text="${member.getGender()}" ></td>
-                    <td><a th:href="@{'/member/' + ${member.id}}">Voir</a></td>
-                    <td><a th:href="@{'/member/edit/' + ${member.id}}">Modifier</a></td>
-                    <td><a th:href="@{'/member/delete/' + ${member.id}}">Supprimer</a></td>
+                <tr th:each="address: ${addresses}">
+                    <td th:text="${address.getId()}" ></td>
+                    <td th:text="${address.getAddress()}" ></td>
+                    <td th:text="${address.getPostalCode()}" ></td>
+                    <td th:text="${address.getCity()}" ></td>
+                    <td><a th:href="@{'/addresses/' + ${address.id}}">Voir</a></td>
+                    <td><a th:href="@{'/addresses/edit/' + ${address.id}}">Modifier</a></td>
+                    <td><a th:href="@{'/addresses/delete/' + ${address.id}}">Supprimer</a></td>
                 </tr>
             </tbody>
         </table>

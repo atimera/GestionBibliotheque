@@ -37,6 +37,7 @@ public class BookCopyRepository {
         }else {
             em.merge(copy);
         }
+        em.merge(copy);
         return copy;
     }
 

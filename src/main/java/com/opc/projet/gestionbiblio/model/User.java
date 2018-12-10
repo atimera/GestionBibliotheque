@@ -21,6 +21,7 @@ import java.util.Date;
 @Setter
 public class User extends Person{
 
+    protected String email;
     protected String username;
     protected String password;
     @Column(insertable = false)

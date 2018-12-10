@@ -17,34 +17,30 @@ import javax.validation.Valid;
 @RequestMapping("/members")
 public class MemberController {
 
-
+    @Autowired
     private MemberService memberService;
 
-    @Autowired
-    public void setMemberService(MemberService memberService) {
-        this.memberService = memberService;
-    }
 
-    @RequestMapping({"/", "/list"})
+    @RequestMapping({"", "/", "/list"})
     public String getMembers(Model pModel){
         pModel.addAttribute("members", memberService.getAll());
-        return "member/list";
+        return "members/list";
     }
 
     @RequestMapping("/{id}")
     public String getMember(@PathVariable int id, Model pModel){
         Member vMember = memberService.getById(id);
         if(vMember == null){
-            return "redirect:/member/list";
+            return "redirect:/members/list";
         }
         pModel.addAttribute("member", vMember);
-        return "member/details";
+        return "members/details";
     }
 
     @RequestMapping("/new")
     public String newMember(Model pModel){
         pModel.addAttribute("member", new Member());
-        return "member/form";
+        return "members/form";
     }
 
     @RequestMapping("/edit/{id}")
@@ -55,20 +51,20 @@ public class MemberController {
         }
         pModel.addAttribute("member", vMember);
 
-        return "member/form";
+        return "members/form";
     }
 
     @RequestMapping("/delete/{id}")
     public String deleteMember(@PathVariable int id){
         memberService.deleteById(id);
-        return "redirect:/member/list";
+        return "redirect:/members/list";
     }
 
     @RequestMapping(value = "/process", method = RequestMethod.POST)
     public String saveOrUpdateMember(@Valid @ModelAttribute("member") Member pMember,
                                       BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return "member/form";
+            return "members/form";
         }
         Member member = memberService.save(pMember);
         System.out.println("\n\n\n" + pMember + "\n\n\n");

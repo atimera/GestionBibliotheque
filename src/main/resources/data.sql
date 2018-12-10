@@ -193,32 +193,32 @@ VALUES(300011, 400002);
 -------------------------------------------------------------------------------------
 
 -- INSERT USERS
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300002, 'j_dupond', '123456', sysdate(), 1);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300002, null, 'j_dupond', '123456', sysdate(), 1);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300004, 'm_memdoza', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', sysdate(), 0);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300004, null, 'm_memdoza', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', sysdate(), 0);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300005, 'yacine', 'Ode_P,de%oe', sysdate(), 1);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300005, null, 'yacine', 'Ode_P,de%oe', sysdate(), 1);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300006, 'issa', 'oooooo', sysdate(), 1);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300006, null, 'issa', 'oooooo', sysdate(), 1);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300007, 'franck', 'azerty', sysdate(), 1);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300007, 'franck93@gmail.com', 'franck', 'azerty', sysdate(), 1);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300008, 'audré', 'ppoaz,dz', sysdate(), 1);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300008, null, 'audré', 'ppoaz,dz', sysdate(), 1);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300009, 'pauline', 'paulinelabest', sysdate(), 0);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300009, null, 'pauline', 'paulinelabest', sysdate(), 0);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300010, 'aimé', '_aimé_', sysdate(), 1);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300010, 'aime@gmail.com', 'aimé', '_aimé_', sysdate(), 1);
 
-INSERT INTO USER(ID, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
-VALUES(300012, 'laenzo', 'laenzo', sysdate(), 1);
+INSERT INTO USER(ID, EMAIL, USERNAME, PASSWORD, REGISTERED_AT, ENABLED )
+VALUES(300012, 'laenzo@hotmail.com', 'laenzo', 'laenzo', sysdate(), 1);
 
 
 ---------------------------------------------------------------------------------------

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Auteur - Livres</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen">
+    <!-- Jquery -->
+    <script href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"
+            th:href="@{/webjars/jquery/3.3.1/jquery.min.css}">
+    </script>
+    <!-- CSS -->
+    <link href="../../static/css/style.css"
+          th:href="@{css/style.css}" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<!-- MEMU -->
+<div th:replace="fragments/menu :: nav">Menu</div>
+
+<div class="container">
+    <div th:if="${#lists.isEmpty(books)}">
+        <i>La liste des livres de cet auteur est vide</i>
+        <div>
+            <a th:href="@{'/books/new'}" class="btn btn-primary">Ajouter</a>
+        </div>
+    </div>
+    <div th:if="${not #lists.isEmpty(books)}">
+        <h2>Liste des livres</h2>
+        <div>
+            <a th:href="@{'/books/new'}" class="btn btn-primary">Ajouter</a>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Date de publication</th>
+                <th>Couverture</th>
+                <!-- Actions: voir / modifier / supprimer -->
+                <th colspan="4" class="text-center">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="book: ${books}">
+
+                <td th:text="${book.id}" ></td>
+                <td th:text="${book.title}" ></td>
+                <td th:text="${book.dateOfPublication}" ></td>
+                <td th:text="${book.cover}" ></td>
+
+                <!-- Actions: voir / modifier / supprimer -->
+                <td><a th:href="@{'/books/' + ${book.id}}">Voir details</a></td>
+                <td><a th:href="@{'/copies/' + ${book.id}}">Voir exemplaires</a></td>
+                <td><a th:href="@{'/books/edit/' + ${book.id}}">Modifier</a></td>
+                <td><a th:href="@{'/books/delete/' + ${book.id}}">Supprimer</a></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

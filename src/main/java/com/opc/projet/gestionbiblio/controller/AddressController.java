@@ -28,34 +28,34 @@ public class AddressController {
     @RequestMapping({"", "/", "/list"})
     public String getAddresses(Model pModel){
         pModel.addAttribute("addresses", addressService.getAll());
-        return "address/list";
+        return "addresses/list";
     }
 
     @RequestMapping("/{id}")
     public String getAddress(@PathVariable int id, Model pModel){
         Address vAddress = addressService.getById(id);
         if(vAddress == null){
-            return "redirect:/address/list";
+            return "redirect:/addresses/list";
         }
         pModel.addAttribute("address", vAddress);
-        return "address/details";
+        return "addresses/details";
     }
 
     @RequestMapping("/new")
     public String newAddress(Model pModel){
         pModel.addAttribute("address", new Address());
-        return "address/form";
+        return "addresses/form";
     }
 
     @RequestMapping("/edit/{id}")
     public String editAddress(@PathVariable int id, Model pModel){
         Address vAddress = addressService.getById(id);
         if(vAddress == null){
-            return "redirect:/address/list";
+            return "redirect:/addresses/list";
         }
         pModel.addAttribute("address", vAddress);
 
-        return "address/form";
+        return "addresses/form";
     }
 
     @RequestMapping("/delete/{id}")
@@ -68,10 +68,9 @@ public class AddressController {
     public String saveOrUpdateAddress(@Valid @ModelAttribute("address") Address pAddress,
                                       BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return "address/form";
+            return "addresses/form";
         }
         Address address = addressService.save(pAddress);
-        System.out.println("\n\n\n" + pAddress + "\n\n\n");
         return "redirect:/addresses/"+ address.getId();
     }
 
