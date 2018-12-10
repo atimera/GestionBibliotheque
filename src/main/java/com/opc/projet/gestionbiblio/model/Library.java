@@ -33,13 +33,18 @@ public class Library {
     @NotBlank @Size(min = 2)
     @Column(nullable = false)
     private String name;
-
     @Pattern(regexp = "[ 0-9]", message = "numero de téléphone incorrect")
     private String phoneNumber;
 
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "address_id")
     private Address location;
+
+    @OneToMany(
+            fetch = FetchType.LAZY,
+            mappedBy = "library",
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<Book> books;
 
     @OneToMany(
             fetch = FetchType.LAZY,
@@ -54,6 +59,7 @@ public class Library {
             joinColumns = @JoinColumn(name = "library_id"),
             inverseJoinColumns = @JoinColumn(name = "member_id"))
     private List<Member> members;
+
 
 
 
@@ -98,25 +104,9 @@ public class Library {
     }
 
 
-//    public List<Employee> getEmployees() {
-//        return employees;
-//    }
-//
-//    public void setEmployees(List<Employee> employees) {
-//        this.employees = employees;
-//    }
-//
-//    public List<Member> getMembers() {
-//        return members;
-//    }
-//
-//    public void setMembers(List<Member> members) {
-//        this.members = members;
-//    }
-//
-//
-//    // convenience methods for bi-directional relationship
-//
+
+    // convenience methods for bi-directional relationship
+
 //    public void addEmployee (Employee employee){
 //        if(employees == null){
 //            employees = new ArrayList<>();

@@ -20,10 +20,6 @@ public class AddressController {
     @Autowired
     private AddressService addressService;
 
-    @Autowired
-    public void setAddressService(AddressService addressService) {
-        this.addressService = addressService;
-    }
 
     @RequestMapping({"", "/", "/list"})
     public String getAddresses(Model pModel){

@@ -20,11 +20,6 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @Autowired
-    public void setAuthorService(AuthorService authorService) {
-        this.authorService = authorService;
-    }
-
     @RequestMapping({"", "/", "/list"})
     public String getAuthors(Model pModel){
         pModel.addAttribute("authors", authorService.getAll());

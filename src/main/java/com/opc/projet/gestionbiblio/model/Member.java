@@ -22,13 +22,16 @@ import java.util.List;
 @JsonIgnoreProperties(value = {"libraries", "lendedCopies"})
 public class Member extends User{
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    @JoinTable(name = "library_member", joinColumns = @JoinColumn(name = "member_id"), inverseJoinColumns = @JoinColumn(name = "library_id"))
-    private List<Library> libraries;
-
     @OneToMany(mappedBy = "lender", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private List<BookCopy> lendedCopies;
 
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinTable(name = "library_member",
+            joinColumns = @JoinColumn(name = "member_id"),
+            inverseJoinColumns = @JoinColumn(name = "library_id"))
+    private List<Library> libraries;
 
 
 

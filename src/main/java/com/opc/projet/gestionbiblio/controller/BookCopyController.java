@@ -21,10 +21,6 @@ public class BookCopyController {
     @Autowired
     private BookCopyService bookCopyService;
 
-    @Autowired
-    public void setBookCopyService(BookCopyService bookCopyService) {
-        this.bookCopyService = bookCopyService;
-    }
 
     @RequestMapping({"", "/", "/list"})
     public String getCopies(Model pModel){

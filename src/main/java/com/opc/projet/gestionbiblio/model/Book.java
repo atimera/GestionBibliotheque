@@ -27,9 +27,19 @@ public class Book {
     private String dateOfPublication;
     private String cover;
 
-    // when a book is deleted, all it's copies will be deleted
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "book", cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+
+    @OneToMany(
+            fetch = FetchType.EAGER,
+            mappedBy = "book",
+            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private List<BookCopy> copies;
+
+
+    @ManyToOne(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "library_id")
+    private Library library;
 
     @ManyToMany(
             fetch = FetchType.LAZY,

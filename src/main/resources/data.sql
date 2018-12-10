@@ -35,20 +35,6 @@ VALUES(100011, '9 Avenue Saint-Germain', '', '92240', 'malakoff' );
 INSERT INTO ADDRESS(ID, ADDRESS, ADDRESS2, POSTAL_CODE, CITY)
 VALUES(100012, '32 Rue Bargue', '', '75740', 'PARIS' );
 
-
---------------------------------------------------------------------------------------
-
--- INSERT LIBRARIES
-INSERT INTO LIBRARY(ID, NAME, PHONE_NUMBER, ADDRESS_ID)
-VALUES(200000, 'Bibliothèque de France', '01 64 76 38 00', 100005);
-
-INSERT INTO LIBRARY(ID, NAME, PHONE_NUMBER, ADDRESS_ID)
-VALUES(200001, 'Bibliothèque Sainte-Geneviève', '01 40 46 30 97', 100006 );
-
-INSERT INTO LIBRARY(ID, NAME, PHONE_NUMBER, ADDRESS_ID)
-VALUES(200002, 'BULAC - Bibliothèque universitaire des langues et civilisations', '01 81 69 18 00', 100007 );
-
-
 ---------------------------------------------------------------------------------------
 
 -- INSERT PERSONS
@@ -105,15 +91,45 @@ VALUES(300011);
 
 ---------------------------------------------------------------------------------------
 
+-- INSERT LIBRARIES
+INSERT INTO LIBRARY(ID, NAME, PHONE_NUMBER, ADDRESS_ID)
+VALUES(200000, 'Bibliothèque de France', '01 64 76 38 00', 100005);
+
+INSERT INTO LIBRARY(ID, NAME, PHONE_NUMBER, ADDRESS_ID)
+VALUES(200001, 'Bibliothèque Sainte-Geneviève', '01 40 46 30 97', 100006 );
+
+INSERT INTO LIBRARY(ID, NAME, PHONE_NUMBER, ADDRESS_ID)
+VALUES(200002, 'BULAC - Bibliothèque universitaire des langues et civilisations', '01 81 69 18 00', 100007 );
+
+---------------------------------------------------------------------------------------
+
 -- INSERT BOOKS
-INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER )
-VALUES(400000, 'Programmer en Java', sysdate(), '');
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID)
+VALUES(400000, 'Programmer en Java', sysdate(), '', 200000);
 
-INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER )
-VALUES(400001, 'Java EE - Développez des application web ev java', sysdate(), '');
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400001, 'Java EE - Développez des application web ev java', sysdate(), '', 200000);
 
-INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER )
-VALUES(400002, 'UML2 de lappprentissage à la pratique', sysdate(), '');
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400002, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200000);
+--
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400003, 'Programmer en Java', sysdate(), '', 200001);
+
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400004, 'Java EE - Développez des application web ev java', sysdate(), '', 200001);
+
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400005, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200001);
+--
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400006, 'Programmer en Java', sysdate(), '', 200002);
+
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400007, 'Java EE - Développez des application web ev java', sysdate(), '', 200002);
+
+INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
+VALUES(400008, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200002);
 
 ---------------------------------------------------------------------------------------
 
@@ -245,14 +261,53 @@ VALUES(300012);
 ---------------------------------------------------------------------------------------
 
 -- INSERT EMPLOYEE
-INSERT INTO EMPLOYEE(ID )
-VALUES(300009);
+INSERT INTO EMPLOYEE(ID, LIBRARY_ID)
+VALUES(300009, 200000);
 
-INSERT INTO EMPLOYEE(ID )
-VALUES(300010);
+INSERT INTO EMPLOYEE(ID, LIBRARY_ID )
+VALUES(300010, 200000);
 
-INSERT INTO EMPLOYEE(ID )
-VALUES(300012);
+INSERT INTO EMPLOYEE(ID, LIBRARY_ID )
+VALUES(300012, 200000);
 
----------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
+
+-- INSERT LIBRARIES MEMBERS
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200000, 300002);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200000, 300004);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200000, 300005);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200000, 300006);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200000, 300007);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200000, 300012);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200001, 300005);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200001, 300006);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200001, 300007);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200001, 300012);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200002, 300007);
+
+INSERT INTO LIBRARY_MEMBER(LIBRARY_ID, MEMBER_ID)
+VALUES(200002, 300012);
+
+--------------------------------------------------------------------------------------
 

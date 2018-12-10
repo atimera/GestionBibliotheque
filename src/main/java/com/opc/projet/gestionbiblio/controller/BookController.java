@@ -20,11 +20,6 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    public void setBookService(BookService bookService) {
-        this.bookService = bookService;
-    }
-
     @RequestMapping({"", "/", "/list"})
     public String getBooks(Model pModel){
         pModel.addAttribute("books", bookService.getAll());
