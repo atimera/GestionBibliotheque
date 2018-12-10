@@ -1,14 +1,17 @@
 package com.opc.projet.gestionbiblio.service.impl;
 
-import com.opc.projet.gestionbiblio.business.AddressRepository;
+import com.opc.projet.gestionbiblio.business.contract.AddressRepository;
 import com.opc.projet.gestionbiblio.model.Address;
 import com.opc.projet.gestionbiblio.service.contract.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Transactional
 public class AddressServiceImpl implements AddressService {
 
     @Autowired
@@ -21,7 +24,14 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public Address getById(long id) {
-        return repository.findById(id);
+        Address vAddress = null;
+        Optional<Address> optional = repository.findById(id);
+
+        if(optional.isPresent()){
+            vAddress = optional.get();
+        }
+
+        return vAddress;
     }
 
     @Override
@@ -31,6 +41,7 @@ public class AddressServiceImpl implements AddressService {
 
     @Override
     public void deleteById(long id) {
-        repository.deletById(id);
+
+        repository.deleteById(id);
     }
 }

@@ -1,14 +1,18 @@
 package com.opc.projet.gestionbiblio.service.impl;
 
-import com.opc.projet.gestionbiblio.business.EmployeeRepository;
+import com.opc.projet.gestionbiblio.business.contract.EmployeeRepository;
+import com.opc.projet.gestionbiblio.model.Book;
 import com.opc.projet.gestionbiblio.model.Employee;
 import com.opc.projet.gestionbiblio.service.contract.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
@@ -20,9 +24,16 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Employee getById(long id) {
-        return repository.findById(id);
+    public Employee getById(long pId) {
+        Employee vEmployee = null;
+        Optional<Employee> optional = repository.findById(pId);
+
+        if(optional.isPresent()){
+            vEmployee = optional.get();
+        }
+        return vEmployee;
     }
+
 
     @Override
     public Employee save(Employee employee) {
@@ -31,6 +42,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void deleteById(long id) {
-        repository.deletById(id);
+        repository.deleteById(id);
     }
 }

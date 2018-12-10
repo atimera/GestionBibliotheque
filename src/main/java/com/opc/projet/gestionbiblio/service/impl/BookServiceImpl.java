@@ -1,14 +1,17 @@
 package com.opc.projet.gestionbiblio.service.impl;
 
-import com.opc.projet.gestionbiblio.business.BookRepository;
+import com.opc.projet.gestionbiblio.business.contract.BookRepository;
 import com.opc.projet.gestionbiblio.model.Book;
 import com.opc.projet.gestionbiblio.service.contract.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Transactional
 public class BookServiceImpl implements BookService {
 
     @Autowired
@@ -20,8 +23,14 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book getById(long id) {
-        return repository.findById(id);
+    public Book getById(long pId) {
+        Book vBook = null;
+        Optional<Book> optional = repository.findById(pId);
+
+        if(optional.isPresent()){
+            vBook = optional.get();
+        }
+        return vBook;
     }
 
     @Override
@@ -31,6 +40,6 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void deleteById(long id) {
-        repository.deletById(id);
+        repository.deleteById(id);
     }
 }

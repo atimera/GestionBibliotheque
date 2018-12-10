@@ -1,14 +1,17 @@
 package com.opc.projet.gestionbiblio.service.impl;
 
-import com.opc.projet.gestionbiblio.business.AuthorRepository;
+import com.opc.projet.gestionbiblio.business.contract.AuthorRepository;
 import com.opc.projet.gestionbiblio.model.Author;
 import com.opc.projet.gestionbiblio.service.contract.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
+@Transactional
 public class AuthorServiceImpl implements AuthorService {
 
     @Autowired
@@ -20,8 +23,14 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public Author getById(long id) {
-        return repository.findById(id);
+    public Author getById(long pId) {
+        Author vAuthor = null;
+        Optional<Author> optional = repository.findById(pId);
+
+        if(optional.isPresent()){
+            vAuthor = optional.get();
+        }
+        return vAuthor;
     }
 
     @Override
@@ -31,7 +40,7 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public void deleteById(long id) {
-        repository.deletById(id);
+        repository.deleteById(id);
     }
 
 }

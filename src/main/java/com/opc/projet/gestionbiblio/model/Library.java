@@ -30,10 +30,10 @@ public class Library {
     @GeneratedValue
     private Long id;
 
-    @NotBlank @Size(min = 2)
+    //@NotBlank @Size(min = 2)
     @Column(nullable = false)
     private String name;
-    @Pattern(regexp = "[ 0-9]", message = "numero de téléphone incorrect")
+    //@Pattern(regexp = "[ 0-9]", message = "numero de téléphone incorrect")
     private String phoneNumber;
 
     @OneToOne(cascade = {CascadeType.ALL})
@@ -43,18 +43,18 @@ public class Library {
     @OneToMany(
             fetch = FetchType.LAZY,
             mappedBy = "library",
-            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+            cascade = {CascadeType.ALL})
     private List<Book> books;
 
     @OneToMany(
             fetch = FetchType.LAZY,
             mappedBy = "library",
-            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+            cascade = {CascadeType.ALL})
     private List<Employee> employees;
 
     @ManyToMany(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+            cascade = {CascadeType.ALL})
     @JoinTable(name = "library_member",
             joinColumns = @JoinColumn(name = "library_id"),
             inverseJoinColumns = @JoinColumn(name = "member_id"))
