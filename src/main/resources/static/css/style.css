@@ -1,3 +1,12 @@
 body{
-    background: #eeeeee;
+    background: aliceblue;
+}
+
+
+
+
+/* CUSTOM BOOSTRAP CSS */
+
+.navbar{
+    margin-bottom: 0;
 }
