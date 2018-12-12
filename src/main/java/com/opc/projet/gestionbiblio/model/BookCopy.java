@@ -1,5 +1,6 @@
 package com.opc.projet.gestionbiblio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,24 +33,28 @@ public class BookCopy {
 
     private Boolean isLended;
 
-    // a Book is not deleted when the copy is deleted
-    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    @JoinColumn(name = "book_id")
-    private Book book;
-
-    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    @JoinColumn(name = "lender_id")
-    private Member lender;
-
-    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    @JoinColumn(name = "employee_id")
-    private Employee lendBy;
-
     @Column(name = "date_of_lend")
     private String dateOfLend;
 
     @Column(name = "date_of_return")
     private String dateOfReturn;
+
+
+    // a Book is not deleted when the copy is deleted
+    @JsonIgnore
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "book_id")
+    private Book book;
+
+    @JsonIgnore
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "lender_id")
+    private Member lender;
+
+    @JsonIgnore
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @JoinColumn(name = "employee_id")
+    private Employee lendBy;
 
 
 

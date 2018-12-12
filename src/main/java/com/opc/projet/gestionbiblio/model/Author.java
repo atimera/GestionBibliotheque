@@ -1,5 +1,6 @@
 package com.opc.projet.gestionbiblio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ import java.util.List;
 @Setter
 public class Author extends Person {
 
+    @JsonIgnore
     @ManyToMany(
             fetch = FetchType.EAGER,
             cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})

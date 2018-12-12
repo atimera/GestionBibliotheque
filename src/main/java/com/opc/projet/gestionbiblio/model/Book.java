@@ -1,12 +1,12 @@
 package com.opc.projet.gestionbiblio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("JpaQlInspection")
@@ -28,6 +28,7 @@ public class Book {
     private String cover;
 
 
+    @JsonIgnore
     @OneToMany(
             fetch = FetchType.EAGER,
             mappedBy = "book",
@@ -35,12 +36,14 @@ public class Book {
     private List<BookCopy> copies;
 
 
+    @JsonIgnore
     @ManyToOne(
             fetch = FetchType.LAZY,
             cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "library_id")
     private Library library;
 
+    @JsonIgnore
     @ManyToMany(
             fetch = FetchType.LAZY,
             cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
@@ -54,13 +57,13 @@ public class Book {
 
     // convenience methods for bi-directional relationship
 
-    public void addCopy (BookCopy bookCopy){
-        if(copies == null){
-            copies = new ArrayList<>();
-        }
-        // set the link
-        copies.add(bookCopy);
-        bookCopy.setBook(this);
-    }
+//    public void addCopy (BookCopy bookCopy){
+//        if(copies == null){
+//            copies = new ArrayList<>();
+//        }
+//        // set the link
+//        copies.add(bookCopy);
+//        bookCopy.setBook(this);
+//    }
 
 }

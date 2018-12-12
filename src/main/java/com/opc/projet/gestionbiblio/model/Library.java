@@ -1,5 +1,6 @@
 package com.opc.projet.gestionbiblio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -37,22 +37,26 @@ public class Library {
     //@Pattern(regexp = "[ 0-9]", message = "numero de téléphone incorrect")
     private String phoneNumber;
 
+    @JsonIgnore
     @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "address_id")
     private Address location;
 
+    @JsonIgnore
     @OneToMany(
             fetch = FetchType.LAZY,
             mappedBy = "library",
             cascade = {CascadeType.ALL})
     private List<Book> books;
 
+    @JsonIgnore
     @OneToMany(
             fetch = FetchType.LAZY,
             mappedBy = "library",
             cascade = {CascadeType.ALL})
     private List<Employee> employees;
 
+    @JsonIgnore
     @ManyToMany(
             fetch = FetchType.LAZY,
             cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
@@ -108,21 +112,21 @@ public class Library {
 
     //convenience methods for bi-directional relationship
 
-    public void addEmployee (Employee employee){
-        if(employees == null){
-            employees = new ArrayList<>();
-        }
-        employees.add(employee);
-        employee.setLibrary(this);
-    }
-
-    public void addMember (Member member){
-        if(members == null){
-            members = new ArrayList<>();
-        }
-        members.add(member);
-        member.addLibrary(this);
-    }
+//    public void addEmployee (Employee employee){
+//        if(employees == null){
+//            employees = new ArrayList<>();
+//        }
+//        employees.add(employee);
+//        employee.setLibrary(this);
+//    }
+//
+//    public void addMember (Member member){
+//        if(members == null){
+//            members = new ArrayList<>();
+//        }
+//        members.add(member);
+//        member.addLibrary(this);
+//    }
 
 
 
