@@ -1,10 +1,9 @@
 package com.opc.projet.gestionbiblio.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -14,17 +13,10 @@ import java.util.List;
 
 
 @SuppressWarnings("JpaQlInspection")
+@ApiModel
 @Entity
-@NamedQueries({
-    @NamedQuery(name = "find_all_libraries", query = "select L from Library L"),
-
-    @NamedQuery(name = "find_all_libraries_order_by_name", query = "select L from Library L order by L.name"),
-
-})
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 public class Library {
 
     @Id
@@ -34,7 +26,7 @@ public class Library {
     //@NotBlank @Size(min = 2)
     @Column(nullable = false)
     private String name;
-    //@Pattern(regexp = "[ 0-9]", message = "numero de téléphone incorrect")
+    @Pattern(regexp = "(0|\\+33|0033)[1-9][0-9]{8}", message = "numero de téléphone incorrect")
     private String phoneNumber;
 
     @JsonIgnore
@@ -64,16 +56,12 @@ public class Library {
             joinColumns = @JoinColumn(name = "library_id"),
             inverseJoinColumns = @JoinColumn(name = "member_id"))
     private List<Member> members;
-
-
-
-
-
-
+    
     // construction with name
     public Library(@NotBlank @Size(min = 2) String name) {
         this.name = name;
     }
+
 
     // constructor with name and phoneNumber
     public Library(@NotBlank @Size(min = 2)
@@ -108,6 +96,61 @@ public class Library {
         this.location = location;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public Address getLocation() {
+        return location;
+    }
+
+    public void setLocation(Address location) {
+        this.location = location;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
+
+    public List<Member> getMembers() {
+        return members;
+    }
+
+    public void setMembers(List<Member> members) {
+        this.members = members;
+    }
 
 
     //convenience methods for bi-directional relationship
@@ -127,6 +170,8 @@ public class Library {
 //        members.add(member);
 //        member.addLibrary(this);
 //    }
+
+
 
 
 
