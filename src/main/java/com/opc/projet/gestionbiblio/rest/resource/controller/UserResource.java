@@ -81,7 +81,7 @@ public class UserResource {
 
     @DeleteMapping("/users/{pId}")
     public void deleteUser(@PathVariable long pId){
-
+        if(userRepository.findById(pId).isPresent()) throw new NotFoundException("User does not exist id-"+pId);
         userRepository.deleteById(pId);
 
     }
@@ -141,9 +141,7 @@ public class UserResource {
         }
 
         Optional<Address> optionalAddress = addressRepository.findById(addressId);
-        if(!optionalAddress.isPresent()){
-            throw new NotFoundException("Address not found : id - "+ addressId);
-        }
+        if(!optionalAddress.isPresent()) throw new NotFoundException("Address not found : id - " + addressId);
 
         // HATEOAS
         Resource<Address> addressResource = new Resource<>(optionalAddress.get());

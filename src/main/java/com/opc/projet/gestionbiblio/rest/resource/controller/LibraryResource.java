@@ -89,7 +89,7 @@ public class LibraryResource {
 
     @DeleteMapping("/libraries/{pId}")
     public void deleteLibrary(@PathVariable long pId){
-
+        if( !libraryRepository.findById(pId).isPresent()) throw new NotFoundException("Library does not exist id-"+pId);
         libraryRepository.deleteById(pId);
 
     }
@@ -184,7 +184,7 @@ public class LibraryResource {
     // update library's location
     @PatchMapping("/libraries/{libraryId}/locations") // or @PutMapping
     public ResponseEntity<Object> updateLibraryLocation(@PathVariable long libraryId,
-                                                     @Valid @RequestBody Address pAddress){
+                                                        @Valid @RequestBody Address pAddress){
 
         Optional<Library> optionalLibrary = libraryRepository.findById(libraryId);
         if(!optionalLibrary.isPresent()) throw new NotFoundException("Library not found : id - " + libraryId);
@@ -214,9 +214,13 @@ public class LibraryResource {
     public void deleteLibraryLocation(@PathVariable long libraryId, @PathVariable long addressId){
 
         Optional<Library> optionalLibrary = libraryRepository.findById(libraryId);
-        if(!optionalLibrary.isPresent()){
-            throw new NotFoundException("Library not found : id - "+ libraryId);
-        }
+        if(!optionalLibrary.isPresent()) throw new NotFoundException("Library not found : id - "+ libraryId);
+
+        Optional<Address> optionalAddress = addressRepository.findById(addressId);
+        if(!optionalAddress.isPresent()) throw new NotFoundException("Address does not exist : id - "+ addressId);
+
+        optionalLibrary.get().setLocation(null);
+
         addressRepository.deleteById(addressId);
     }
 

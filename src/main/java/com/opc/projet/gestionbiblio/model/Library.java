@@ -2,6 +2,7 @@ package com.opc.projet.gestionbiblio.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
@@ -23,10 +24,11 @@ public class Library {
     @GeneratedValue
     private Long id;
 
-    //@NotBlank @Size(min = 2)
+    @ApiModelProperty("Obligatoire et doit être d'au moins 2 caractères")
+    @NotBlank(message = "Obligatoire") @Size(min = 2)
     @Column(nullable = false)
     private String name;
-    @Pattern(regexp = "(0|\\+33|0033)[1-9][0-9]{8}", message = "numero de téléphone incorrect")
+    //@Pattern(regexp = "(0|\\+33|0033)[1-9][0-9]{8}", message = "numero de téléphone incorrect")
     private String phoneNumber;
 
     @JsonIgnore
@@ -56,7 +58,7 @@ public class Library {
             joinColumns = @JoinColumn(name = "library_id"),
             inverseJoinColumns = @JoinColumn(name = "member_id"))
     private List<Member> members;
-    
+
     // construction with name
     public Library(@NotBlank @Size(min = 2) String name) {
         this.name = name;

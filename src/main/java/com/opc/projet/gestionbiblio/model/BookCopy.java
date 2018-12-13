@@ -2,42 +2,28 @@ package com.opc.projet.gestionbiblio.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
 @SuppressWarnings("JpaQlInspection")
 @Entity
-@NamedQueries({
-        @NamedQuery(name = "find_all_copies", query = "select c from BookCopy c"),
-})
-@NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Table(name = "bookcopy")
 public class BookCopy {
 
     @Id
     @GeneratedValue
-    @Column(name = "id")
     private Long id;
-
-    @Column(name = "reference")
     private String reference;
-
-    @Column(name = "date_of_purchase")
     private String dateOfPurchase;
-
-    private Boolean isLended;
-
-    @Column(name = "date_of_lend")
+    private Boolean available = true;
     private String dateOfLend;
-
-    @Column(name = "date_of_return")
     private String dateOfReturn;
+
+    public BookCopy(){
+        super();
+        available = true;
+    }
 
 
     // a Book is not deleted when the copy is deleted
@@ -56,6 +42,75 @@ public class BookCopy {
     @JoinColumn(name = "employee_id")
     private Employee lendBy;
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+    public String getDateOfPurchase() {
+        return dateOfPurchase;
+    }
+
+    public void setDateOfPurchase(String dateOfPurchase) {
+        this.dateOfPurchase = dateOfPurchase;
+    }
+
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
+
+    public String getDateOfLend() {
+        return dateOfLend;
+    }
+
+    public void setDateOfLend(String dateOfLend) {
+        this.dateOfLend = dateOfLend;
+    }
+
+    public String getDateOfReturn() {
+        return dateOfReturn;
+    }
+
+    public void setDateOfReturn(String dateOfReturn) {
+        this.dateOfReturn = dateOfReturn;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public Member getLender() {
+        return lender;
+    }
+
+    public void setLender(Member lender) {
+        this.lender = lender;
+    }
+
+    public Employee getLendBy() {
+        return lendBy;
+    }
+
+    public void setLendBy(Employee lendBy) {
+        this.lendBy = lendBy;
+    }
 }
