@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("JpaQlInspection")
@@ -28,7 +29,7 @@ public class Book {
     @OneToMany(
             fetch = FetchType.EAGER,
             mappedBy = "book",
-            cascade = {CascadeType.ALL})
+            cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     private List<BookCopy> copies;
 
 
@@ -118,4 +119,29 @@ public class Book {
 //        bookCopy.setBook(this);
 //    }
 
+    public void addAuthor (Author pAuthor){
+        if(authors == null){
+            authors = new ArrayList<>();
+        }
+        // set the link
+        authors.add(pAuthor);
+    }
+    public void removeAuthor (Author pAuthor){
+        if(authors != null){
+            authors.remove(pAuthor);
+        }
+    }
+
+
+
+
+    @Override
+    public String toString() {
+        return "\nBook - {" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", dateOfPublication='" + dateOfPublication + '\'' +
+                ", cover='" + cover + '\'' +
+                '}';
+    }
 }

@@ -16,7 +16,7 @@ public class BookCopy {
     private Long id;
     private String reference;
     private String dateOfPurchase;
-    private Boolean available = true;
+    private Boolean available;
     private String dateOfLend;
     private String dateOfReturn;
 

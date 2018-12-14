@@ -46,9 +46,7 @@ public class BookResource {
     public Resource<Book> retrieveBook(@PathVariable long pId){
 
         Optional<Book> optionalBook = bookRepository.findById(pId);
-        if(!optionalBook.isPresent()){
-            throw new NotFoundException("Book not found : id - "+ pId);
-        }
+        if(!optionalBook.isPresent()) throw new NotFoundException("Book not found : id - " + pId);
 
 
         // HATEOAS
@@ -57,17 +55,11 @@ public class BookResource {
         ControllerLinkBuilder linkToBooks = linkTo(methodOn(this.getClass()).retrieveBooks());
         bookResource.add(linkToBooks.withRel("all-books"));
 
-//        ControllerLinkBuilder linkToLocations = linkTo(methodOn(this.getClass()).retrieveBookLocation(pId));
-//        bookResource.add(linkToLocations.withRel("book-location"));
-//
-//        ControllerLinkBuilder linkToEmployees = linkTo(methodOn(this.getClass()).retrieveBookEmployees(pId));
-//        bookResource.add(linkToEmployees.withRel("book-employees"));
-//
-//        ControllerLinkBuilder linkToBooks = linkTo(methodOn(this.getClass()).retrieveBookBooks(pId));
-//        bookResource.add(linkToBooks.withRel("book-books"));
-//
-//        ControllerLinkBuilder linkToMembers = linkTo(methodOn(this.getClass()).retrieveBookMembers(pId));
-//        bookResource.add(linkToMembers.withRel("book-members"));
+        ControllerLinkBuilder linkToAuthors = linkTo(methodOn(this.getClass()).retrieveBookAuthors(pId));
+        bookResource.add(linkToAuthors.withRel("book-authors"));
+
+        ControllerLinkBuilder linkToCopies = linkTo(methodOn(this.getClass()).retrieveBookCopies(pId));
+        bookResource.add(linkToCopies.withRel("book-copies"));
 
         return bookResource;
     }
@@ -230,33 +222,12 @@ public class BookResource {
 
     // retrieve list of book's authors
     @GetMapping("/books/{bookId}/authors")
-    public List<Author> retrieveBookEmployees(@PathVariable long bookId){
+    public List<Author> retrieveBookAuthors(@PathVariable long bookId){
         Optional<Book> optionalBook = bookRepository.findById(bookId);
         if (!optionalBook.isPresent()) throw new NotFoundException("Book not found id-"+ bookId);
 
         return optionalBook.get().getAuthors();
     }
-
-//
-//    // retrieve list of book's books
-//    @GetMapping("/books/{bookId}/books")
-//    public List<Book> retrieveBookBooks(@PathVariable long bookId){
-//        Optional<Book> optionalBook = bookRepository.findById(bookId);
-//        if (!optionalBook.isPresent()) throw new NotFoundException("Book not found id-"+ bookId);
-//
-//        return optionalBook.get().getBooks();
-//    }
-//
-//
-//    // retrieve list of book's books
-//    @GetMapping("/books/{bookId}/members")
-//    public List<Member> retrieveBookMembers(@PathVariable long bookId){
-//        Optional<Book> optionalBook = bookRepository.findById(bookId);
-//        if (!optionalBook.isPresent()) throw new NotFoundException("Book not found id-"+ bookId);
-//
-//        return optionalBook.get().getMembers();
-//    }
-
 
 
 

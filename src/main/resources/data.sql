@@ -161,28 +161,19 @@ INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID)
 VALUES(400000, 'Programmer en Java', sysdate(), '', 200000);
 
 INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
-VALUES(400001, 'Java EE - Développez des application web ev java', sysdate(), '', 200000);
+VALUES(400001, 'Développez des application web  java', sysdate(), '', 200000);
 
 INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
 VALUES(400002, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200000);
---
-INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
-VALUES(400003, 'Programmer en Java', sysdate(), '', 200001);
 
 INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
-VALUES(400004, 'Java EE - Développez des application web ev java', sysdate(), '', 200001);
+VALUES(400003, 'Programmer en Java Edition 2', sysdate(), '', 200001);
 
 INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
-VALUES(400005, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200001);
---
-INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
-VALUES(400006, 'Programmer en Java', sysdate(), '', 200002);
+VALUES(400004, 'Java EE - Développez des application "web" en java', sysdate(), '', 200001);
 
 INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
-VALUES(400007, 'Java EE - Développez des application web ev java', sysdate(), '', 200002);
-
-INSERT INTO BOOK(ID, TITLE, DATE_OF_PUBLICATION, COVER, LIBRARY_ID )
-VALUES(400008, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200002);
+VALUES(400005, 'Dammy Book', sysdate(), '', 200002);
 
 ---------------------------------------------------------------------------------------
 
@@ -225,13 +216,13 @@ VALUES(400008, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200002);
  VALUES(500012, 1, sysdate(), sysdate(), sysdate(), 'JEEDDAWEJ1005', 400001,null, null);
 
  INSERT INTO BOOKCOPY(ID, available, DATE_OF_LEND, DATE_OF_PURCHASE, DATE_OF_RETURN, REFERENCE, BOOK_ID, EMPLOYEE_ID, LENDER_ID)
- VALUES(500013, 1, sysdate(), sysdate(), sysdate(), 'UML2DAALP10005', 400002,null, null);
+ VALUES(500013, 1, sysdate(), sysdate(), sysdate(), 'UML2DAALP10005', 400003,null, null);
 
  INSERT INTO BOOKCOPY(ID, available, DATE_OF_LEND, DATE_OF_PURCHASE, DATE_OF_RETURN, REFERENCE, BOOK_ID, EMPLOYEE_ID, LENDER_ID)
  VALUES(500014, 1, sysdate(), sysdate(), sysdate(), 'JEEDDAWEJ1006', 400001, null, null);
 
  INSERT INTO BOOKCOPY(ID, available, DATE_OF_LEND, DATE_OF_PURCHASE, DATE_OF_RETURN, REFERENCE, BOOK_ID, EMPLOYEE_ID, LENDER_ID)
- VALUES(500015, 1, sysdate(), sysdate(), sysdate(), 'UML2DAALP10006', 400002,null, null);
+ VALUES(500015, 1, sysdate(), sysdate(), sysdate(), 'UML2DAALP10006', 400004,null, null);
 
  INSERT INTO BOOKCOPY(ID, available, DATE_OF_LEND, DATE_OF_PURCHASE, DATE_OF_RETURN, REFERENCE, BOOK_ID, EMPLOYEE_ID, LENDER_ID)
  VALUES(500016, 1, sysdate(), sysdate(), sysdate(), 'PEJ1004', 400000,null, null);
@@ -243,10 +234,10 @@ VALUES(400008, 'UML2 de lappprentissage à la pratique', sysdate(), '', 200002);
  VALUES(500018, 1, sysdate(), sysdate(), sysdate(), 'UML2DAALP10007', 400002,null, null);
 
  INSERT INTO BOOKCOPY(ID, available, DATE_OF_LEND, DATE_OF_PURCHASE, DATE_OF_RETURN, REFERENCE, BOOK_ID, EMPLOYEE_ID, LENDER_ID)
- VALUES(500019, 1, sysdate(), sysdate(), sysdate(), 'JEEDDAWEJ1008', 400001,null, null);
+ VALUES(500019, 1, sysdate(), sysdate(), sysdate(), 'JEEDDAWEJ1008', 400004,null, null);
 
  INSERT INTO BOOKCOPY(ID, available, DATE_OF_LEND, DATE_OF_PURCHASE, DATE_OF_RETURN, REFERENCE, BOOK_ID, EMPLOYEE_ID, LENDER_ID)
- VALUES(500020, 1, sysdate(), sysdate(), sysdate(), 'UML2DAALP10008', 400002,null, null);
+ VALUES(500020, 1, sysdate(), sysdate(), sysdate(), 'DB10000', 400005,null, null);
 
 ---------------------------------------------------------------------------------------
 
@@ -259,6 +250,15 @@ VALUES(300003, 400001);
 
 INSERT INTO AUTHOR_BOOK(AUTHOR_ID, BOOK_ID )
 VALUES(300011, 400002);
+
+INSERT INTO AUTHOR_BOOK(AUTHOR_ID, BOOK_ID )
+VALUES(300000, 400003);
+
+INSERT INTO AUTHOR_BOOK(AUTHOR_ID, BOOK_ID )
+VALUES(300003, 400004);
+
+INSERT INTO AUTHOR_BOOK(AUTHOR_ID, BOOK_ID )
+VALUES(300003, 400005);
 
 -------------------------------------------------------------------------------------
 

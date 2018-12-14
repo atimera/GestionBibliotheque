@@ -2,7 +2,6 @@ package com.opc.projet.gestionbiblio.service.impl;
 
 import com.opc.projet.gestionbiblio.business.contract.UserRepository;
 import com.opc.projet.gestionbiblio.model.User;
-import com.opc.projet.gestionbiblio.model.User;
 import com.opc.projet.gestionbiblio.service.contract.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

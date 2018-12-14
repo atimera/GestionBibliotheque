@@ -61,10 +61,11 @@
 
 
         <!-- to convert json into xml -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.dataformat</groupId>
-            <artifactId>jackson-dataformat-xml</artifactId>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.fasterxml.jackson.dataformat</groupId>-->
+            <!--<artifactId>jackson-dataformat-xml</artifactId>-->
+        <!--</dependency>-->
+
 
         <!-- for documentation of the REST api WSDL equivalent in SOAP -->
         <dependency>

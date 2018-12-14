@@ -2,6 +2,7 @@ package com.opc.projet.gestionbiblio.rest.resource.controller;
 
 import com.opc.projet.gestionbiblio.business.contract.AddressRepository;
 import com.opc.projet.gestionbiblio.business.contract.UserRepository;
+import com.opc.projet.gestionbiblio.business.contract.UserRepositoryCustom;
 import com.opc.projet.gestionbiblio.model.Address;
 import com.opc.projet.gestionbiblio.model.User;
 import com.opc.projet.gestionbiblio.rest.exception.NotFoundException;
@@ -28,6 +29,9 @@ public class UserResource {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    UserRepositoryCustom userRepositoryCustom;
 
     @Autowired
     AddressRepository addressRepository;
@@ -123,9 +127,7 @@ public class UserResource {
             throw new NotFoundException("User not found : id - "+ userId);
         }
 
-        User vUser = optionalUser.get();
-
-        return vUser.getLocations();
+        return userRepositoryCustom.findUserAddresses(userId);
 
     }
 
@@ -135,19 +137,14 @@ public class UserResource {
             @PathVariable long userId,
             @PathVariable long addressId){
 
-        Optional<User> optionalUser = userRepository.findById(userId);
-        if(!optionalUser.isPresent()){
-            throw new NotFoundException("User not found : id - "+ userId);
-        }
-
-        Optional<Address> optionalAddress = addressRepository.findById(addressId);
-        if(!optionalAddress.isPresent()) throw new NotFoundException("Address not found : id - " + addressId);
-
         // HATEOAS
-        Resource<Address> addressResource = new Resource<>(optionalAddress.get());
+        Address vAddress = userRepositoryCustom.findUserAddressById(userId, addressId);
+        if(vAddress == null) throw new NotFoundException("Address not found : userId-"+ userId + " and addressId-" + addressId);
 
-        ControllerLinkBuilder linkTo = linkTo(methodOn(this.getClass()).retrieveUserLocations(userId));
-        addressResource.add(linkTo.withRel("all-user-locations"));
+        Resource<Address> addressResource = new Resource<>(vAddress);
+
+        ControllerLinkBuilder linkToUserLocations = linkTo(methodOn(this.getClass()).retrieveUserLocations(userId));
+        addressResource.add(linkToUserLocations.withRel("all-user-locations"));
 
         return addressResource;
     }
@@ -184,7 +181,10 @@ public class UserResource {
             throw new NotFoundException("User not found : id - "+ userId);
         }
 
-        addressRepository.deleteById(addressId);
+        Address vAddress = userRepositoryCustom.findUserAddressById(userId, addressId);
+        if(vAddress == null) throw new NotFoundException("Address does not exist: id - " + addressId);
+
+        userRepositoryCustom.deleteAddressFromUserAddresses(userId, addressId);
 
     }
 
