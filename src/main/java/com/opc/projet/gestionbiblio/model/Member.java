@@ -1,5 +1,6 @@
 package com.opc.projet.gestionbiblio.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,12 +21,14 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@JsonIgnoreProperties(value = {"libraries", "lendedCopies"})
+@JsonIgnoreProperties(value = {"libraries", "borrowedCopies"})
 public class Member extends User{
 
-    @OneToMany(mappedBy = "lender", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    private List<BookCopy> lendedCopies;
+    @JsonIgnore
+    @OneToMany(mappedBy = "borrower", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<BookCopy> borrowedCopies;
 
+    @JsonIgnore
     @ManyToMany(
             fetch = FetchType.LAZY,
             cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
@@ -39,23 +42,32 @@ public class Member extends User{
 
     // inconvenience methods for bi-directional relationship
 
-    public void addLibrary(Library library) {
-        if(libraries == null){
-            libraries = new ArrayList<>();
-        }
-        // set the link
-        libraries.add(library);
-        library.addMember(this);
-    }
+//    public void addLibrary(Library library) {
+//        if(libraries == null){
+//            libraries = new ArrayList<>();
+//        }
+//        // set the link
+//        libraries.add(library);
+//        library.addMember(this);
+//    }
 
     public void addBookCopy(BookCopy copy){
-        if(lendedCopies == null){
-            lendedCopies = new ArrayList<>();
+        if(borrowedCopies == null){
+            borrowedCopies = new ArrayList<>();
         }
         // set the link
-        lendedCopies.add(copy);
-        copy.setLender(this);
+        borrowedCopies.add(copy);
+        copy.setBorrower(this);
     }
+
+    public void removeBookCopy(BookCopy copy){
+        if(borrowedCopies != null){
+            copy.setBorrower(null);
+            borrowedCopies.remove(copy);
+        }
+    }
+
+
 
 
 }

@@ -1,57 +1,50 @@
 package com.opc.projet.gestionbiblio;
 
 
+import com.opc.projet.gestionbiblio.business.contract.AuthorRepositoryCustom;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
+
+import java.util.Locale;
 
 @SpringBootApplication
-public class GestionbiblioApplication {
+public class GestionbiblioApplication implements CommandLineRunner {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-    
-//    @Autowired
-//    private BookCopyRepository repository;
+    @Autowired
+    AuthorRepositoryCustom authorRepository;
 
     
 	public static void main(String[] args) {
 		ApplicationContext ctx =  SpringApplication.run(GestionbiblioApplication.class, args);
 
-//        System.out.println("*************** Beans ******************");
-//        System.out.println(ctx.getBeanDefinitionCount());
-//        for (String beanName: ctx.getBeanDefinitionNames()) {
-//            System.out.println(beanName);
-//        }
-//        System.out.println("*************** Beans ******************");
 	}
 
+	// For i18n
+    @Bean
+    public LocaleResolver localeResolver(){
+        AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
+        localeResolver.setDefaultLocale(Locale.FRANCE);
+        //localeResolver.setDefaultLocale(Locale.US);
 
-//    // === execute a command line on start up
-//    @Override
-//    public void run(String... args) throws Exception {
-//
-//        logger.info("\n====> All Copies -> {}");
-//        repository.findAll().forEach(System.out::println);
-//        //Book book = repository.findById(400000);
-//        //logger.info("\n====> BOOK with ID 400002 -> {}", book);
-//
-//        //logger.info("== > All copies -> {} ", book.getCopies());
-//
-//        //System.out.println(member.getLendedCopies());
-//
-//
-//        //logger.info("==-> Saved Author -> {}", bookRepository.save(book));
-//
-//        //bookRepository.deletById(400002L);
-//
-//        //logger.info("\n====> All Books -> {}", bookRepository.findAll());
-//
-//        //logger.info("Deleting author .....");
-//        //authorRepository.deletById(1);
-//
-//    }
+        return localeResolver;
+    }
 
 
+    @Override
+    public void run(String... args) throws Exception {
+        //logger.info("===> All Authors -> {}", authorRepository.findAll());
+        //logger.info("===> Author with Id 300003 -> {}", authorRepository.findById(300003L));
+        //Author author = authorRepository.findById(300003L).get();
+        //logger.info("===> Author's books -> {}", authorRepository.getAuthorBooks(300000L));
+        //logger.info("===> Author's book By Id -> {}", authorRepository.getAuthorBookById(3000000L, 400003L));
+    }
 }
