@@ -16,7 +16,7 @@ public class BookCopy {
     private Long id;
     private String reference;
     private String dateOfPurchase;
-    private Boolean available;
+    private Boolean available = true;
     private String dateOfLend;
     private String dateOfReturn;
 
@@ -41,6 +41,8 @@ public class BookCopy {
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "employee_id")
     private Employee lender;
+
+
 
     public Long getId() {
         return id;
