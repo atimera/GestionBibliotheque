@@ -34,13 +34,13 @@ public class BookCopy {
 
     @JsonIgnore
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
-    @JoinColumn(name = "lender_id")
-    private Member lender;
+    @JoinColumn(name = "member_id")
+    private Member borrower;
 
     @JsonIgnore
     @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name = "employee_id")
-    private Employee lendBy;
+    private Employee lender;
 
     public Long getId() {
         return id;
@@ -98,19 +98,19 @@ public class BookCopy {
         this.book = book;
     }
 
-    public Member getLender() {
+    public Member getBorrower() {
+        return borrower;
+    }
+
+    public void setBorrower(Member borrower) {
+        this.borrower = borrower;
+    }
+
+    public Employee getLender() {
         return lender;
     }
 
-    public void setLender(Member lender) {
+    public void setLender(Employee lender) {
         this.lender = lender;
-    }
-
-    public Employee getLendBy() {
-        return lendBy;
-    }
-
-    public void setLendBy(Employee lendBy) {
-        this.lendBy = lendBy;
     }
 }

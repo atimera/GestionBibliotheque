@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,12 +21,12 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-@JsonIgnoreProperties(value = {"libraries", "lendedCopies"})
+@JsonIgnoreProperties(value = {"libraries", "borrowedCopies"})
 public class Member extends User{
 
     @JsonIgnore
-    @OneToMany(mappedBy = "lender", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
-    private List<BookCopy> lendedCopies;
+    @OneToMany(mappedBy = "borrower", fetch = FetchType.LAZY, cascade = {CascadeType.DETACH,CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    private List<BookCopy> borrowedCopies;
 
     @JsonIgnore
     @ManyToMany(
@@ -49,15 +50,24 @@ public class Member extends User{
 //        libraries.add(library);
 //        library.addMember(this);
 //    }
-//
-//    public void addBookCopy(BookCopy copy){
-//        if(lendedCopies == null){
-//            lendedCopies = new ArrayList<>();
-//        }
-//        // set the link
-//        lendedCopies.add(copy);
-//        copy.setLender(this);
-//    }
+
+    public void addBookCopy(BookCopy copy){
+        if(borrowedCopies == null){
+            borrowedCopies = new ArrayList<>();
+        }
+        // set the link
+        borrowedCopies.add(copy);
+        copy.setBorrower(this);
+    }
+
+    public void removeBookCopy(BookCopy copy){
+        if(borrowedCopies != null){
+            copy.setBorrower(null);
+            borrowedCopies.remove(copy);
+        }
+    }
+
+
 
 
 }

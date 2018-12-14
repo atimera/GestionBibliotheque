@@ -31,7 +31,7 @@ public class Employee extends User{
     @JsonIgnore
     @OneToMany(
             fetch = FetchType.LAZY,
-            mappedBy = "lendBy",
+            mappedBy = "lender",
             cascade = {CascadeType.DETACH, CascadeType.MERGE,CascadeType.PERSIST, CascadeType.REFRESH})
     private List<BookCopy> lendedCopies;
 
